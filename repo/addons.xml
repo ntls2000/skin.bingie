@@ -62,4 +62,71 @@
             </assets>
         </extension>
     </addon>
+    <addon id="script.bingie.toolbox" name="Bingie Toolbox" version="1.0.1" provider-name="matke">
+        <requires>
+            <import addon="xbmc.python" version="3.0.0" />
+            <import addon="xbmc.addon" version="12.0.0" />
+            <import addon="script.module.simplejson" version="3.3.0" />
+            <import addon="script.module.simplecache" version="1.0.0" />
+        </requires>
+        <extension point="xbmc.python.library" library="default.py" />
+        <extension point="xbmc.python.pluginsource" library="plugin.py" />
+        <extension point="xbmc.addon.metadata">
+            <summary lang="en">Bingie Toolbox</summary>
+            <description>Toolbox for Bingie skin.</description>
+            <assets>
+                <icon>icon.png</icon>
+                <fanart>fanart.jpg</fanart>
+            </assets>
+            <language />
+            <platform>all</platform>
+            <license>GPL v2.0</license>
+            <forum />
+            <website />
+            <source />
+        </extension>
+    </addon>
+    <addon id="script.bingie.widgets" name="Bingie Widgets" version="1.0.2" provider-name="matke">
+        <requires>
+            <import addon="xbmc.python" version="3.0.0" />
+            <import addon="xbmc.addon" version="12.0.0" />
+            <import addon="script.module.simplecache" version="2.0.2" />
+            <import addon="script.module.requests" version="2.9.1" />
+            <import addon="script.module.infotagger" version="0.0.4" />
+        </requires>
+        <extension point="xbmc.python.pluginsource" library="plugin.py">
+            <provides>video</provides>
+        </extension>
+        <extension library="service.py" point="xbmc.service" start="login" />
+        <extension point="xbmc.addon.metadata">
+            <summary lang="en">Bingie Widgets</summary>
+            <description>Widgets for Bingie skin.</description>
+            <assets>
+                <icon>icon.png</icon>
+                <fanart>fanart.jpg</fanart>
+            </assets>
+            <language />
+            <platform>all</platform>
+            <license>GPL v2.0</license>
+            <forum />
+            <website />
+            <source />
+        </extension>
+    </addon>
+    <addon id="script.module.bingie" name="bingie common" provider-name="jurialmunkey,matke" version="1.0.2">
+        <requires>
+            <import addon="xbmc.python" version="3.0.1" />
+            <import addon="script.module.requests" version="2.9.1" />
+            <import addon="script.module.infotagger" version="0.0.5" />
+        </requires>
+        <extension point="xbmc.python.module" library="resources/modules" />
+        <extension point="xbmc.addon.metadata">
+            <description lang="en_GB">Common code required by TMDb Bingie Helper.</description>
+            <license>GPL-3.0-or-later</license>
+            <website>https://github.com/matke-84/script.module.bingie</website>
+            <assets>
+                <icon>icon.png</icon>
+            </assets>
+        </extension>
+    </addon>
 </addons>
