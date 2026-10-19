@@ -25,8 +25,41 @@ jobs:
           git fetch origin omega
           git checkout omega
           git reset --hard origin/omega
-      - name: Check Kodi 22 skin compatibility
-        run: python3 tools/check_kodi22.py
+      - name: Fetch our editable Bingie Toolbox
+        uses: actions/checkout@v4
+        with:
+          repository: ntls2000/script.bingie.toolbox
+          ref: main
+          path: addons-src/script.bingie.toolbox
+          persist-credentials: false
+      - name: Fetch our editable Bingie Widgets
+        uses: actions/checkout@v4
+        with:
+          repository: ntls2000/script.bingie.widgets
+          ref: main
+          path: addons-src/script.bingie.widgets
+          persist-credentials: false
+      - name: Fetch our editable Bingie Common Module
+        uses: actions/checkout@v4
+        with:
+          repository: ntls2000/script.module.bingie
+          ref: main
+          path: addons-src/script.module.bingie
+          persist-credentials: false
+      - name: Verify source and Kodi 22 Python syntax
+        run: |
+          python3 tools/check_kodi22.py
+          python3 - <<'PY'
+          import ast
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+          for root in sorted(Path('addons-src').iterdir()):
+              manifest = ET.parse(root / 'addon.xml').getroot()
+              assert manifest.get('id') == root.name
+              for file in root.rglob('*.py'):
+                  ast.parse(file.read_text(encoding='utf-8-sig'), filename=str(file))
+              print(f"OK: {root.name} v{manifest.get('version')} Python and manifest")
+          PY
       - name: Generate Kodi repository
         run: python3 tools/build_kodi_repo.py
       - name: Publish ZIP files and repository index
