@@ -1,7 +1,13 @@
-name: Validate Bingie Skin Shortcuts v3 beta
-# Temporarily run manually while changing the home UI to avoid racing ZIP bot commits.
+name: Validate Bingie Skin Shortcuts v3 and Modern UI
 on:
+  push:
+    branches: [kodi22-skinshortcuts-v3]
+    paths-ignore:
+      - 'repo/**'
   workflow_dispatch:
+concurrency:
+  group: bingie-v3-beta
+  cancel-in-progress: false
 permissions:
   contents: write
 jobs:
@@ -20,15 +26,15 @@ jobs:
       - name: Preserve test ZIP for manual Kodi 22 verification
         uses: actions/upload-artifact@v4
         with:
-          name: bingie-2.0.4-beta3-skinshortcuts-v3-test
-          path: repo/skin.bingie/skin.bingie-2.0.4~beta3.zip
+          name: bingie-2.0.5-beta1-modern-2026-test
+          path: repo/skin.bingie/skin.bingie-2.0.5~beta1.zip
           if-no-files-found: error
           retention-days: 14
       - name: Publish the beta ZIP on this test branch only
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f 'repo/skin.bingie/skin.bingie-2.0.4~beta3.zip'
+          git add -f 'repo/skin.bingie/skin.bingie-2.0.5~beta1.zip'
           if ! git diff --cached --quiet; then
             git commit -m "test: publish Kodi 22 Skin Shortcuts v3 beta ZIP [skip ci]"
             git push origin HEAD:kodi22-skinshortcuts-v3
