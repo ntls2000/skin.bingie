@@ -45,6 +45,31 @@
             <icon>common/settings1.png</icon>
         </item>
     </menu>
+    <!-- Modern Netflix TV navigation is distinct from the customizable legacy menu.
+         Each item is editable through Skin Shortcuts 3. Existing mainmenu saved data
+         is not reset or altered. -->
+    <menu name="modernnav" container="900">
+        <item name="modern-home" required="true">
+            <label>$LOCALIZE[10000]</label>
+            <action>ActivateWindow(home,return)</action>
+            <icon>shortcuts/home.png</icon>
+        </item>
+        <item name="modern-shows">
+            <label>$LOCALIZE[31566]</label>
+            <action>ActivateWindow(1110,return)</action>
+            <icon>shortcuts/tv.png</icon>
+        </item>
+        <item name="modern-movies">
+            <label>$LOCALIZE[342]</label>
+            <action>ActivateWindow(1111,return)</action>
+            <icon>shortcuts/clapperboard.png</icon>
+        </item>
+        <item name="modern-list">
+            <label>$LOCALIZE[31534]</label>
+            <action>ActivateWindow(1114,return)</action>
+            <icon>shortcuts/mylist.png</icon>
+        </item>
+    </menu>
     <menu name="powermenu">
         <item name="settings" required="true">
             <label>$LOCALIZE[5]</label>
