@@ -32,6 +32,25 @@ Une migration réelle de tous les menus Bingie vers Skin Shortcuts v3 reste à f
 
 **Statut :** XML vérifié et packaging réussi sur GitHub Actions. Installation complète, scripts Python, interface et performances à vérifier **sur Kodi 22** avant d'annoncer une compatibilité totale.
 
+## Nos propres extensions modifiables
+
+Les sources des extensions Bingie importées se trouvent dans `addons-src/<identifiant-extension>/` :
+
+| Extension | Version de notre fork | Origine |
+| --- | --- | --- |
+| `script.bingie.helper` | 1.1.3 | 1.1.2 |
+| `script.bingie.toolbox` | 1.0.1 | 1.0.0 |
+| `script.bingie.widgets` | 1.0.2 | 1.0.1 |
+| `plugin.video.tmdb.bingie.helper` | 1.0.4 | 1.0.3 |
+| `plugin.program.autocompletion` | 2.1.4 | 2.1.3 |
+| `script.module.bingie` | 1.0.2 | 1.0.1 |
+
+À partir du dépôt original de matke-84, `tools/import_bingie_addons.py` extrait chaque archive officielle en code **lisible et modifiable**, en conservant les licences et les mentions d'origine. L'importateur **n'écrase jamais** un dossier déjà importé.
+
+Après modification d'une extension, augmenter sa version dans son propre `addons-src/<id>/addon.xml`, puis envoyer les changements sur `omega`. GitHub Actions reconstruit automatiquement son ZIP dans `repo/<id>/` et actualise le catalogue Kodi. Les versions des forks sont volontairement supérieures à celles du catalogue original pour que Kodi reconnaisse nos correctifs.
+
+Les dépendances venant du dépôt officiel Kodi (par exemple `script.skinshortcuts`) restent externes. Le pack `resource.images.studios.coloured`, très volumineux et contenant des logos tiers, reste également chez l'auteur pour l'instant. **Nous n'avons pas encore testé les extensions modifiées sur Kodi 22**.
+
 ## Génération
 
 ```sh
