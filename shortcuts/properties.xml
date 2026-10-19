@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Native Skin Shortcuts v3 property editors. Old button 404 is gone. -->
+<properties>
+  <property name="widget" type="widget"/>
+  <property name="background" type="background"/>
+  <property name="thumb" type="text"/>
+  <property name="layout" type="options"><options>
+    <option value="poster" label="Poster"/><option value="landscape" label="Landscape"/>
+    <option value="square" label="Carré"/><option value="list" label="Liste"/>
+  </options></property>
+  <property name="widgetStyle" type="options"><options>
+    <option value="default" label="Défaut"/><option value="poster" label="Poster"/>
+    <option value="landscape" label="Paysage"/><option value="square" label="Carré"/>
+  </options></property>
+  <property name="widgetTags" type="options"><options>
+    <option value="WidgetTagOverlayEnable" label="Activés"/><option value="WidgetTagOverlayDisable" label="Désactivés"/>
+  </options></property>
+  <property name="widgetTarget" type="options"><options>
+    <option value="videos" label="Vidéos"/><option value="music" label="Musique"/>
+    <option value="pictures" label="Images"/><option value="programs" label="Programmes"/>
+  </options></property>
+  <property name="widgetSortBy" type="options"><options>
+    <option value="dateadded" label="Date d'ajout"/><option value="title" label="Titre"/>
+    <option value="label" label="Libellé"/><option value="random" label="Aléatoire"/>
+    <option value="userpreference" label="Préférences"/>
+  </options></property>
+  <property name="widgetSortOrder" type="options"><options>
+    <option value="ascending" label="Croissant"/><option value="descending" label="Décroissant"/>
+  </options></property>
+  <property name="widgetLimit" type="number"/>
+  <buttons>
+    <button id="309" property="widget" title="Choisir un widget" type="widget" rename="true"/>
+    <button id="310" property="background" title="Arrière-plan" type="background"/>
+    <button id="4311" property="background" title="Image du menu" type="background"/>
+    <button id="31507" property="layout" title="Disposition"/>
+    <button id="315071" property="widgetStyle" title="Style du widget"/>
+    <button id="31028" property="widgetTags" title="Badges"/>
+    <button id="31468" property="widgetTarget" title="Type de contenu"/>
+    <button id="581" property="widgetSortBy" title="Trier par"/>
+    <button id="580" property="widgetSortOrder" title="Ordre de tri"/>
+    <button id="21427" property="widgetLimit" title="Nombre d'éléments"/>
+  </buttons>
+</properties>
