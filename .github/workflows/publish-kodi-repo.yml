@@ -82,7 +82,7 @@ jobs:
           from zipfile import ZipFile
 
           beta = Path('beta-skin-source')
-          expected = '2.0.4~beta2'
+          expected = '2.0.4~beta3'
           manifest = ET.parse(beta / 'addon.xml').getroot()
           assert manifest.get('id') == 'skin.bingie'
           assert manifest.get('version') == expected, 'Unexpected beta version'
