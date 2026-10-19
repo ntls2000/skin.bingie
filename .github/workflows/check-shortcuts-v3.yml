@@ -37,6 +37,10 @@ jobs:
           git add -f 'repo/skin.bingie/skin.bingie-2.0.5~beta2.zip'
           if ! git diff --cached --quiet; then
             git commit -m "test: publish Kodi 22 Skin Shortcuts v3 beta ZIP [skip ci]"
+            # Remove files modified by the Kodi index generator before rebase.
+            # The beta ZIP was committed above and will be preserved.
+            git reset --hard HEAD
+            git clean -fd
             # Parallel source changes may arrive while the artifact builds:
             # rebase this binary-only commit on the newest source head.
             git fetch origin kodi22-skinshortcuts-v3
