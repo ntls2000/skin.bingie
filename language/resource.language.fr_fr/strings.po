@@ -2378,3 +2378,13 @@ msgstr "Widget"
 msgctxt "#31579"
 msgid "color for play icon"
 msgstr "Couleur de l'icône Lecture"
+
+# Kodi 22: optional modern TV homepage. Classic Bingie remains available.
+msgctxt "#31610"
+msgid "Modern Netflix-inspired TV interface (2026)"
+msgstr "Interface TV moderne inspirée de Netflix (2026)"
+
+msgctxt "#31611"
+msgid "Display horizontal navigation and a modern featured hero. The original layout can be restored at any time."
+msgstr "Afficher la navigation horizontale et les grandes images à la une. Il est possible de revenir à la présentation classique."
+
