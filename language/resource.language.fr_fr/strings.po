@@ -2388,3 +2388,15 @@ msgctxt "#31611"
 msgid "Display horizontal navigation and a modern featured hero. The original layout can be restored at any time."
 msgstr "Afficher la navigation horizontale et les grandes images à la une. Il est possible de revenir à la présentation classique."
 
+
+msgctxt "#31612"
+msgid "Edit modern navigation"
+msgstr "Personnaliser la navigation moderne"
+
+msgctxt "#31613"
+msgid "FEATURED"
+msgstr "À LA UNE"
+
+msgctxt "#31614"
+msgid "More info"
+msgstr "Plus d’infos"
