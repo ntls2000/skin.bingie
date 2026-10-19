@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bingie Netflix-inspired 2026 TV layout. No Netflix art or backend is bundled.
+     All user-editable actions come from Skin Shortcuts v3 (skinshortcuts-mainmenu).
+     The original side menu remains available when NetflixModern2026 is disabled. -->
+<includes>
+    <!-- The artwork comes from the selected Kodi spotlight widget. -->
+    <include name="NetflixModernHeroSurface">
+        <control type="group">
+            <visible>Skin.HasSetting(NetflixModern2026) + Window.IsActive(Home) + $EXP[IsCurrentWidgetSpotlight] + !Player.HasVideo</visible>
+            <left>70</left>
+            <top>126</top>
+            <width>1780</width>
+            <height>465</height>
+            <animation effect="fade" start="0" end="100" time="240">Visible</animation>
+            <!-- The solid surface provides a safe fallback when the library has no fanart. -->
+            <control type="image">
+                <width>1780</width>
+                <height>465</height>
+                <texture colordiffuse="ff111115">colors/color_white.png</texture>
+            </control>
+            <control type="image">
+                <width>1780</width>
+                <height>465</height>
+                <fadetime>350</fadetime>
+                <texture background="true">$VAR[BingieSpotlightBackground]</texture>
+                <aspectratio>scale</aspectratio>
+            </control>
+            <control type="image">
+                <width>1780</width>
+                <height>465</height>
+                <texture colordiffuse="ef09090c">bingie/diffuse.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>
+        </control>
+    </include>
+
+    <!-- A permanent horizontal menu: search, films, series and user shortcuts.
+         Keep list id 900 and group id 9001 so existing focus/navigation survives. -->
+    <include name="NetflixModernTopNavigation">
+        <control type="group" id="9001">
+            <visible>Skin.HasSetting(NetflixModern2026) + Window.IsActive(Home)</visible>
+            <left>0</left>
+            <top>0</top>
+            <width>1920</width>
+            <height>113</height>
+
+            <control type="image">
+                <width>1920</width>
+                <height>113</height>
+                <texture colordiffuse="f50c0c0f">colors/color_white.png</texture>
+            </control>
+            <!-- Distinct Bingie wordmark, not Netflix branding. -->
+            <control type="label">
+                <left>54</left>
+                <top>34</top>
+                <width>125</width>
+                <height>51</height>
+                <font>Bold38</font>
+                <aligny>center</aligny>
+                <textcolor>ffe50914</textcolor>
+                <label>BINGIE</label>
+            </control>
+            <control type="list" id="900">
+                <left>195</left>
+                <top>25</top>
+                <width>1490</width>
+                <height>70</height>
+                <orientation>horizontal</orientation>
+                <itemgap>5</itemgap>
+                <scrolltime>170</scrolltime>
+                <preloaditems>8</preloaditems>
+                <onup>noop</onup>
+                <ondown condition="Control.IsVisible(1508)">1508</ondown>
+                <ondown>77777</ondown>
+                <onback>77777</onback>
+                <itemlayout width="181" height="67">
+                    <control type="label">
+                        <left>8</left>
+                        <top>1</top>
+                        <width>165</width>
+                        <height>63</height>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>Reg26</font>
+                        <textcolor>ffdddddd</textcolor>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="181" height="67">
+                    <control type="image">
+                        <left>7</left>
+                        <top>5</top>
+                        <width>167</width>
+                        <height>55</height>
+                        <texture colordiffuse="fff5f5f5" border="18">dialogs/keyboard/key-nf-2.png</texture>
+                    </control>
+                    <control type="label">
+                        <left>11</left>
+                        <top>1</top>
+                        <width>158</width>
+                        <height>63</height>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>Bold26</font>
+                        <textcolor>ff151515</textcolor>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </focusedlayout>
+                <include>MainMenuContent</include>
+            </control>
+            <!-- Safety route to Kodi settings, independent of Skin Shortcuts. -->
+            <control type="button" id="49001">
+                <left>1709</left>
+                <top>29</top>
+                <width>72</width>
+                <height>65</height>
+                <texturefocus border="10" colordiffuse="fff5f5f5">dialogs/keyboard/key-nf-2.png</texturefocus>
+                <texturenofocus/>
+                <label/>
+                <onleft>900</onleft>
+                <onright>49002</onright>
+                <ondown>77777</ondown>
+                <onclick>ActivateWindow(Settings)</onclick>
+                <control type="image">
+                    <left>18</left>
+                    <top>18</top>
+                    <width>30</width>
+                    <height>30</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture>common/settings1.png</texture>
+                </control>
+            </control>
+            <control type="button" id="49002">
+                <left>1811</left>
+                <top>37</top>
+                <width>51</width>
+                <height>51</height>
+                <texturefocus border="10" colordiffuse="fff5f5f5">dialogs/keyboard/key-nf-2.png</texturefocus>
+                <texturenofocus/>
+                <label/>
+                <onleft>49001</onleft>
+                <ondown>77777</ondown>
+                <onclick>System.LogOff</onclick>
+                <control type="image">
+                    <width>51</width>
+                    <height>51</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[System.ProfileThumb]</texture>
+                </control>
+            </control>
+        </control>
+    </include>
+</includes>
