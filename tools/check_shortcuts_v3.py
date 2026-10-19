@@ -91,6 +91,28 @@ def check():
         if re.search(r"RunScript\(script\.skinshortcuts,type=widgets", text):
             raise AssertionError(f"Legacy v2 widget picker in {path.relative_to(ROOT)}")
 
+    # Modern Netflix-inspired mode is opt-in and must not replace the safe legacy UI.
+    modern = ET.parse(XML_DIR / "IncludesNetflixModern.xml").getroot()
+    modern_includes = {node.get("name") for node in modern.findall("include")}
+    assert {"NetflixModernTopNavigation", "NetflixModernHeroSurface"} <= modern_includes
+    navigation = next(e for e in modern.findall("include")
+                      if e.get("name") == "NetflixModernTopNavigation")
+    assert any(c.get("id") == "900" and c.get("type") == "list"
+               for c in navigation.iter("control")), "Modern menu must preserve Skin Shortcuts id 900"
+    assert any((x.text or "").strip() == "MainMenuContent"
+               for x in navigation.iter("include")), "Modern menu must reuse saved v3 items"
+    homepage = (XML_DIR / "IncludesHomeBingie.xml").read_text(encoding="utf-8")
+    assert 'condition="Skin.HasSetting(NetflixModern2026) + Window.IsActive(Home)"' in homepage
+    assert 'condition="!Skin.HasSetting(NetflixModern2026) | !Window.IsActive(Home)"' in homepage
+    assert 'NetflixModernHeroSurface' in homepage
+    skinsettings = (XML_DIR / "IncludesSkinSettings.xml").read_text(encoding="utf-8")
+    assert "Skin.ToggleSetting(NetflixModern2026)" in skinsettings
+    assert "ReloadSkin()" in skinsettings
+    assert "ActivateWindow(Settings)" in ET.tostring(modern, encoding="unicode")
+    for locale in ("en_gb", "fr_fr"):
+        po = (ROOT / f"language/resource.language.{locale}/strings.po").read_text(encoding="utf-8")
+        assert 'msgctxt "#31610"' in po and 'msgctxt "#31611"' in po
+
     manifest = ET.parse(ROOT / "addon.xml").getroot()
     dep = next((e for e in manifest.iter("import") if e.get("addon") == "script.skinshortcuts"), None)
     assert dep is not None and dep.get("version") == "3.0.4", "v3 min dependency missing"
