@@ -1232,7 +1232,7 @@ msgstr "Taille fixe pour la couleur"
 
 msgctxt "#31300"
 msgid "Watch It Again Movies"
-msgstr "Watch It Again Movies"
+msgstr "Films à revoir"
 
 msgctxt "#31301"
 msgid "Auto focus the first unwatched episode in lists"
@@ -1240,15 +1240,15 @@ msgstr "Sélectionner automatiquement le premier épisode non vu des listes"
 
 msgctxt "#31302"
 msgid "Border color for fixed MPAA panel"
-msgstr "Border color for fixed MPAA panel"
+msgstr "Couleur de bordure du panneau de classification fixe"
 
 msgctxt "#31303"
 msgid "Color"
-msgstr "Color"
+msgstr "Couleur"
 
 msgctxt "#31304"
 msgid "Prefer TV Show thumbnail for episodes in widgets"
-msgstr "Prefer TV Show thumbnail for episodes in widgets"
+msgstr "Préférer la miniature de la série pour les épisodes dans les widgets"
 
 msgctxt "#31305"
 msgid "Decoder"
@@ -1256,11 +1256,11 @@ msgstr "Décodeur"
 
 msgctxt "#31306"
 msgid "UK MPAA (only for US and UK ratings)"
-msgstr "UK MPAA (only for US and UK ratings)"
+msgstr "Classification britannique (uniquement pour les notes US et UK)"
 
 msgctxt "#31307"
 msgid "Lyrics overlay color"
-msgstr "Lyrics overlay color"
+msgstr "Couleur du voile des paroles"
 
 msgctxt "#31308"
 msgid "Select movie genre fanart"
@@ -1268,39 +1268,39 @@ msgstr "Sélectionner les fanarts de Genre de Films"
 
 msgctxt "#31309"
 msgid "MPAA style"
-msgstr "MPAA style"
+msgstr "Style de la classification d’âge"
 
 msgctxt "#31310"
 msgid "Hide header"
-msgstr "Hide header"
+msgstr "Masquer l’en-tête"
 
 msgctxt "#31311"
 msgid "on IMDB Today"
-msgstr "on IMDB Today"
+msgstr "sur IMDb aujourd’hui"
 
 msgctxt "#31312"
 msgid "Channel logo/number visibility in TV guide"
-msgstr "Channel logo/number visibility in TV guide"
+msgstr "Affichage du logo et du numéro des chaînes dans le guide TV"
 
 msgctxt "#31313"
 msgid "Most Played Movies"
-msgstr "Most Played Movies"
+msgstr "Films les plus lus"
 
 msgctxt "#31314"
 msgid "Most Played TV Shows"
-msgstr "Most Played TV Shows"
+msgstr "Séries les plus lues"
 
 msgctxt "#31315"
 msgid "Most Watched Movies"
-msgstr "Most Watched Movies"
+msgstr "Films les plus regardés"
 
 msgctxt "#31316"
 msgid "Most Watched TV Shows"
-msgstr "Most Watched TV Shows"
+msgstr "Séries les plus regardées"
 
 msgctxt "#31317"
 msgid "Disable collections"
-msgstr "Disable collections"
+msgstr "Désactiver les collections"
 
 # DO NOT TRANSLATE THIS STRING!!!
 msgctxt "#31318"
@@ -1309,11 +1309,11 @@ msgstr "Épisodes Bingie"
 
 msgctxt "#31319"
 msgid "Trakt Popular TV Shows"
-msgstr "Trakt Popular TV Shows"
+msgstr "Séries populaires sur Trakt"
 
 msgctxt "#31320"
 msgid "Enable Top 250 sublabel on video info"
-msgstr "Enable Top 250 sublabel on video info"
+msgstr "Afficher le badge Top 250 dans les informations vidéo"
 
 msgctxt "#31321"
 msgid "Bingie views"
@@ -1321,31 +1321,31 @@ msgstr "Vues Bingie"
 
 msgctxt "#31322"
 msgid "Enable Top 250 sublabel on spotlight"
-msgstr "Enable Top 250 sublabel on spotlight"
+msgstr "Afficher le badge Top 250 dans la sélection principale"
 
 msgctxt "#31323"
 msgid "Top 250 sublabel visibility"
-msgstr "Top 250 sublabel visibility"
+msgstr "Affichage du badge Top 250"
 
 msgctxt "#31324"
 msgid "Hide ratings and studio logo in views"
-msgstr "Hide ratings and studio logo in views"
+msgstr "Masquer les notes et le logo du studio dans les vues"
 
 msgctxt "#31325"
 msgid "Show current weather"
-msgstr "Show current weather"
+msgstr "Afficher la météo actuelle"
 
 msgctxt "#31326"
 msgid "Trakt Popular Movies"
-msgstr "Trakt Popular Movies"
+msgstr "Films populaires sur Trakt"
 
 msgctxt "#31327"
 msgid "Clearlogo/title position (except Bingie views)"
-msgstr "Clearlogo/title position (except Bingie views)"
+msgstr "Position du titre ou logo (sauf vues Bingie)"
 
 msgctxt "#31328"
 msgid "Trakt Trending TV Shows"
-msgstr "Trakt Trending TV Shows"
+msgstr "Séries tendance sur Trakt"
 
 msgctxt "#31329"
 msgid "Top left"
@@ -1361,7 +1361,7 @@ msgstr "haut-droite"
 
 msgctxt "#31332"
 msgid "Movies Trending Today"
-msgstr "Movies Trending Today"
+msgstr "Films tendance aujourd’hui"
 
 msgctxt "#31333"
 msgid "Because you watched"
@@ -1369,67 +1369,67 @@ msgstr "Parce que vous avez regardé"
 
 msgctxt "#31334"
 msgid "Last Releases Movies"
-msgstr "Last Releases Movies"
+msgstr "Dernières sorties de films"
 
 msgctxt "#31335"
 msgid "Most Voted Movies"
-msgstr "Most Voted Movies"
+msgstr "Films ayant reçu le plus de votes"
 
 msgctxt "#31336"
 msgid "Most Voted TV Shows"
-msgstr "Most Voted TV Shows"
+msgstr "Séries ayant reçu le plus de votes"
 
 msgctxt "#31337"
 msgid "Trakt Trending Movies"
-msgstr "Trakt Trending Movies"
+msgstr "Films tendance sur Trakt"
 
 msgctxt "#31338"
 msgid "Prefer white ratings and studio logo"
-msgstr "Prefer white ratings and studio logo"
+msgstr "Préférer des notes et logos de studio blancs"
 
 msgctxt "#31339"
 msgid "Top Rated Movies"
-msgstr "Top Rated Movies"
+msgstr "Films les mieux notés"
 
 msgctxt "#31340"
 msgid "Top Rated TV Shows"
-msgstr "Top Rated TV Shows"
+msgstr "Séries les mieux notées"
 
 msgctxt "#31341"
 msgid "Total episodes"
-msgstr "Total episodes"
+msgstr "Nombre total d’épisodes"
 
 msgctxt "#31342"
 msgid "Episode number"
-msgstr "Episode number"
+msgstr "Numéro de l’épisode"
 
 msgctxt "#31343"
 msgid "Highest Revenue Movies"
-msgstr "Highest Revenue Movies"
+msgstr "Films ayant rapporté le plus de recettes"
 
 msgctxt "#31344"
 msgid "Scrollbar visibility"
-msgstr "Scrollbar visibility"
+msgstr "Affichage de la barre de défilement"
 
 msgctxt "#31346"
 msgid "TMDb Popular TV Shows"
-msgstr "TMDb Popular TV Shows"
+msgstr "Séries populaires sur TMDb"
 
 msgctxt "#31347"
 msgid "TMDb Popular Movies"
-msgstr "TMDb Popular Movies"
+msgstr "Films populaires sur TMDb"
 
 msgctxt "#31348"
 msgid "Label overlay text color"
-msgstr "Label overlay text color"
+msgstr "Couleur du texte du voile des libellés"
 
 msgctxt "#31349"
 msgid "Label overlay panel color"
-msgstr "Label overlay panel color"
+msgstr "Couleur du panneau du voile des libellés"
 
 msgctxt "#31350"
 msgid "Menu colors"
-msgstr "Menu colors"
+msgstr "Couleurs des menus"
 
 msgctxt "#31351"
 msgid "Sideblade/options menu panel color"
@@ -1437,19 +1437,19 @@ msgstr "Couleur du Panneau d'options latéral "
 
 msgctxt "#31352"
 msgid "TV Mysteries"
-msgstr "TV Mysteries"
+msgstr "Séries policières et mystérieuses"
 
 msgctxt "#31353"
 msgid "TV Westerns"
-msgstr "TV Westerns"
+msgstr "Westerns (séries)"
 
 msgctxt "#31354"
 msgid "Are you sure you want to restore menu itmes to default settings?"
-msgstr "Are you sure you want to restore menu itmes to default settings?"
+msgstr "Voulez-vous vraiment restaurer les éléments du menu par défaut ?"
 
 msgctxt "#31355"
 msgid "Align tags in center"
-msgstr "Align tags in center"
+msgstr "Centrer les badges"
 
 msgctxt "#31356"
 msgid "Show infopanel right"
@@ -1457,19 +1457,19 @@ msgstr "Afficher le panneau d'information à droite"
 
 msgctxt "#31357"
 msgid "IMDB Rating"
-msgstr "IMDB Rating"
+msgstr "Note IMDb"
 
 msgctxt "#31358"
 msgid "Open information instead of playing/opening content (only applies to widgets)"
-msgstr "Open information instead of playing/opening content (only applies to widgets)"
+msgstr "Afficher les informations au lieu de lire ou d’ouvrir le contenu (widgets uniquement)"
 
 msgctxt "#31359"
 msgid "Select which details to show in video info"
-msgstr "Select which details to show in video info"
+msgstr "Choisir les détails affichés dans les informations vidéo"
 
 msgctxt "#31360"
 msgid "Enable ratings"
-msgstr "Enable ratings"
+msgstr "Activer les notes"
 
 msgctxt "#31361"
 msgid "Global background"
@@ -1477,15 +1477,15 @@ msgstr "Arrière-plan général"
 
 msgctxt "#31362"
 msgid "Enable auto pause on OSD open"
-msgstr "Enable auto pause on OSD open"
+msgstr "Mettre automatiquement en pause à l’ouverture de l’OSD"
 
 msgctxt "#31363"
 msgid "TMDb People"
-msgstr "TMDb People"
+msgstr "Personnalités TMDb"
 
 msgctxt "#31364"
 msgid "TV Animations"
-msgstr "TV Animations"
+msgstr "Séries d’animation"
 
 msgctxt "#31365"
 msgid "Footer colors"
@@ -1509,7 +1509,7 @@ msgstr "Choisir une icône"
 
 msgctxt "#31370"
 msgid "Auto play trailers for spotlight widget"
-msgstr "Auto play trailers for spotlight widget"
+msgstr "Lecture automatique des bandes-annonces dans la sélection principale"
 
 msgctxt "#31371"
 msgid "No items in My List.[CR]Start adding Movies & TV Shows you like, just press the 'Add to My List' button from information page."
@@ -1517,35 +1517,35 @@ msgstr "Aucun élément dans Ma Liste. [CR]Commencez à ajouter les films et des
 
 msgctxt "#31372"
 msgid "TV Crime"
-msgstr "TV Crime"
+msgstr "Séries policières"
 
 msgctxt "#31373"
 msgid "TV Sci-Fi & Fantasy"
-msgstr "TV Sci-Fi & Fantasy"
+msgstr "Séries de science-fiction et fantastiques"
 
 msgctxt "#31374"
 msgid "TV War & Politics"
-msgstr "TV War & Politics"
+msgstr "Séries de guerre et politiques"
 
 msgctxt "#31375"
 msgid "OSD media/codec info color"
-msgstr "OSD media/codec info color"
+msgstr "Couleur des informations média et codecs dans l’OSD"
 
 msgctxt "#31376"
 msgid "TV Kids & Family"
-msgstr "TV Kids & Family"
+msgstr "Séries jeunesse et famille"
 
 msgctxt "#31377"
 msgid "TV Documentaries"
-msgstr "TV Documentaries"
+msgstr "Séries documentaires"
 
 msgctxt "#31378"
 msgid "Use alternative video info dialog"
-msgstr "Use alternative video info dialog"
+msgstr "Utiliser la fenêtre alternative d’informations vidéo"
 
 msgctxt "#31379"
 msgid "Set spotlight widget"
-msgstr "Set spotlight widget"
+msgstr "Définir le widget de sélection principale"
 
 msgctxt "#31380"
 msgid "Audio Process Information"
@@ -1553,15 +1553,15 @@ msgstr "Information de processus audio"
 
 msgctxt "#31381"
 msgid "TV Dramas"
-msgstr "TV Dramas"
+msgstr "Séries dramatiques"
 
 msgctxt "#31382"
 msgid "TV Comedies"
-msgstr "TV Comedies"
+msgstr "Séries comiques"
 
 msgctxt "#31383"
 msgid "Customize surprise me hub"
-msgstr "Customize surprise me hub"
+msgstr "Personnaliser la section Surprenez-moi"
 
 # DO NOT TRANSLATE THIS STRING!!!
 msgctxt "#31384"
@@ -1570,11 +1570,11 @@ msgstr "Fanart"
 
 msgctxt "#31385"
 msgid "Surprise Me"
-msgstr "Surprise Me"
+msgstr "Surprenez-moi"
 
 msgctxt "#31386"
 msgid "TV Action & Adventure"
-msgstr "TV Action & Adventure"
+msgstr "Séries d’action et d’aventure"
 
 msgctxt "#31387"
 msgid "Welcome to Bingie"
@@ -1594,27 +1594,27 @@ msgstr "This skin is designed to simulate Netflix user experience for TV.[CR]In 
 
 msgctxt "#31389"
 msgid "Set recommended options"
-msgstr "Set recommended options"
+msgstr "Définir les options recommandées"
 
 msgctxt "#31390"
 msgid "Keep my current settings"
-msgstr "Keep my current settings"
+msgstr "Conserver mes paramètres actuels"
 
 msgctxt "#31391"
 msgid "Change action"
-msgstr "Change action"
+msgstr "Modifier l’action"
 
 msgctxt "#31392"
 msgid "Disable shortcut"
-msgstr "Disable shortcut"
+msgstr "Désactiver le raccourci"
 
 msgctxt "#31393"
 msgid "Footer icon color"
-msgstr "Footer icon color"
+msgstr "Couleur des icônes de pied de page"
 
 msgctxt "#31394"
 msgid "Lyrics colors"
-msgstr "Lyrics colors"
+msgstr "Couleurs des paroles"
 
 msgctxt "#31395"
 msgid "With Bingie you can have all of your Kodi and library content in one place, through the use of widgets.[CR][CR]"
@@ -1630,11 +1630,11 @@ msgstr "With Bingie you can have all of your Kodi and library content in one pla
 
 msgctxt "#31396"
 msgid "Add videos to library"
-msgstr "Add videos to library"
+msgstr "Ajouter des vidéos à la médiathèque"
 
 msgctxt "#31397"
 msgid "Get started with Bingie"
-msgstr "Get started with Bingie"
+msgstr "Premiers pas avec Bingie"
 
 msgctxt "#31398"
 msgid "Thriller"
