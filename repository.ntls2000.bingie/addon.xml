@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<addon id="repository.ntls2000.bingie" name="Bingie - Dépôt de mises à jour" version="1.0.0" provider-name="ntls2000">
+<addon id="repository.ntls2000.bingie" name="Bingie - Dépôt de mises à jour" version="1.0.1" provider-name="ntls2000">
     <extension point="xbmc.addon.repository" name="Bingie - Dépôt de mises à jour">
         <dir>
             <info compressed="false">https://raw.githubusercontent.com/ntls2000/skin.bingie/omega/repo/addons.xml</info>
             <checksum>https://raw.githubusercontent.com/ntls2000/skin.bingie/omega/repo/addons.xml.md5</checksum>
             <datadir zip="true">https://raw.githubusercontent.com/ntls2000/skin.bingie/omega/repo/</datadir>
+            <hashes>false</hashes>
+        </dir>
+        <!-- Upstream Bingie add-ons: helpers, widgets, TMDb integration and studio art.
+             Kodi merges the catalogues and selects the higher version of skin.bingie
+             from our local repository. Keep the upstream ZIP locations unchanged. -->
+        <dir minversion="20.9.1">
+            <info compressed="false">https://raw.githubusercontent.com/matke-84/repository.bingie/main/omega/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/matke-84/repository.bingie/main/omega/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/matke-84/repository.bingie/main/omega/</datadir>
             <hashes>false</hashes>
         </dir>
     </extension>
