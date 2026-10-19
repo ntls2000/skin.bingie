@@ -785,12 +785,12 @@
 				<include condition="Skin.HasSetting(EnableFixedFrameWidgets) + [Window.IsActive(Home) | $EXP[IsBingieHubsActive2]]">Bingie_Screens_Fixed_Focus_Frame</include>
 			</control>
 				<!-- gradient overlays on widgets -->
-                <include>Bingie_Left_Gradient</include>
+                <include condition="!Skin.HasSetting(NetflixModern2026) | !Window.IsActive(Home)">Bingie_Left_Gradient</include>
 			</control>
 	
 			<!--Bingie Logo Diffuse-->
 			<control type="image">
-				<visible>!Skin.HasSetting(DisableBingieLogo) + [Window.IsActive(Home) | Window.IsActive(1110) | Window.IsActive(1111) | Window.IsActive(1112) | Window.IsActive(1113) | Window.IsActive(1120) | Window.IsActive(1114)]</visible> 
+				<visible>!Skin.HasSetting(DisableBingieLogo) + [Window.IsActive(Home) | Window.IsActive(1110) | Window.IsActive(1111) | Window.IsActive(1112) | Window.IsActive(1113) | Window.IsActive(1120) | Window.IsActive(1114)]+ ![Skin.HasSetting(NetflixModern2026) + Window.IsActive(Home)]</visible> 
 				<description>diffuse behind Bingie logo</description>
 				<animation effect="slide" end="-66" time="0" condition="Window.IsActive(1110) | Window.IsActive(1111) | Window.IsActive(1114)">Conditional</animation>
 				<right>470</right>
@@ -804,7 +804,7 @@
 			</control>
 			<!--Bingie Logo-->
 			<control type="image">
-				<visible>!Skin.HasSetting(DisableBingieLogo) + !Window.IsActive(1110) + !Window.IsActive(1111) + !Window.IsActive(1114) + !Window.IsActive(1120)</visible>
+				<visible>!Skin.HasSetting(DisableBingieLogo) + !Window.IsActive(1110) + !Window.IsActive(1111) + !Window.IsActive(1114) + !Window.IsActive(1120)+ ![Skin.HasSetting(NetflixModern2026) + Window.IsActive(Home)]</visible>
 				<description>Bingie logo</description>
 				<right>314</right>
 				<bottom>5</bottom>
@@ -816,7 +816,7 @@
 			</control>
 
 			<control type="grouplist">
-				<visible>!Skin.HasSetting(DisableBingieLogo) + [Window.IsActive(1110) | Window.IsActive(1111) | Window.IsActive(1120) | Window.IsActive(1114)]</visible>
+				<visible>!Skin.HasSetting(DisableBingieLogo) + [Window.IsActive(1110) | Window.IsActive(1111) | Window.IsActive(1120) | Window.IsActive(1114)]+ ![Skin.HasSetting(NetflixModern2026) + Window.IsActive(Home)]</visible>
 				<orientation>horizontal</orientation>
 				<height>56</height>
 				<width>300</width>
