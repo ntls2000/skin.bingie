@@ -662,6 +662,12 @@
             <onclick>ReloadSkin()</onclick>
             <selected>Skin.HasSetting(NetflixModern2026)</selected>
         </control>
+        <control type="button" id="31612">
+            <include>SkinSettings_Button</include>
+            <label>$LOCALIZE[31612]</label>
+            <onclick>RunScript(script.skinshortcuts,type=manage&amp;menu=modernnav)</onclick>
+            <visible>Skin.HasSetting(NetflixModern2026)</visible>
+        </control>
         <control type="textbox" id="31611">
             <width>100%</width>
             <height>73</height>
