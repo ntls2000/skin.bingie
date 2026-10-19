@@ -121,14 +121,7 @@
                 <onright>49002</onright>
                 <ondown>77777</ondown>
                 <onclick>ActivateWindow(Settings)</onclick>
-                <control type="image">
-                    <left>18</left>
-                    <top>18</top>
-                    <width>30</width>
-                    <height>30</height>
-                    <aspectratio>keep</aspectratio>
-                    <texture>common/settings1.png</texture>
-                </control>
+
             </control>
             <control type="button" id="49002">
                 <left>1811</left>
@@ -141,12 +134,7 @@
                 <onleft>49001</onleft>
                 <ondown>77777</ondown>
                 <onclick>System.LogOff</onclick>
-                <control type="image">
-                    <width>51</width>
-                    <height>51</height>
-                    <aspectratio>keep</aspectratio>
-                    <texture background="true">$INFO[System.ProfileThumb]</texture>
-                </control>
+
             </control>
         </control>
     </include>
