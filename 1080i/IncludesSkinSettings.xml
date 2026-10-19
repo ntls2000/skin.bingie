@@ -662,6 +662,13 @@
             <onclick>ReloadSkin()</onclick>
             <selected>Skin.HasSetting(NetflixModern2026)</selected>
         </control>
+        <control type="textbox" id="31611">
+            <width>100%</width>
+            <height>73</height>
+            <font>Reg22</font>
+            <label>$LOCALIZE[31611]</label>
+            <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+        </control>
         <control type="label" id="31182">
             <include>SkinSettings_Header</include>
             <label>$LOCALIZE[31182]</label>
