@@ -26,16 +26,20 @@ jobs:
       - name: Preserve test ZIP for manual Kodi 22 verification
         uses: actions/upload-artifact@v4
         with:
-          name: bingie-2.0.5-beta1-modern-2026-test
-          path: repo/skin.bingie/skin.bingie-2.0.5~beta1.zip
+          name: bingie-2.0.5-beta2-modern-2026-test
+          path: repo/skin.bingie/skin.bingie-2.0.5~beta2.zip
           if-no-files-found: error
           retention-days: 14
       - name: Publish the beta ZIP on this test branch only
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f 'repo/skin.bingie/skin.bingie-2.0.5~beta1.zip'
+          git add -f 'repo/skin.bingie/skin.bingie-2.0.5~beta2.zip'
           if ! git diff --cached --quiet; then
             git commit -m "test: publish Kodi 22 Skin Shortcuts v3 beta ZIP [skip ci]"
+            # Parallel source changes may arrive while the artifact builds:
+            # rebase this binary-only commit on the newest source head.
+            git fetch origin kodi22-skinshortcuts-v3
+            git rebase origin/kodi22-skinshortcuts-v3
             git push origin HEAD:kodi22-skinshortcuts-v3
           fi
