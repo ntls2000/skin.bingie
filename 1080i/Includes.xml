@@ -43,6 +43,7 @@
     <include file="IncludesOSD.xml" />
     <include file="IncludesSkinSettings.xml" />
     <include file="IncludesContextMenu.xml" />
+    <include file="IncludesNetflixModern.xml"/>
     <include file="IncludesHomeBingie.xml"/>
     <include file="IncludesBingieKeyboard.xml"/>
     <include file="IncludesBingieSearch.xml"/>
