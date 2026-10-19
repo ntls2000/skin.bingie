@@ -1,4 +1,4 @@
-# Bingie 2.0.5~beta1 — Accueil TV moderne (inspiré de Netflix 2026)
+# Bingie 2.0.5~beta2 — Accueil TV moderne (inspiré de Netflix 2026)
 
 ## Concept
 Une **première version expérimentale** du nouvel accueil TV introduit par Netflix en 2025
@@ -45,3 +45,20 @@ Cette version remplace le **menu d'accueil** et le **visuel de mise en avant** ;
 ce n'est pas une reproduction pixel-perfect de Netflix. Le carrousel de cartes
 vedettes, les transitions de prévisualisation et les cartes d'information
 contextuelles seront affinés après retour visuel depuis Kodi 22.
+
+## Corrections d'après la capture tablette (beta2)
+- Les libellés du menu ne défilent plus en dehors du bord droit : seulement quatre
+  onglets (Accueil, Séries, Films, Ma liste) restent visibles ; Recherche est indépendante.
+- Les menus de ce mode sont éditables via Skin Shortcuts 3 dans les paramètres d'accueil.
+  L'ancien menu conserve ses raccourcis et ses libellés personnalisés.
+- Le gigantesque titre de section héritée (« Accueil ») ne recouvre plus la mise en avant.
+- La carte principale dispose d'un titre provenant du contenu Spotlight de Kodi,
+  d'un genre, d'une année, d'un résumé et des actions **Lire** et **Plus d'infos**.
+- Les rangées de widgets utilisent de plus grandes cartes au format paysage ;
+  le mode classique garde le format choisi dans chaque widget.
+- Le premier widget est placé sous la carte vedette, sans chevaucher les textes.
+
+### Vérifications prioritaires beta2
+Confirmer que le titre du film/série apparaît dans la carte, que les actions Lire et
+Plus d'infos sont fonctionnelles et que les cartes en paysage sont correctes. Sur
+certains contenus ou extensions, Kodi peut ne pas fournir tous les champs de métadonnées.
