@@ -49,6 +49,14 @@ def check():
     templates = ET.tostring(config["templates"], encoding="unicode")
     assert not re.search(r"\$PYTHON\[|\$SKINSHORTCUTS\[", templates), "v2 template macros in v3 configuration"
 
+    # Skin Shortcuts v2 add-on strings (32000-32999) are not in the
+    # skin's language resources; unresolved $LOCALIZE[x] is shown verbatim.
+    for filename in ("menus.xml", "widgets.xml"):
+        source = (SHORTCUTS / filename).read_text(encoding="utf-8")
+        assert not re.search(r"\\$LOCALIZE\\[32\\d{3}\\]", source), (
+            f"Untranslated Skin Shortcuts v2 labels in {filename}"
+        )
+
     properties = config["properties"]
     mappings = properties.find("buttons")
     assert mappings is not None
