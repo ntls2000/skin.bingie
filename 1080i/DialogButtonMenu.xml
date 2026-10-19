@@ -107,6 +107,13 @@
 			</focusedlayout>
 			<content>
 				<include condition="!Window.IsActive(loginscreen)">skinshortcuts-powermenu</include>
+                <!-- Safe Kodi settings access if Skin Shortcuts has no generated controls. -->
+                <item id="99902">
+                    <label>$LOCALIZE[5]</label>
+                    <icon>common/settings1.png</icon>
+                    <onclick condition="Window.IsActive(shutdownmenu)">Dialog.Close(all)</onclick>
+                    <onclick>ActivateWindow(Settings)</onclick>
+                </item>
                 <!-- shutdown menu options for loginscreen -->
                 <item id="997">
                     <label>$LOCALIZE[13009]</label>
