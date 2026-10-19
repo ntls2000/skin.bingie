@@ -654,6 +654,14 @@
 
     <!-- Home Menu Options -->
     <include name="Home_Menu_Settings">
+        <!-- Opt-in 2026 television layout. Never override legacy mode automatically. -->
+        <control type="radiobutton" id="31610">
+            <include>SkinSettings_Button</include>
+            <label>$LOCALIZE[31610]</label>
+            <onclick>Skin.ToggleSetting(NetflixModern2026)</onclick>
+            <onclick>ReloadSkin()</onclick>
+            <selected>Skin.HasSetting(NetflixModern2026)</selected>
+        </control>
         <control type="label" id="31182">
             <include>SkinSettings_Header</include>
             <label>$LOCALIZE[31182]</label>
