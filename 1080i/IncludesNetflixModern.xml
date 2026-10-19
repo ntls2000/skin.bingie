@@ -1,150 +1,256 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Bingie Netflix-inspired 2026 TV layout. No Netflix art or backend is bundled.
-     All user-editable actions come from Skin Shortcuts v3 (skinshortcuts-mainmenu).
-     The original side menu remains available when NetflixModern2026 is disabled. -->
+<!-- Optional TV UI inspired by the 2025/2026 Netflix TV redesign.
+     Source art, user widgets and metadata remain inside Kodi. Classic mode is untouched. -->
 <includes>
-    <!-- The artwork comes from the selected Kodi spotlight widget. -->
-    <include name="NetflixModernHeroSurface">
-        <control type="group">
-            <visible>Skin.HasSetting(NetflixModern2026) + Window.IsActive(Home) + $EXP[IsCurrentWidgetSpotlight] + !Player.HasVideo</visible>
-            <left>70</left>
-            <top>126</top>
-            <width>1780</width>
-            <height>465</height>
-            <animation effect="fade" start="0" end="100" time="240">Visible</animation>
-            <!-- The solid surface provides a safe fallback when the library has no fanart. -->
-            <control type="image">
-                <width>1780</width>
-                <height>465</height>
-                <texture colordiffuse="ff111115">colors/color_white.png</texture>
-            </control>
-            <control type="image">
-                <width>1780</width>
-                <height>465</height>
-                <fadetime>350</fadetime>
-                <texture background="true">$VAR[BingieSpotlightBackground]</texture>
-                <aspectratio>scale</aspectratio>
-            </control>
-            <control type="image">
-                <width>1780</width>
-                <height>465</height>
-                <texture colordiffuse="ef09090c">bingie/diffuse.png</texture>
-                <aspectratio>stretch</aspectratio>
-            </control>
-        </control>
-    </include>
+  <include name="NetflixModernHeroSurface">
+    <control type="group" id="49020">
+      <visible>Skin.HasSetting(NetflixModern2026) + Window.IsActive(Home) + $EXP[IsCurrentWidgetSpotlight] + !Player.HasVideo</visible>
+      <left>76</left>
+      <top>125</top>
+      <width>1768</width>
+      <height>535</height>
+      <animation effect="fade" start="0" end="100" time="300">Visible</animation>
 
-    <!-- A permanent horizontal menu: search, films, series and user shortcuts.
-         Keep list id 900 and group id 9001 so existing focus/navigation survives. -->
-    <include name="NetflixModernTopNavigation">
-        <control type="group" id="9001">
-            <visible>Skin.HasSetting(NetflixModern2026) + Window.IsActive(Home)</visible>
-            <left>0</left>
-            <top>0</top>
-            <width>1920</width>
-            <height>113</height>
+      <!-- Entire fanart and its fade are within one cinematic card. -->
+      <control type="image">
+        <width>1768</width>
+        <height>535</height>
+        <texture colordiffuse="ff161619">colors/color_white.png</texture>
+      </control>
+      <control type="image">
+        <width>1768</width>
+        <height>535</height>
+        <fadetime>400</fadetime>
+        <texture background="true">$VAR[BingieSpotlightBackground]</texture>
+        <aspectratio>scale</aspectratio>
+      </control>
+      <control type="image">
+        <width>1768</width>
+        <height>535</height>
+        <texture colordiffuse="d2000000">bingie/diffuse.png</texture>
+        <aspectratio>stretch</aspectratio>
+      </control>
+      <control type="label">
+        <left>65</left>
+        <top>40</top>
+        <width>520</width>
+        <height>36</height>
+        <aligny>center</aligny>
+        <font>Bold26</font>
+        <textcolor>ffe50914</textcolor>
+        <label>$LOCALIZE[31613]</label>
+      </control>
+      <!-- Use the featured Kodi list item rather than a hub name such as "Accueil". -->
+      <control type="label">
+        <left>65</left>
+        <top>198</top>
+        <width>940</width>
+        <height>86</height>
+        <font>title2</font>
+        <aligny>center</aligny>
+        <textcolor>ffffffff</textcolor>
+        <label>$INFO[Container(1508).ListItem.Title]</label>
+      </control>
+      <control type="label">
+        <visible>String.IsEmpty(Container(1508).ListItem.Title)</visible>
+        <left>65</left>
+        <top>198</top>
+        <width>940</width>
+        <height>86</height>
+        <font>title2</font>
+        <aligny>center</aligny>
+        <textcolor>ffffffff</textcolor>
+        <label>$INFO[Container(1508).ListItem.Label]</label>
+      </control>
+      <control type="label">
+        <left>65</left>
+        <top>281</top>
+        <width>930</width>
+        <height>40</height>
+        <font>Reg26</font>
+        <textcolor>ffdddddd</textcolor>
+        <label>$INFO[Container(1508).ListItem.Genre]   •   $INFO[Container(1508).ListItem.Year]   •   $INFO[Container(1508).ListItem.Duration]</label>
+      </control>
+      <control type="textbox">
+        <left>65</left>
+        <top>325</top>
+        <width>870</width>
+        <height>87</height>
+        <font>Reg26</font>
+        <textcolor>ffededed</textcolor>
+        <label>$INFO[Container(1508).ListItem.Plot]</label>
+        <autoscroll>false</autoscroll>
+      </control>
+      <control type="button" id="49010">
+        <left>65</left>
+        <top>435</top>
+        <width>210</width>
+        <height>67</height>
+        <font>Bold26</font>
+        <align>center</align>
+        <textcolor>ff111111</textcolor>
+        <focusedcolor>ff111111</focusedcolor>
+        <label>$LOCALIZE[208]</label>
+        <texturefocus colordiffuse="ffffffff" border="16">dialogs/keyboard/key-nf-2.png</texturefocus>
+        <texturenofocus colordiffuse="ffe8e8e8" border="16">dialogs/keyboard/key-nf-2.png</texturenofocus>
+        <onup>900</onup>
+        <ondown>77777</ondown>
+        <onright>49011</onright>
+        <onclick condition="!String.IsEqual(Container(1508).ListItem.DBType,tvshow)">PlayMedia($ESCINFO[Container(1508).ListItem.FileNameAndPath],resume)</onclick>
+        <onclick condition="String.IsEqual(Container(1508).ListItem.DBType,tvshow)">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[Container(1508).ListItem.DBID]/-2/,return)</onclick>
+      </control>
+      <control type="button" id="49011">
+        <left>295</left>
+        <top>435</top>
+        <width>247</width>
+        <height>67</height>
+        <font>Bold26</font>
+        <align>center</align>
+        <textcolor>ffefefef</textcolor>
+        <focusedcolor>ffefefef</focusedcolor>
+        <label>$LOCALIZE[31614]</label>
+        <texturefocus colordiffuse="ff606066" border="16">dialogs/keyboard/key-nf-2.png</texturefocus>
+        <texturenofocus colordiffuse="bf35353a" border="16">dialogs/keyboard/key-nf-2.png</texturenofocus>
+        <onup>900</onup>
+        <ondown>77777</ondown>
+        <onleft>49010</onleft>
+        <onclick>SetFocus(1508)</onclick>
+        <onclick>Action(info)</onclick>
+      </control>
+    </control>
+  </include>
 
-            <control type="image">
-                <width>1920</width>
-                <height>113</height>
-                <texture colordiffuse="f50c0c0f">colors/color_white.png</texture>
-            </control>
-            <!-- Distinct Bingie wordmark, not Netflix branding. -->
-            <control type="label">
-                <left>54</left>
-                <top>34</top>
-                <width>125</width>
-                <height>51</height>
-                <font>Bold38</font>
-                <aligny>center</aligny>
-                <textcolor>ffe50914</textcolor>
-                <label>BINGIE</label>
-            </control>
-            <control type="list" id="900">
-                <left>195</left>
-                <top>25</top>
-                <width>1490</width>
-                <height>70</height>
-                <orientation>horizontal</orientation>
-                <itemgap>5</itemgap>
-                <scrolltime>170</scrolltime>
-                <preloaditems>8</preloaditems>
-                <onup>noop</onup>
-                <ondown condition="Control.IsVisible(1508)">1508</ondown>
-                <ondown>77777</ondown>
-                <onback>77777</onback>
-                <itemlayout width="181" height="67">
-                    <!-- Keep the current page indicated even when focus moves to the rows. -->
-                    <control type="image">
-                        <visible>$EXP[IsMenuEntryActive]</visible>
-                        <left>7</left>
-                        <top>5</top>
-                        <width>167</width>
-                        <height>55</height>
-                        <texture colordiffuse="ff38383c" border="18">dialogs/keyboard/key-nf-2.png</texture>
-                    </control>
-                    <control type="label">
-                        <left>8</left>
-                        <top>1</top>
-                        <width>165</width>
-                        <height>63</height>
-                        <align>center</align>
-                        <aligny>center</aligny>
-                        <font>Reg26</font>
-                        <textcolor>ffdddddd</textcolor>
-                        <label>$INFO[ListItem.Label]</label>
-                    </control>
-                </itemlayout>
-                <focusedlayout width="181" height="67">
-                    <control type="image">
-                        <left>7</left>
-                        <top>5</top>
-                        <width>167</width>
-                        <height>55</height>
-                        <texture colordiffuse="fff5f5f5" border="18">dialogs/keyboard/key-nf-2.png</texture>
-                    </control>
-                    <control type="label">
-                        <left>11</left>
-                        <top>1</top>
-                        <width>158</width>
-                        <height>63</height>
-                        <align>center</align>
-                        <aligny>center</aligny>
-                        <font>Bold26</font>
-                        <textcolor>ff151515</textcolor>
-                        <label>$INFO[ListItem.Label]</label>
-                    </control>
-                </focusedlayout>
-                <include>MainMenuContent</include>
-            </control>
-            <!-- Safety route to Kodi settings, independent of Skin Shortcuts. -->
-            <control type="button" id="49001">
-                <left>1709</left>
-                <top>29</top>
-                <width>72</width>
-                <height>65</height>
-                <texturefocus border="10" colordiffuse="fff5f5f5">dialogs/keyboard/key-nf-2.png</texturefocus>
-                <texturenofocus/>
-                <label/>
-                <onleft>900</onleft>
-                <onright>49002</onright>
-                <ondown>77777</ondown>
-                <onclick>ActivateWindow(Settings)</onclick>
-
-            </control>
-            <control type="button" id="49002">
-                <left>1811</left>
-                <top>37</top>
-                <width>51</width>
-                <height>51</height>
-                <texturefocus border="10" colordiffuse="fff5f5f5">dialogs/keyboard/key-nf-2.png</texturefocus>
-                <texturenofocus/>
-                <label/>
-                <onleft>49001</onleft>
-                <ondown>77777</ondown>
-                <onclick>System.LogOff</onclick>
-
-            </control>
-        </control>
-    </include>
+  <!-- Compact top nav: exactly four editable shortcuts, like a contemporary TV app.
+       Skin Shortcuts v3 stores these separately from existing classic shortcuts. -->
+  <include name="NetflixModernTopNavigation">
+    <control type="group" id="9001">
+      <visible>Skin.HasSetting(NetflixModern2026) + Window.IsActive(Home)</visible>
+      <left>0</left>
+      <top>0</top>
+      <width>1920</width>
+      <height>109</height>
+      <control type="image">
+        <width>1920</width>
+        <height>109</height>
+        <texture colordiffuse="f50d0d10">colors/color_white.png</texture>
+      </control>
+      <control type="label">
+        <left>58</left>
+        <top>23</top>
+        <width>215</width>
+        <height>65</height>
+        <aligny>center</aligny>
+        <font>Bold43</font>
+        <textcolor>ffe50914</textcolor>
+        <label>BINGIE</label>
+      </control>
+      <!-- Search is a single icon outside the main tabs. -->
+      <control type="button" id="49003">
+        <left>310</left>
+        <top>27</top>
+        <width>90</width>
+        <height>62</height>
+        <label>$LOCALIZE[137]</label>
+        <font>Reg26</font>
+        <align>center</align>
+        <texturefocus colordiffuse="ff47474c" border="18">dialogs/keyboard/key-nf-2.png</texturefocus>
+        <texturenofocus/>
+        <onleft>900</onleft>
+        <onright>900</onright>
+        <ondown>49010</ondown>
+        <onclick>ActivateWindow(1109,return)</onclick>
+      </control>
+      <control type="list" id="900">
+        <left>445</left>
+        <top>24</top>
+        <width>1050</width>
+        <height>70</height>
+        <orientation>horizontal</orientation>
+        <itemgap>12</itemgap>
+        <scrolltime>170</scrolltime>
+        <preloaditems>5</preloaditems>
+        <onup>noop</onup>
+        <ondown>49010</ondown>
+        <onback>77777</onback>
+        <itemlayout width="245" height="68">
+          <control type="image">
+            <visible>$EXP[IsMenuEntryActive]</visible>
+            <left>5</left>
+            <top>7</top>
+            <width>234</width>
+            <height>54</height>
+            <texture colordiffuse="ff333338" border="18">dialogs/keyboard/key-nf-2.png</texture>
+          </control>
+          <control type="label">
+            <left>8</left>
+            <top>1</top>
+            <width>226</width>
+            <height>65</height>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>Reg26</font>
+            <textcolor>ffdddddd</textcolor>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+        </itemlayout>
+        <focusedlayout width="245" height="68">
+          <control type="image">
+            <left>5</left>
+            <top>7</top>
+            <width>234</width>
+            <height>54</height>
+            <texture colordiffuse="fff5f5f5" border="18">dialogs/keyboard/key-nf-2.png</texture>
+          </control>
+          <control type="label">
+            <left>8</left>
+            <top>1</top>
+            <width>226</width>
+            <height>65</height>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>Bold26</font>
+            <textcolor>ff141414</textcolor>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+        </focusedlayout>
+        <content><include>skinshortcuts-modernnav</include></content>
+      </control>
+      <!-- Unconditional emergency settings action: never rely on a dynamic shortcut. -->
+      <control type="button" id="49001">
+        <left>1600</left>
+        <top>27</top>
+        <width>120</width>
+        <height>62</height>
+        <label>$LOCALIZE[5]</label>
+        <font>Reg22</font>
+        <align>center</align>
+        <texturefocus colordiffuse="ff47474c" border="18">dialogs/keyboard/key-nf-2.png</texturefocus>
+        <texturenofocus/>
+        <onleft>900</onleft>
+        <onright>49002</onright>
+        <ondown>49010</ondown>
+        <onclick>ActivateWindow(Settings)</onclick>
+      </control>
+      <control type="button" id="49002">
+        <left>1780</left>
+        <top>27</top>
+        <width>80</width>
+        <height>62</height>
+        <texturefocus colordiffuse="ff47474c" border="18">dialogs/keyboard/key-nf-2.png</texturefocus>
+        <texturenofocus/>
+        <onleft>49001</onleft>
+        <ondown>49010</ondown>
+        <label>$LOCALIZE[31076]</label>
+        <onclick>System.LogOff</onclick>
+      </control>
+      <control type="image">
+        <left>1799</left>
+        <top>38</top>
+        <width>42</width>
+        <height>42</height>
+        <aspectratio>keep</aspectratio>
+        <texture background="true">$INFO[System.ProfileThumb]</texture>
+      </control>
+    </control>
+  </include>
 </includes>
