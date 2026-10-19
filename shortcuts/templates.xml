@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Skin Shortcuts v3 templates; the old v2 template.xml is intentionally unused.
+     Each Bingie hub owns a v3 menu and emits its widgets into the original include. -->
+<templates>
+  <!-- Bingie Widgets: replaced legacy submenuOther/$SKINSHORTCUTS macros -->
+  <template include="Widgets" menu="mainmenu">
+    <condition>widgetPath</condition>
+    <property name="contentStyle">normal</property>
+    <property name="container">fixedlist</property>
+    <property name="position">horizontal</property>
+    <property name="width">100%</property>
+    <property name="height">341</property>
+    <property name="widgetStyle">default</property>
+    <property name="widgetLimit">20</property>
+    <property name="widgetTags">WidgetTagOverlayDisable</property>
+    <property name="widgetTarget">videos</property>
+    <controls>
+      <include content="widget_header_multi">
+        <param name="widgetid" value="$MATH[1500 + index]" />
+        <param name="submenuid" value="$PROPERTY[name]" />
+        <param name="widgetName" value="$PROPERTY[widgetLabel]" />
+      </include>
+      <include content="widget_base">
+        <param name="contentStyle" value="$PROPERTY[contentStyle]" />
+        <param name="widgetid" value="$MATH[1500 + index]" />
+        <param name="container" value="$PROPERTY[container]" />
+        <param name="position" value="$PROPERTY[position]" />
+        <param name="width" value="$PROPERTY[width]" />
+        <param name="height" value="$PROPERTY[height]" />
+        <param name="widgetName" value="$PROPERTY[widgetLabel]" />
+        <param name="submenuid" value="$PROPERTY[name]" />
+        <param name="widgetTags" value="$PROPERTY[widgetTags]" />
+        <param name="widgetTarget" value="$PROPERTY[widgetTarget]" />
+        <param name="widgetPath" value="$PROPERTY[widgetPath]" />
+        <param name="widgetStyle" value="widget_layout_$PROPERTY[widgetStyle]" />
+        <param name="widgetSortBy" value="$PROPERTY[widgetSortBy]" />
+        <param name="widgetSortOrder" value="$PROPERTY[widgetSortOrder]" />
+        <param name="widgetLimit" value="$PROPERTY[widgetLimit]" />
+      </include>
+    </controls>
+  </template>
+  <!-- Bingie moviehub: replaced legacy submenuOther/$SKINSHORTCUTS macros -->
+  <template include="moviehub" menu="moviehub">
+    <condition>widgetPath</condition>
+    <property name="contentStyle">normal</property>
+    <property name="container">fixedlist</property>
+    <property name="position">horizontal</property>
+    <property name="width">100%</property>
+    <property name="height">341</property>
+    <property name="widgetStyle">default</property>
+    <property name="widgetLimit">20</property>
+    <property name="widgetTags">WidgetTagOverlayDisable</property>
+    <property name="widgetTarget">videos</property>
+    <controls>
+      <include content="widget_header_multi">
+        <param name="widgetid" value="$MATH[1600 + index]" />
+        <param name="submenuid" value="$PROPERTY[name]" />
+        <param name="widgetName" value="$PROPERTY[widgetLabel]" />
+      </include>
+      <include content="widget_base">
+        <param name="contentStyle" value="$PROPERTY[contentStyle]" />
+        <param name="widgetid" value="$MATH[1600 + index]" />
+        <param name="container" value="$PROPERTY[container]" />
+        <param name="position" value="$PROPERTY[position]" />
+        <param name="width" value="$PROPERTY[width]" />
+        <param name="height" value="$PROPERTY[height]" />
+        <param name="widgetName" value="$PROPERTY[widgetLabel]" />
+        <param name="submenuid" value="$PROPERTY[name]" />
+        <param name="widgetTags" value="$PROPERTY[widgetTags]" />
+        <param name="widgetTarget" value="$PROPERTY[widgetTarget]" />
+        <param name="widgetPath" value="$PROPERTY[widgetPath]" />
+        <param name="widgetStyle" value="widget_layout_$PROPERTY[widgetStyle]" />
+        <param name="widgetSortBy" value="$PROPERTY[widgetSortBy]" />
+        <param name="widgetSortOrder" value="$PROPERTY[widgetSortOrder]" />
+        <param name="widgetLimit" value="$PROPERTY[widgetLimit]" />
+      </include>
+    </controls>
+  </template>
+  <!-- Bingie tvshowhub: replaced legacy submenuOther/$SKINSHORTCUTS macros -->
+  <template include="tvshowhub" menu="tvshowhub">
+    <condition>widgetPath</condition>
+    <property name="contentStyle">normal</property>
+    <property name="container">fixedlist</property>
+    <property name="position">horizontal</property>
+    <property name="width">100%</property>
+    <property name="height">341</property>
+    <property name="widgetStyle">default</property>
+    <property name="widgetLimit">20</property>
+    <property name="widgetTags">WidgetTagOverlayDisable</property>
+    <property name="widgetTarget">videos</property>
+    <controls>
+      <include content="widget_header_multi">
+        <param name="widgetid" value="$MATH[1700 + index]" />
+        <param name="submenuid" value="$PROPERTY[name]" />
+        <param name="widgetName" value="$PROPERTY[widgetLabel]" />
+      </include>
+      <include content="widget_base">
+        <param name="contentStyle" value="$PROPERTY[contentStyle]" />
+        <param name="widgetid" value="$MATH[1700 + index]" />
+        <param name="container" value="$PROPERTY[container]" />
+        <param name="position" value="$PROPERTY[position]" />
+        <param name="width" value="$PROPERTY[width]" />
+        <param name="height" value="$PROPERTY[height]" />
+        <param name="widgetName" value="$PROPERTY[widgetLabel]" />
+        <param name="submenuid" value="$PROPERTY[name]" />
+        <param name="widgetTags" value="$PROPERTY[widgetTags]" />
+        <param name="widgetTarget" value="$PROPERTY[widgetTarget]" />
+        <param name="widgetPath" value="$PROPERTY[widgetPath]" />
+        <param name="widgetStyle" value="widget_layout_$PROPERTY[widgetStyle]" />
+        <param name="widgetSortBy" value="$PROPERTY[widgetSortBy]" />
+        <param name="widgetSortOrder" value="$PROPERTY[widgetSortOrder]" />
+        <param name="widgetLimit" value="$PROPERTY[widgetLimit]" />
+      </include>
+    </controls>
+  </template>
+  <!-- Bingie newhub: replaced legacy submenuOther/$SKINSHORTCUTS macros -->
+  <template include="newhub" menu="newhub">
+    <condition>widgetPath</condition>
+    <property name="contentStyle">normal</property>
+    <property name="container">fixedlist</property>
+    <property name="position">horizontal</property>
+    <property name="width">100%</property>
+    <property name="height">341</property>
+    <property name="widgetStyle">default</property>
+    <property name="widgetLimit">20</property>
+    <property name="widgetTags">WidgetTagOverlayDisable</property>
+    <property name="widgetTarget">videos</property>
+    <controls>
+      <include content="widget_header_multi">
+        <param name="widgetid" value="$MATH[1800 + index]" />
+        <param name="submenuid" value="$PROPERTY[name]" />
+        <param name="widgetName" value="$PROPERTY[widgetLabel]" />
+      </include>
+      <include content="widget_base">
+        <param name="contentStyle" value="$PROPERTY[contentStyle]" />
+        <param name="widgetid" value="$MATH[1800 + index]" />
+        <param name="container" value="$PROPERTY[container]" />
+        <param name="position" value="$PROPERTY[position]" />
+        <param name="width" value="$PROPERTY[width]" />
+        <param name="height" value="$PROPERTY[height]" />
+        <param name="widgetName" value="$PROPERTY[widgetLabel]" />
+        <param name="submenuid" value="$PROPERTY[name]" />
+        <param name="widgetTags" value="$PROPERTY[widgetTags]" />
+        <param name="widgetTarget" value="$PROPERTY[widgetTarget]" />
+        <param name="widgetPath" value="$PROPERTY[widgetPath]" />
+        <param name="widgetStyle" value="widget_layout_$PROPERTY[widgetStyle]" />
+        <param name="widgetSortBy" value="$PROPERTY[widgetSortBy]" />
+        <param name="widgetSortOrder" value="$PROPERTY[widgetSortOrder]" />
+        <param name="widgetLimit" value="$PROPERTY[widgetLimit]" />
+      </include>
+    </controls>
+  </template>
+  <!-- Bingie musichub: replaced legacy submenuOther/$SKINSHORTCUTS macros -->
+  <template include="musichub" menu="musichub">
+    <condition>widgetPath</condition>
+    <property name="contentStyle">normal</property>
+    <property name="container">fixedlist</property>
+    <property name="position">horizontal</property>
+    <property name="width">100%</property>
+    <property name="height">341</property>
+    <property name="widgetStyle">default</property>
+    <property name="widgetLimit">20</property>
+    <property name="widgetTags">WidgetTagOverlayDisable</property>
+    <property name="widgetTarget">music</property>
+    <controls>
+      <include content="widget_header_multi">
+        <param name="widgetid" value="$MATH[1900 + index]" />
+        <param name="submenuid" value="$PROPERTY[name]" />
+        <param name="widgetName" value="$PROPERTY[widgetLabel]" />
+      </include>
+      <include content="widget_base">
+        <param name="contentStyle" value="$PROPERTY[contentStyle]" />
+        <param name="widgetid" value="$MATH[1900 + index]" />
+        <param name="container" value="$PROPERTY[container]" />
+        <param name="position" value="$PROPERTY[position]" />
+        <param name="width" value="$PROPERTY[width]" />
+        <param name="height" value="$PROPERTY[height]" />
+        <param name="widgetName" value="$PROPERTY[widgetLabel]" />
+        <param name="submenuid" value="$PROPERTY[name]" />
+        <param name="widgetTags" value="$PROPERTY[widgetTags]" />
+        <param name="widgetTarget" value="$PROPERTY[widgetTarget]" />
+        <param name="widgetPath" value="$PROPERTY[widgetPath]" />
+        <param name="widgetStyle" value="widget_layout_$PROPERTY[widgetStyle]" />
+        <param name="widgetSortBy" value="$PROPERTY[widgetSortBy]" />
+        <param name="widgetSortOrder" value="$PROPERTY[widgetSortOrder]" />
+        <param name="widgetLimit" value="$PROPERTY[widgetLimit]" />
+      </include>
+    </controls>
+  </template>
+  <!-- Bingie customhub: replaced legacy submenuOther/$SKINSHORTCUTS macros -->
+  <template include="customhub" menu="customhub">
+    <condition>widgetPath</condition>
+    <property name="contentStyle">normal</property>
+    <property name="container">fixedlist</property>
+    <property name="position">horizontal</property>
+    <property name="width">100%</property>
+    <property name="height">341</property>
+    <property name="widgetStyle">default</property>
+    <property name="widgetLimit">20</property>
+    <property name="widgetTags">WidgetTagOverlayDisable</property>
+    <property name="widgetTarget">videos</property>
+    <controls>
+      <include content="widget_header_multi">
+        <param name="widgetid" value="$MATH[2000 + index]" />
+        <param name="submenuid" value="$PROPERTY[name]" />
+        <param name="widgetName" value="$PROPERTY[widgetLabel]" />
+      </include>
+      <include content="widget_base">
+        <param name="contentStyle" value="$PROPERTY[contentStyle]" />
+        <param name="widgetid" value="$MATH[2000 + index]" />
+        <param name="container" value="$PROPERTY[container]" />
+        <param name="position" value="$PROPERTY[position]" />
+        <param name="width" value="$PROPERTY[width]" />
+        <param name="height" value="$PROPERTY[height]" />
+        <param name="widgetName" value="$PROPERTY[widgetLabel]" />
+        <param name="submenuid" value="$PROPERTY[name]" />
+        <param name="widgetTags" value="$PROPERTY[widgetTags]" />
+        <param name="widgetTarget" value="$PROPERTY[widgetTarget]" />
+        <param name="widgetPath" value="$PROPERTY[widgetPath]" />
+        <param name="widgetStyle" value="widget_layout_$PROPERTY[widgetStyle]" />
+        <param name="widgetSortBy" value="$PROPERTY[widgetSortBy]" />
+        <param name="widgetSortOrder" value="$PROPERTY[widgetSortOrder]" />
+        <param name="widgetLimit" value="$PROPERTY[widgetLimit]" />
+      </include>
+    </controls>
+  </template>
+  <!-- Bingie mylisthub: replaced legacy submenuOther/$SKINSHORTCUTS macros -->
+  <template include="mylisthub" menu="mylisthub">
+    <condition>widgetPath</condition>
+    <property name="contentStyle">normal</property>
+    <property name="container">fixedlist</property>
+    <property name="position">horizontal</property>
+    <property name="width">100%</property>
+    <property name="height">341</property>
+    <property name="widgetStyle">default</property>
+    <property name="widgetLimit">20</property>
+    <property name="widgetTags">WidgetTagOverlayDisable</property>
+    <property name="widgetTarget">videos</property>
+    <controls>
+      <include content="widget_header_multi">
+        <param name="widgetid" value="$MATH[2100 + index]" />
+        <param name="submenuid" value="$PROPERTY[name]" />
+        <param name="widgetName" value="$PROPERTY[widgetLabel]" />
+      </include>
+      <include content="widget_base">
+        <param name="contentStyle" value="$PROPERTY[contentStyle]" />
+        <param name="widgetid" value="$MATH[2100 + index]" />
+        <param name="container" value="$PROPERTY[container]" />
+        <param name="position" value="$PROPERTY[position]" />
+        <param name="width" value="$PROPERTY[width]" />
+        <param name="height" value="$PROPERTY[height]" />
+        <param name="widgetName" value="$PROPERTY[widgetLabel]" />
+        <param name="submenuid" value="$PROPERTY[name]" />
+        <param name="widgetTags" value="$PROPERTY[widgetTags]" />
+        <param name="widgetTarget" value="$PROPERTY[widgetTarget]" />
+        <param name="widgetPath" value="$PROPERTY[widgetPath]" />
+        <param name="widgetStyle" value="widget_layout_$PROPERTY[widgetStyle]" />
+        <param name="widgetSortBy" value="$PROPERTY[widgetSortBy]" />
+        <param name="widgetSortOrder" value="$PROPERTY[widgetSortOrder]" />
+        <param name="widgetLimit" value="$PROPERTY[widgetLimit]" />
+      </include>
+    </controls>
+  </template>
+  <!-- Bingie somethinghub: replaced legacy submenuOther/$SKINSHORTCUTS macros -->
+  <template include="somethinghub" menu="somethinghub">
+    <condition>widgetPath</condition>
+    <property name="contentStyle">normal</property>
+    <property name="container">panel</property>
+    <property name="position">vertical</property>
+    <property name="width">1804</property>
+    <property name="height">474</property>
+    <property name="widgetStyle">default</property>
+    <property name="widgetLimit">20</property>
+    <property name="widgetTags">WidgetTagOverlayDisable</property>
+    <property name="widgetTarget">videos</property>
+    <controls>
+      <include content="Object_Something_Template">
+        <param name="widgetid" value="$MATH[1530 + index]" />
+        <param name="widgetpath" value="$PROPERTY[widgetPath]" />
+        <param name="label" value="$PROPERTY[label]" />
+        <param name="widgetSortBy" value="$PROPERTY[widgetSortBy]" />
+        <param name="widgetSortOrder" value="$PROPERTY[widgetSortOrder]" />
+        <param name="widgetlimit" value="$PROPERTY[widgetLimit]" />
+        <param name="widgetTarget" value="$PROPERTY[widgetTarget]" />
+      </include>
+
+    </controls>
+  </template>
+</templates>
