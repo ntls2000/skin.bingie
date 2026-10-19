@@ -9,10 +9,10 @@
         <control type="group" id="9000">
 			<visible>!String.Contains(VideoPlayer.Title,bingie_intro)</visible>
             <include>HideWindowOnStartupAndDialogInfoLoad</include>
-            <!-- Spotlight BG -->
+            <!-- Spotlight BG (classic Bingie) -->
             <control type="group">
                 <include>FullscreenDimensions</include>
-                <visible>$EXP[IsCurrentWidgetSpotlight]</visible>
+                <visible>$EXP[IsCurrentWidgetSpotlight] + ![Skin.HasSetting(NetflixModern2026) + Window.IsActive(Home)]</visible>
 				<animation effect="fade" start="0" end="100" time="400" condition="!Player.HasVideo">Visible</animation>
                 <control type="list" id="15081">
                     <visible>$EXP[IsTvShowDBType]</visible>
@@ -41,7 +41,8 @@
 					<animation effect="fade" start="0" end="100" time="1200">Visible</animation>
                 </control>
 			</control>
-			<!-- SPOTLIGHT DIFFUSE VIGNETTE -->
+			<include>NetflixModernHeroSurface</include>
+            <!-- SPOTLIGHT DIFFUSE VIGNETTE -->
 			<control type="image">
 				<visible>$EXP[IsCurrentWidgetSpotlight]</visible>
                 <include>FullscreenDimensions</include>
@@ -838,13 +839,14 @@
 			</control>
 			</control>								       
 
-		<include>Header</include>
+		<include condition="!Skin.HasSetting(NetflixModern2026) | !Window.IsActive(Home)">Header</include>
 
         <include content="Dim_Overlay">
-            <param name="visibility" value="$EXP[IsMainMenuOpened]" />
+            <param name="visibility" value="$EXP[IsMainMenuOpened] + ![Skin.HasSetting(NetflixModern2026) + Window.IsActive(Home)]" />
         </include>
 		<control type="group">
-			<include>BingieSideBladeMainMenu</include>
+			<include condition="!Skin.HasSetting(NetflixModern2026) | !Window.IsActive(Home)">BingieSideBladeMainMenu</include>
+            <include condition="Skin.HasSetting(NetflixModern2026) + Window.IsActive(Home)">NetflixModernTopNavigation</include>
 			<animation effect="fade" start="100" end="50" time="300" condition="!Control.IsVisible(40003) + !$EXP[IsMainMenuOpened] + !$EXP[IsCurrentWidgetSpotlight] + [Window.IsActive(Home) | $EXP[IsBingieHubsActive2]] + Container.HasPrevious">Conditional</animation>
 		</control>	 
 		<!-- Snow Effect -->
