@@ -49,6 +49,13 @@ jobs:
           ref: main
           path: addons-src/script.module.bingie
           persist-credentials: false
+      - name: Fetch Kodi 22 Skin Shortcuts v3 beta
+        uses: actions/checkout@v4
+        with:
+          repository: ntls2000/skin.bingie
+          ref: kodi22-skinshortcuts-v3
+          path: beta-skin-source
+          persist-credentials: false
       - name: Verify source and Kodi 22 Python syntax
         run: |
           python3 tools/check_kodi22.py
@@ -65,6 +72,46 @@ jobs:
           PY
       - name: Generate Kodi repository
         run: python3 tools/build_kodi_repo.py
+      - name: Publish the validated v3 beta in our existing Kodi repository
+        run: |
+          python3 - <<'PY'
+          import hashlib
+          import shutil
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+          from zipfile import ZipFile
+
+          beta = Path('beta-skin-source')
+          expected = '2.0.4~beta1'
+          manifest = ET.parse(beta / 'addon.xml').getroot()
+          assert manifest.get('id') == 'skin.bingie'
+          assert manifest.get('version') == expected, 'Unexpected beta version'
+          deps = {x.get('addon'): x.get('version') for x in manifest.findall('./requires/import')}
+          assert deps.get('script.skinshortcuts') == '3.0.4', 'Skin Shortcuts v3 is required'
+
+          source = beta / 'repo/skin.bingie' / f'skin.bingie-{expected}.zip'
+          assert source.is_file(), 'Compiled beta ZIP missing from test branch'
+          with ZipFile(source) as archive:
+              bundled = ET.fromstring(archive.read('skin.bingie/addon.xml'))
+              assert bundled.get('id') == 'skin.bingie'
+              assert bundled.get('version') == expected, 'Beta ZIP version does not match manifest'
+
+          destination = Path('repo/skin.bingie') / source.name
+          destination.parent.mkdir(parents=True, exist_ok=True)
+          shutil.copy2(source, destination)
+
+          index = Path('repo/addons.xml')
+          catalog = ET.parse(index).getroot()
+          old = [a for a in catalog.findall('addon') if a.get('id') == 'skin.bingie']
+          assert len(old) == 1, 'Skin catalogue entry not unique'
+          catalog.remove(old[0])
+          catalog.insert(0, manifest)
+          ET.indent(catalog, space='    ')
+          xml = ET.tostring(catalog, encoding='utf-8', xml_declaration=True) + b'\n'
+          index.write_bytes(xml)
+          Path('repo/addons.xml.md5').write_text(hashlib.md5(xml).hexdigest(), encoding='ascii')
+          print(f'Published Bingie {expected} (Skin Shortcuts 3) to existing Kodi repository')
+          PY
       - name: Publish ZIP files and repository index
         run: |
           git config user.name "github-actions[bot]"
