@@ -238,28 +238,28 @@
             <shortcut name="mylist" label="$LOCALIZE[31534]" icon="shortcuts/mylist.png"><action>ActivateWindow(1114,return)</action></shortcut>
             <shortcut name="customhub" label="$LOCALIZE[31252]" icon="shortcuts/widget.png"><action>ActivateWindow(1113,return)</action></shortcut>
             <shortcut name="something" label="$LOCALIZE[31385]" icon="shortcuts/something.png"><action>ActivateWindow(1118,return)</action></shortcut>
-            <shortcut name="pvrhub" label="$LOCALIZE[32022]" icon="shortcuts/antenna.png" visible="PVR.HasTVChannels | PVR.HasRadioChannels"><action>ActivateWindow(1116,return)</action></shortcut>
+            <shortcut name="pvrhub" label="$LOCALIZE[19020]" icon="shortcuts/antenna.png" visible="PVR.HasTVChannels | PVR.HasRadioChannels"><action>ActivateWindow(1116,return)</action></shortcut>
             <shortcut name="music" label="$LOCALIZE[2]" icon="shortcuts/music.png" visible="Library.HasContent(music)"><action>ActivateWindow(1120,return)</action></shortcut>
             <shortcut name="weather" label="$LOCALIZE[12600]" icon="shortcuts/weather.png"><action>ActivateWindow(Weather)</action></shortcut>
             <shortcut name="skinsettings" label="$LOCALIZE[20077]" icon="common/skin-settings.png"><action>ActivateWindow(SkinSettings)</action></shortcut>
             <shortcut name="settings" label="$LOCALIZE[5]" icon="common/settings1.png"><action>ActivateWindow(Settings)</action></shortcut>
         </group>
-        <group name="video" label="$LOCALIZE[32030]">
+        <group name="video" label="$LOCALIZE[3]">
             <content source="nodes" target="video"/>
             <content source="playlists" target="video"/>
             <content source="sources" target="video"/>
             <content source="addons" target="video"/>
         </group>
-        <group name="music" label="$LOCALIZE[32031]">
+        <group name="music" label="$LOCALIZE[2]">
             <content source="nodes" target="music"/>
             <content source="playlists" target="music"/>
             <content source="addons" target="audio"/>
         </group>
-        <group name="pvr" label="$LOCALIZE[32017]" visible="PVR.HasTVChannels | PVR.HasRadioChannels">
+        <group name="pvr" label="$LOCALIZE[19020]" visible="PVR.HasTVChannels | PVR.HasRadioChannels">
             <content source="pvr" target="tv"/>
             <content source="pvr" target="radio"/>
         </group>
-        <group name="other" label="$LOCALIZE[32007]">
+        <group name="other" label="$LOCALIZE[24001]">
             <content source="favourites"/>
             <content source="settings"/>
             <content source="commands"/>
