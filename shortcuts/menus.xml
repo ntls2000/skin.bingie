@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- EXPERIMENTAL Kodi 22 / Skin Shortcuts v3 configuration.
-     Main menu + power menu are based on Bingie v2 defaults.
-     Do NOT merge this branch into omega until templates, submenu
-     includes, widgets, dialogs and actions have been fully migrated. -->
+<!-- Skin Shortcuts v3: full Bingie menu definitions; built for Kodi 22. -->
 <menus>
     <menu name="mainmenu" container="900">
+        <allow widgets="true" backgrounds="true" submenus="true" />
         <item name="search">
             <label>$LOCALIZE[137]</label>
             <action>ActivateWindow(1109,return)</action>
@@ -20,12 +18,12 @@
             <action>ActivateWindow(1112,return)</action>
             <icon>shortcuts/new.png</icon>
         </item>
-        <item name="shows">
+        <item name="shows" submenu="shows" widget="recent-episodes">
             <label>$LOCALIZE[31566]</label>
             <action>ActivateWindow(1110,return)</action>
             <icon>shortcuts/tv.png</icon>
         </item>
-        <item name="movies">
+        <item name="movies" submenu="movies" widget="recent-movies">
             <label>$LOCALIZE[342]</label>
             <action>ActivateWindow(1111,return)</action>
             <icon>shortcuts/clapperboard.png</icon>
@@ -40,9 +38,15 @@
             <action>ActivateWindow(1114,return)</action>
             <icon>shortcuts/mylist.png</icon>
         </item>
+        <!-- Unremovable emergency route back to Kodi settings. -->
+        <item name="kodi-settings" required="true">
+            <label>$LOCALIZE[5]</label>
+            <action>ActivateWindow(Settings)</action>
+            <icon>common/settings1.png</icon>
+        </item>
     </menu>
     <menu name="powermenu">
-        <item name="settings">
+        <item name="settings" required="true">
             <label>$LOCALIZE[5]</label>
             <action>ActivateWindow(Settings)</action>
             <icon>common/settings1.png</icon>
@@ -68,6 +72,161 @@
             <icon>common/shutdown1.png</icon>
         </item>
     </menu>
+  <menu name="searchmenu">
+    <item name="searchmenu-1">
+      <label>$LOCALIZE[342]</label>
+      <action>DefaultSearch-Movies</action>
+    </item>
+    <item name="searchmenu-2">
+      <label>$LOCALIZE[31566]</label>
+      <action>DefaultSearch-TvShows</action>
+    </item>
+    <item name="searchmenu-3">
+      <label>$LOCALIZE[20360]</label>
+      <action>DefaultSearch-Episodes</action>
+    </item>
+  </menu>
+  <menu name="tmdbsearchmenu">
+    <item name="tmdbsearchmenu-1">
+      <label>$LOCALIZE[31110]</label>
+      <action>$VAR[SearchTMDBAll]</action>
+    </item>
+  </menu>
+  <menu name="moviehub" type="widgets">
+    <item name="moviehub-1">
+      <label>$VAR[DefMovieHubName]</label>
+      <action>$VAR[DefMovieHubContent]</action>
+      <property name="widgetPath">$VAR[DefMovieHubContent]</property>
+      <property name="widgetLabel">$VAR[DefMovieHubName]</property>
+      <property name="widgetTarget">videos</property>
+    </item>
+    <item name="moviehub-2">
+      <label>$VAR[DefMovieHub1Name]</label>
+      <action>$VAR[DefMovieHub1Content]</action>
+      <property name="widgetPath">$VAR[DefMovieHub1Content]</property>
+      <property name="widgetLabel">$VAR[DefMovieHub1Name]</property>
+      <property name="widgetTarget">videos</property>
+    </item>
+    <item name="moviehub-3">
+      <label>$VAR[DefMovieHub2Name]</label>
+      <action>$VAR[DefMovieHub2Content]</action>
+      <property name="widgetPath">$VAR[DefMovieHub2Content]</property>
+      <property name="widgetLabel">$VAR[DefMovieHub2Name]</property>
+      <property name="widgetTarget">videos</property>
+    </item>
+  </menu>
+  <menu name="tvshowhub" type="widgets">
+    <item name="tvshowhub-1">
+      <label>$VAR[DefTVShowHubName]</label>
+      <action>$VAR[DefTVShowHubContent]</action>
+      <property name="widgetPath">$VAR[DefTVShowHubContent]</property>
+      <property name="widgetLabel">$VAR[DefTVShowHubName]</property>
+      <property name="widgetTarget">videos</property>
+    </item>
+    <item name="tvshowhub-2">
+      <label>$VAR[DefTVShowHub1Name]</label>
+      <action>$VAR[DefTVShowHub1Content]</action>
+      <property name="widgetPath">$VAR[DefTVShowHub1Content]</property>
+      <property name="widgetLabel">$VAR[DefTVShowHub1Name]</property>
+      <property name="widgetTarget">videos</property>
+    </item>
+    <item name="tvshowhub-3">
+      <label>$VAR[DefTVShowHub2Name]</label>
+      <action>$VAR[DefTVShowHub2Content]</action>
+      <property name="widgetPath">$VAR[DefTVShowHub2Content]</property>
+      <property name="widgetLabel">$VAR[DefTVShowHub2Name]</property>
+      <property name="widgetTarget">videos</property>
+    </item>
+  </menu>
+  <menu name="newhub" type="widgets">
+    <item name="newhub-1">
+      <label>$VAR[DefNewHubName]</label>
+      <action>$VAR[DefNewHubContent]</action>
+      <property name="widgetPath">$VAR[DefNewHubContent]</property>
+      <property name="widgetLabel">$VAR[DefNewHubName]</property>
+      <property name="widgetTarget">videos</property>
+    </item>
+    <item name="newhub-2">
+      <label>$VAR[DefNewHub1Name]</label>
+      <action>$VAR[DefNewHub1Content]</action>
+      <property name="widgetPath">$VAR[DefNewHub1Content]</property>
+      <property name="widgetLabel">$VAR[DefNewHub1Name]</property>
+      <property name="widgetTarget">videos</property>
+    </item>
+    <item name="newhub-3">
+      <label>$VAR[DefNewHub2Name]</label>
+      <action>$VAR[DefNewHub2Content]</action>
+      <visible>!Library.HasContent(Movies) + !Library.HasContent(TVShows)</visible>
+      <property name="widgetPath">$VAR[DefNewHub2Content]</property>
+      <property name="widgetLabel">$VAR[DefNewHub2Name]</property>
+      <property name="widgetTarget">videos</property>
+    </item>
+    <item name="newhub-4">
+      <label>$VAR[DefNewHub3Name]</label>
+      <action>$VAR[DefNewHub3Content]</action>
+      <visible>!Library.HasContent(Movies) + !Library.HasContent(TVShows)</visible>
+      <property name="widgetPath">$VAR[DefNewHub3Content]</property>
+      <property name="widgetLabel">$VAR[DefNewHub3Name]</property>
+      <property name="widgetTarget">videos</property>
+    </item>
+  </menu>
+  <menu name="musichub" type="widgets">
+    <item name="musichub-1">
+      <label>$VAR[DefMusicHub3Name]</label>
+      <action>special://skin/extras/widgetplaylists/recentlyaddedalbums.xsp</action>
+      <property name="widgetPath">special://skin/extras/widgetplaylists/recentlyaddedalbums.xsp</property>
+      <property name="widgetLabel">$VAR[DefMusicHub3Name]</property>
+      <property name="widgetTarget">music</property>
+    </item>
+    <item name="musichub-2">
+      <label>$LOCALIZE[31131]</label>
+      <action>special://skin/extras/widgetplaylists/recentlyaddedartists.xsp</action>
+      <property name="widgetPath">special://skin/extras/widgetplaylists/recentlyaddedartists.xsp</property>
+      <property name="widgetLabel">$LOCALIZE[31131]</property>
+      <property name="widgetTarget">music</property>
+    </item>
+    <item name="musichub-3">
+      <label>$LOCALIZE[31211]</label>
+      <action>special://skin/extras/widgetplaylists/recentlyaddedsongs.xsp</action>
+      <property name="widgetPath">special://skin/extras/widgetplaylists/recentlyaddedsongs.xsp</property>
+      <property name="widgetLabel">$LOCALIZE[31211]</property>
+      <property name="widgetTarget">music</property>
+    </item>
+  </menu>
+  <menu name="mylisthub" type="widgets">
+    <item name="mylisthub-1">
+      <label>$LOCALIZE[31534]</label>
+      <action>$VAR[Path_MyList]</action>
+      <property name="widgetPath">$VAR[Path_MyList]</property>
+      <property name="widgetLabel">$LOCALIZE[31534]</property>
+      <property name="widgetTarget">videos</property>
+    </item>
+  </menu>
+  <menu name="somethinghub" type="widgets">
+    <item name="somethinghub-1">
+      <label>$VAR[DefSomethingHubName]</label>
+      <action>$VAR[DefSomethingHubContent]</action>
+      <property name="widgetPath">$VAR[DefSomethingHubContent]</property>
+      <property name="widgetLabel">$VAR[DefSomethingHubName]</property>
+      <property name="widgetTarget">videos</property>
+    </item>
+  </menu>
+  <menu name="customhub" type="widgets">
+    <allow widgets="true" backgrounds="true" submenus="false" />
+  </menu>
+  <submenu name="movies">
+    <item name="movies-recent"><label>$LOCALIZE[20386]</label><action>ActivateWindow(Videos,videodb://recentlyaddedmovies/,return)</action></item>
+    <item name="movies-all"><label>$LOCALIZE[342]</label><action>ActivateWindow(Videos,videodb://movies/titles/,return)</action></item>
+  </submenu>
+  <submenu name="shows">
+    <item name="shows-recent"><label>$LOCALIZE[20386]</label><action>ActivateWindow(Videos,videodb://recentlyaddedepisodes/,return)</action></item>
+    <item name="shows-all"><label>$LOCALIZE[31566]</label><action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action></item>
+  </submenu>
+  <icons>
+    <source label="Bingie">special://skin/extras/icons/</source>
+    <source label="Parcourir">browse</source>
+  </icons>
+  <contextmenu>true</contextmenu>
     <groupings>
         <group name="bingie" label="Bingie" icon="DefaultShortcut.png">
             <shortcut name="search" label="$LOCALIZE[137]" icon="shortcuts/search.png"><action>ActivateWindow(1109,return)</action></shortcut>
