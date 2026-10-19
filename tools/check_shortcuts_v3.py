@@ -41,7 +41,7 @@ def check():
     shortcuts = main.find("item[@name='movies']")
     assert shortcuts is not None and shortcuts.get("submenu") == "movies"
 
-    existing = {e.get("name") for e in config["templates"].findall("template")
+    existing = {e.get("include") for e in config["templates"].findall("template")
                 if e.get("include")}
     expected = {"Widgets", "moviehub", "tvshowhub", "newhub", "musichub",
                 "customhub", "mylisthub", "somethinghub"}
