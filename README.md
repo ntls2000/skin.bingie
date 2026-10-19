@@ -1,37 +1,42 @@
 # Bingie — Skin Netflix pour Kodi
 
-Fork de Bingie, maintenu pour Kodi **21 Omega** et **22 Piers**.
+Fork de Bingie, en adaptation vers Kodi **21 Omega** et **22 Piers**.
 
-## Version 2.0.3 — première passe Kodi 22
+## Installation depuis Kodi (Android / tablette)
 
-- Conserve l'API `xbmc.gui 5.17.0` : Kodi 22 (`5.18.0`) accepte cette ABI et Kodi 21 reste pris en charge.
-- Corrige les deux références à `Player.Cutlist`, supprimé dans Kodi 22, en utilisant `Player.Cuts`.
-- Corrige des déclarations XML invalides, des URL de bande-annonce avec esperluette non échappée et des commentaires de classification mal formés.
-- Ajoute `tools/check_kodi22.py` : vérification automatique du XML et des InfoLabels supprimés sous Kodi 22.
+1. Télécharger et installer le fichier `repository.ntls2000.bingie-1.0.1.zip` depuis :
+   https://raw.githubusercontent.com/ntls2000/skin.bingie/omega/repo/repository.ntls2000.bingie/repository.ntls2000.bingie-1.0.1.zip
+2. Dans Kodi : **Paramètres → Extensions → Installer depuis un fichier ZIP**.
+3. **Installer depuis un dépôt → Bingie - Dépôt de mises à jour → Apparence → Habillages → Bingie**.
+4. Kodi doit rechercher les scripts Bingie depuis le **catalogue officiel de l'auteur**, intégré comme seconde source au dépôt depuis la version 1.0.1. Une connexion Internet et le dépôt Kodi officiel actif sont également nécessaires pour les modules généraux.
 
-**Statut :** compatibilité du code du skin vérifiée statiquement. Les scripts Python externes, l'installation complète et les performances doivent encore être testés directement dans Kodi 22 RC sur appareil.
+Ce dépôt publie **notre skin** (`skin.bingie` 2.0.3) tandis que les extensions tierces sont récupérées **directement à la source d'origine**, sans reconditionnement. La source ajoutée est :
+https://github.com/matke-84/repository.bingie/tree/main/omega
 
-## Dépôt de mises à jour Kodi
+## Avertissement Kodi 22 : Skin Shortcuts 3
 
-Télécharger le ZIP du dépôt :
+La branche Kodi 22 du dépôt officiel Kodi peut proposer `script.skinshortcuts` v3.0.0. Bingie utilise encore les fichiers `shortcuts/template.xml` et `shortcuts/overrides.xml` de **Skin Shortcuts 2.0.3**. Skin Shortcuts v3 **n'est pas rétrocompatible** : le skin pourrait s'installer mais les menus personnalisés ne fonctionneraient pas.
 
-https://raw.githubusercontent.com/ntls2000/skin.bingie/omega/repo/repository.ntls2000.bingie/repository.ntls2000.bingie-1.0.0.zip
+**Solution provisoire sur Kodi 22** : avant d'activer Bingie, installer Skin Shortcuts **2.0.3** et désactiver les mises à jour automatiques de cette seule extension. Le fichier original v2.0.3 est disponible dans les archives du dépôt Kodi (Omega) :
+https://mirrors.kodi.tv/addons/omega/script.skinshortcuts/script.skinshortcuts-2.0.3.zip
 
-Dans Kodi : Paramètres → Extensions → Installer depuis un fichier ZIP, puis Installer depuis un dépôt → Bingie - Dépôt de mises à jour → Apparence → Habillages → Bingie.
+Une migration réelle de tous les menus Bingie vers Skin Shortcuts v3 reste à faire. Ne pas présenter cette première version comme totalement compatible Kodi 22.
 
-Le dépôt est construit automatiquement par GitHub Actions sur la branche `omega`. Kodi repère les nouvelles versions grâce au numéro de version de `addon.xml`.
+## Version 2.0.3 — correctifs Kodi 22
 
-## Attention aux dépendances
+- Garde l'ABI `xbmc.gui 5.17.0` pour Kodi 21 / Kodi 22.
+- Remplace `Player.Cutlist` (supprimé de Kodi 22) par `Player.Cuts` dans le lecteur.
+- Corrige plusieurs fichiers XML mal formés, des caractères non échappés et des commentaires invalides.
+- Vérifie le XML et quelques labels supprimés automatiquement grâce à `tools/check_kodi22.py`.
+- Repository v1.0.1 : référence le catalogue des scripts du dépôt officiel Bingie pour résolution automatique.
 
-Bingie dépend d'extensions tierces : `script.bingie.helper`, `script.bingie.toolbox`, `script.bingie.widgets`, `script.skinshortcuts`, `plugin.video.tmdb.bingie.helper`, `plugin.program.autocompletion` et `resource.images.studios.coloured`. Ce dépôt ne les embarque pas. Elles doivent être installées depuis des sources adaptées et vérifiées pour Kodi 22 / Python 3.14.
+**Statut :** XML vérifié et packaging réussi sur GitHub Actions. Installation complète, scripts Python, interface et performances à vérifier **sur Kodi 22** avant d'annoncer une compatibilité totale.
 
-Avant les essais sous Kodi 22 : sauvegarder les paramètres et vérifier que le skin Estuary est utilisable comme interface de secours.
-
-## Vérification
+## Génération
 
 ```sh
 python3 tools/check_kodi22.py
 python3 tools/build_kodi_repo.py
 ```
 
-La réussite de ces contrôles ne remplace pas un test dans Kodi sur Android ou un autre système.
+La publication de nouvelles versions se fait automatiquement via GitHub Actions sur la branche `omega`, dès que la version de l'extension augmente.
