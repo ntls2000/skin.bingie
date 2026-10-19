@@ -52,6 +52,49 @@ def skin_files():
                     yield (path, path.relative_to(ROOT).as_posix())
 
 
+# Vendored Python add-ons are independently editable under addons-src/.
+VENDORED_SOURCE = ROOT / "addons-src"
+
+
+def addon_source_files(source: Path):
+    """Yield safe source files with paths relative to a Kodi add-on root."""
+    for path in source.rglob("*"):
+        if not path.is_file() or path.is_symlink():
+            continue
+        relative = path.relative_to(source)
+        if any(part in (".git", "__pycache__") for part in relative.parts):
+            continue
+        if path.suffix in (".pyc", ".pyo"):
+            continue
+        yield (path, relative.as_posix())
+
+
+def build_vendored_addons(catalogue: ET.Element):
+    """Include our modifiable forks alongside the skin."""
+    packages = []
+    if not VENDORED_SOURCE.is_dir():
+        return packages
+    for source in sorted(VENDORED_SOURCE.iterdir()):
+        if not source.is_dir() or not (source / "addon.xml").is_file():
+            continue
+        addon_id = source.name
+        if addon_id in (SKIN_ID, REPOSITORY_ID):
+            raise ValueError(f"Conflicting addon ID: {addon_id}")
+        info, version = addon_details(source / "addon.xml", addon_id)
+        packages.append(package(addon_id, version, addon_source_files(source)))
+        catalogue.append(info)
+        assets = info.find("./extension[@point='xbmc.addon.metadata']/assets")
+        if assets is not None:
+            for name in ("icon", "fanart"):
+                entry = assets.findtext(name)
+                if not entry:
+                    continue
+                source_asset = source / entry
+                if source_asset.is_file() and source_asset.resolve().is_relative_to(source.resolve()):
+                    shutil.copy2(source_asset, OUT / addon_id / Path(entry).name)
+    return packages
+
+
 def main():
     skin, skin_version = addon_details(ROOT / "addon.xml", SKIN_ID)
     repodir = ROOT / REPOSITORY_ID
@@ -74,13 +117,14 @@ def main():
     addons = ET.Element("addons")
     addons.append(skin)
     addons.append(repository)
+    vendor_zips = build_vendored_addons(addons)
     ET.indent(addons, space="    ")
     xml_data = ET.tostring(addons, encoding="utf-8", xml_declaration=True) + b"\n"
     (OUT / "addons.xml").write_bytes(xml_data)
     (OUT / "addons.xml.md5").write_text(
         hashlib.md5(xml_data).hexdigest(), encoding="ascii"
     )
-    for path in (skin_zip, repo_zip):
+    for path in (skin_zip, repo_zip, *vendor_zips):
         print(f"Built {path.relative_to(ROOT)} ({path.stat().st_size:,} bytes)")
     print("Generated repo/addons.xml and repo/addons.xml.md5")
 
