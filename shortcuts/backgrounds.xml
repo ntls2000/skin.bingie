@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<backgrounds>
+  <background name="browse" label="Choisir une image" type="browse"/>
+  <background name="multi" label="Choisir un dossier" type="multi"/>
+  <background name="default" label="Arrière-plan du skin" type="static">
+    <path>special://skin/backgrounds/default.jpg</path>
+  </background>
+</backgrounds>
