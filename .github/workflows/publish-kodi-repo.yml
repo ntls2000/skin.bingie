@@ -5,6 +5,9 @@ on:
     paths-ignore:
       - 'repo/**'
   workflow_dispatch:
+  schedule:
+    # Refresh extension forks twice daily; Kodi receives new versions automatically.
+    - cron: '17 5,17 * * *'
 permissions:
   contents: write
 concurrency:
