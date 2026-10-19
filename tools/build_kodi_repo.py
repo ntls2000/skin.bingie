@@ -62,7 +62,7 @@ def addon_source_files(source: Path):
         if not path.is_file() or path.is_symlink():
             continue
         relative = path.relative_to(source)
-        if any(part in (".git", "__pycache__") for part in relative.parts):
+        if any(part in (".git", ".github", "__pycache__", ".pytest_cache") for part in relative.parts):
             continue
         if path.suffix in (".pyc", ".pyo"):
             continue
