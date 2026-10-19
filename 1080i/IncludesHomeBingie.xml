@@ -73,8 +73,9 @@
                 </control>
             </control>
 
-            <!-- Details Section -->
+            <!-- Details Section: old hub title and old spotlight would overlap modern feature. -->
             <control type="group">
+                <visible>!Skin.HasSetting(NetflixModern2026) | !Window.IsActive(Home)</visible>
                 <width>1920</width>
                 <height>525</height>
                 <include content="Preview_Window">
@@ -748,6 +749,8 @@
 				<include>Animation_Right_Home</include>
             <!-- Widgets -->
             <control type="grouplist" id="77777">
+                <!-- The first 2026 row starts beneath the larger featured card. -->
+                <animation effect="slide" end="0,155" time="0" condition="Skin.HasSetting(NetflixModern2026) + Window.IsActive(Home)">Conditional</animation>
                 <animation time="300" effect="fade" start="100" end="70" reversible="true" easing="inout" condition="$EXP[IsMainMenuOpened] + !$EXP[IsPlayingRecognizedContent]">Conditional</animation>
 				<animation effect="slide" end="0,38" time="300" condition="$EXP[IsCurrentWidgetSpotlight]">Conditional</animation>
 				<animation effect="slide" end="0,42" time="0" condition="Window.IsActive(1114)">Conditional</animation>
