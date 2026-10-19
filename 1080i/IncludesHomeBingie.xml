@@ -779,9 +779,9 @@
 				<include condition="Window.IsActive(1120)">skinshortcuts-template-musichub</include>				
             </control>
 			
-			<include condition="String.IsEqual(Skin.String(widgetstyle),poster) + !Skin.HasSetting(DisableDummySpotlight)">SpotlightDummyPosterWidget</include>
-			<include condition="String.IsEqual(Skin.String(widgetstyle),landscape) + !Skin.HasSetting(DisableDummySpotlight)">SpotlightDummyLandscapeWidget</include>
-			<include condition="[String.IsEqual(Skin.String(widgetstyle),square) | Window.IsActive(1120)] + !Skin.HasSetting(DisableDummySpotlight)">SpotlightDummySquareWidget</include>
+			<include condition="String.IsEqual(Skin.String(widgetstyle),poster) + !Skin.HasSetting(DisableDummySpotlight) + ![Skin.HasSetting(NetflixModern2026) + Window.IsActive(Home)]">SpotlightDummyPosterWidget</include>
+			<include condition="String.IsEqual(Skin.String(widgetstyle),landscape) + !Skin.HasSetting(DisableDummySpotlight) + ![Skin.HasSetting(NetflixModern2026) + Window.IsActive(Home)]">SpotlightDummyLandscapeWidget</include>
+			<include condition="[String.IsEqual(Skin.String(widgetstyle),square) | Window.IsActive(1120)] + !Skin.HasSetting(DisableDummySpotlight) + ![Skin.HasSetting(NetflixModern2026) + Window.IsActive(Home)]">SpotlightDummySquareWidget</include>
          			
 			<!-- Fixed Focus Frame -->
 			<control type="group">
