@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- WIP: Skin Shortcuts v3 widget picker. These categories mirror the
-     v2 widget-groupings; widget templates and property mapping still
-     need migration before the Bingie interface can use them. -->
+<!-- Skin Shortcuts v3 widget picker: use Kodi/skin-resolvable localized labels. -->
 <widgets>
-    <group name="movies" label="$LOCALIZE[32030]" icon="DefaultMovies.png">
+    <group name="movies" label="$LOCALIZE[342]" icon="DefaultMovies.png">
         <widget name="recent-movies" label="$LOCALIZE[20382]" type="movies">
             <path>videodb://recentlyaddedmovies/</path>
         </widget>
@@ -15,7 +13,7 @@
         <content source="addons" target="video"/>
         <content source="sources" target="video"/>
     </group>
-    <group name="tv" label="$LOCALIZE[32031]" icon="DefaultTVShows.png">
+    <group name="tv" label="$LOCALIZE[31566]" icon="DefaultTVShows.png">
         <widget name="recent-episodes" label="$LOCALIZE[20382]" type="episodes">
             <path>videodb://recentlyaddedepisodes/</path>
         </widget>
@@ -27,7 +25,7 @@
         <content source="addons" target="audio"/>
         <content source="sources" target="music"/>
     </group>
-    <group name="other" label="$LOCALIZE[32007]" icon="DefaultAddon.png">
+    <group name="other" label="$LOCALIZE[24001]" icon="DefaultAddon.png">
         <content source="favourites"/>
         <content source="addons" target="video"/>
         <content source="addons" target="image"/>
