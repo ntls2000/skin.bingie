@@ -1,0 +1,42 @@
+name: Import editable Bingie add-on sources
+on:
+  push:
+    branches: [omega]
+    paths:
+      - '.github/workflows/import-bingie-addons.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bingie-build-omega
+  cancel-in-progress: false
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Use latest omega revision
+        run: |
+          git fetch origin omega
+          git checkout omega
+          git reset --hard origin/omega
+      - name: Import original source ZIPs (do not overwrite local edits)
+        run: python3 tools/import_bingie_addons.py
+      - name: Check Kodi 22 XML
+        run: python3 tools/check_kodi22.py
+      - name: Build Kodi ZIP packages and catalogue
+        run: python3 tools/build_kodi_repo.py
+      - name: Commit sources and published ZIP packages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add addons-src/ repo/
+          if ! git diff --cached --quiet; then
+            git commit -m "feat: host editable Bingie add-on forks with Kodi packages"
+            git push origin HEAD:omega
+          fi
