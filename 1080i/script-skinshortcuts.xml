@@ -38,7 +38,7 @@
 			</control>
 			<!-- black bg panel - if not mainmenu window -->
 			<control type="image">
-				<visible>!String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+				<visible>!String.IsEqual(Window.Property(menuname),mainmenu)</visible>
 				<posx>60</posx>
 				<posy>0</posy>
 				<width>1800</width>
@@ -174,7 +174,7 @@
 						<pauseatend>2500</pauseatend>
 						<orientation>horizontal</orientation>
                         <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
-						<visible>String.IsEqual(Window.Property(groupname),mainmenu) | String.IsEqual(Window.Property(groupname),powermenu) | String.IsEqual(Window.Property(groupname),searchmenu) | String.IsEqual(Window.Property(groupname),tmdbsearchmenu)</visible>
+						<visible>String.IsEqual(Window.Property(menuname),mainmenu) | String.IsEqual(Window.Property(menuname),powermenu) | String.IsEqual(Window.Property(menuname),searchmenu) | String.IsEqual(Window.Property(menuname),tmdbsearchmenu)</visible>
 					</control>
 					<control type="fadelabel">
 						<left>5</left>
@@ -188,7 +188,7 @@
 						<pauseatend>2500</pauseatend>
 						<orientation>horizontal</orientation>
                         <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
-						<visible>![String.IsEqual(Window.Property(groupname),mainmenu) | String.IsEqual(Window.Property(groupname),powermenu) | String.IsEqual(Window.Property(groupname),searchmenu) | String.IsEqual(Window.Property(groupname),tmdbsearchmenu)]</visible>
+						<visible>![String.IsEqual(Window.Property(menuname),mainmenu) | String.IsEqual(Window.Property(menuname),powermenu) | String.IsEqual(Window.Property(menuname),searchmenu) | String.IsEqual(Window.Property(menuname),tmdbsearchmenu)]</visible>
 					</control>
 					<!--Spotlight label-->
 					<control type="label">
@@ -199,7 +199,7 @@
                         <font>Reg24</font>
 						<scrollspeed>160</scrollspeed>
 						<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
-						<visible>String.EndsWith(Window.Property(groupname),.1) | String.IsEqual(Window.Property(groupname),customhub) | String.IsEqual(Window.Property(groupname),moviehub) | String.IsEqual(Window.Property(groupname),tvshowhub) | String.IsEqual(Window.Property(groupname),newhub) | String.IsEqual(Window.Property(groupname),musichub)</visible>
+						<visible>String.IsEqual(Window.Property(menuname),mainmenu) | String.IsEqual(Window.Property(menuname),customhub) | String.IsEqual(Window.Property(menuname),moviehub) | String.IsEqual(Window.Property(menuname),tvshowhub) | String.IsEqual(Window.Property(menuname),newhub) | String.IsEqual(Window.Property(menuname),musichub)</visible>
 					</control>
 					<control type="fadelabel">
 						<left>5</left>
@@ -213,7 +213,7 @@
 						<pauseatend>2500</pauseatend>
 						<orientation>horizontal</orientation>
                         <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
-						<visible>String.EndsWith(Window.Property(groupname),.1) | String.IsEqual(Window.Property(groupname),customhub) | String.IsEqual(Window.Property(groupname),moviehub) | String.IsEqual(Window.Property(groupname),tvshowhub) | String.IsEqual(Window.Property(groupname),newhub) | String.IsEqual(Window.Property(groupname),musichub)</visible>
+						<visible>String.IsEqual(Window.Property(menuname),mainmenu) | String.IsEqual(Window.Property(menuname),customhub) | String.IsEqual(Window.Property(menuname),moviehub) | String.IsEqual(Window.Property(menuname),tvshowhub) | String.IsEqual(Window.Property(menuname),newhub) | String.IsEqual(Window.Property(menuname),musichub)</visible>
 					</control>
 					<!--Widget style label-->
 					<control type="label">
@@ -224,7 +224,7 @@
                         <font>Reg24</font>
 						<scrollspeed>160</scrollspeed>
 						<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
-						<visible>!String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),somethinghub) + !String.IsEqual(Window.Property(groupname),powermenu)</visible>
+						<visible>!String.IsEqual(Window.Property(menuname),mainmenu) + !String.IsEqual(Window.Property(menuname),somethinghub) + !String.IsEqual(Window.Property(menuname),powermenu)</visible>
 					</control>
 					<control type="fadelabel">
 						<left>5</left>
@@ -238,7 +238,7 @@
 						<pauseatend>2500</pauseatend>
 						<orientation>horizontal</orientation>
                         <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
-						<visible>!String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),somethinghub) + !String.IsEqual(Window.Property(groupname),powermenu)</visible>
+						<visible>!String.IsEqual(Window.Property(menuname),mainmenu) + !String.IsEqual(Window.Property(menuname),somethinghub) + !String.IsEqual(Window.Property(menuname),powermenu)</visible>
 					</control>
 					<!--Widget tags label-->
 					<control type="label">
@@ -249,7 +249,7 @@
                         <font>Reg24</font>
 						<scrollspeed>160</scrollspeed>
 						<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
-						<visible>!String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + !String.IsEqual(Window.Property(groupname),somethinghub)</visible>
+						<visible>!String.IsEqual(Window.Property(menuname),mainmenu) + !String.IsEqual(Window.Property(menuname),powermenu) + !String.IsEqual(Window.Property(menuname),somethinghub)</visible>
 					    <visible>!String.Contains(Container(211).ListItem.Property(widgetstyle),landscape) + ![String.IsEmpty(Container(211).ListItem.Property(widgetstyle)) + String.Contains(Skin.String(widgetstyle),landscape)] + !String.Contains(Container(211).ListItem.Property(widgetstyle),square) + ![String.IsEmpty(Container(211).ListItem.Property(widgetstyle)) + String.Contains(Skin.String(widgetstyle),square)]</visible>
 					</control>
 					<control type="fadelabel">
@@ -264,7 +264,7 @@
 						<pauseatend>2500</pauseatend>
 						<orientation>horizontal</orientation>
                         <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
-						<visible>!String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + !String.IsEqual(Window.Property(groupname),somethinghub)</visible>
+						<visible>!String.IsEqual(Window.Property(menuname),mainmenu) + !String.IsEqual(Window.Property(menuname),powermenu) + !String.IsEqual(Window.Property(menuname),somethinghub)</visible>
 						<visible>!String.Contains(Container(211).ListItem.Property(widgetstyle),landscape) + ![String.IsEmpty(Container(211).ListItem.Property(widgetstyle)) + String.Contains(Skin.String(widgetstyle),landscape)] + !String.Contains(Container(211).ListItem.Property(widgetstyle),square) + ![String.IsEmpty(Container(211).ListItem.Property(widgetstyle)) + String.Contains(Skin.String(widgetstyle),square)]</visible>
 					</control>
 					<!--Widget target label-->
@@ -276,7 +276,7 @@
                         <font>Reg24</font>
 						<scrollspeed>160</scrollspeed>
 						<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
-						<visible>!String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu)</visible>
+						<visible>!String.IsEqual(Window.Property(menuname),mainmenu) + !String.IsEqual(Window.Property(menuname),powermenu)</visible>
 					</control>
 					<control type="fadelabel">
 						<left>5</left>
@@ -290,7 +290,7 @@
 						<pauseatend>2500</pauseatend>
 						<orientation>horizontal</orientation>
                         <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
-						<visible>!String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu)</visible>
+						<visible>!String.IsEqual(Window.Property(menuname),mainmenu) + !String.IsEqual(Window.Property(menuname),powermenu)</visible>
 					</control>
 					<!--Widget sort by label-->
 					<control type="label">
@@ -301,7 +301,7 @@
                         <font>Reg24</font>
 						<scrollspeed>160</scrollspeed>
 						<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
-						<visible>!String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + !String.IsEqual(Window.Property(groupname),searchmenu) + !String.IsEqual(Window.Property(groupname),tmdbsearchmenu)</visible>
+						<visible>!String.IsEqual(Window.Property(menuname),mainmenu) + !String.IsEqual(Window.Property(menuname),powermenu) + !String.IsEqual(Window.Property(menuname),searchmenu) + !String.IsEqual(Window.Property(menuname),tmdbsearchmenu)</visible>
 					</control>
 					<control type="fadelabel">
 						<left>5</left>
@@ -315,7 +315,7 @@
 						<pauseatend>2500</pauseatend>
 						<orientation>horizontal</orientation>
                         <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
-						<visible>!String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + !String.IsEqual(Window.Property(groupname),searchmenu) + !String.IsEqual(Window.Property(groupname),tmdbsearchmenu)</visible>
+						<visible>!String.IsEqual(Window.Property(menuname),mainmenu) + !String.IsEqual(Window.Property(menuname),powermenu) + !String.IsEqual(Window.Property(menuname),searchmenu) + !String.IsEqual(Window.Property(menuname),tmdbsearchmenu)</visible>
 					</control>
 					<!--Widget sort order label-->
 					<control type="label">
@@ -326,7 +326,7 @@
                         <font>Reg24</font>
 						<scrollspeed>160</scrollspeed>
 						<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
-						<visible>!String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + !String.IsEqual(Window.Property(groupname),searchmenu) + !String.IsEqual(Window.Property(groupname),tmdbsearchmenu)</visible>
+						<visible>!String.IsEqual(Window.Property(menuname),mainmenu) + !String.IsEqual(Window.Property(menuname),powermenu) + !String.IsEqual(Window.Property(menuname),searchmenu) + !String.IsEqual(Window.Property(menuname),tmdbsearchmenu)</visible>
 					</control>
 					<control type="fadelabel">
 						<left>5</left>
@@ -340,7 +340,7 @@
 						<pauseatend>2500</pauseatend>
 						<orientation>horizontal</orientation>
                         <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
-						<visible>!String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + !String.IsEqual(Window.Property(groupname),searchmenu) + !String.IsEqual(Window.Property(groupname),tmdbsearchmenu)</visible>
+						<visible>!String.IsEqual(Window.Property(menuname),mainmenu) + !String.IsEqual(Window.Property(menuname),powermenu) + !String.IsEqual(Window.Property(menuname),searchmenu) + !String.IsEqual(Window.Property(menuname),tmdbsearchmenu)</visible>
 					</control>
 					<!--Widget limit label-->
 					<control type="label">
@@ -351,7 +351,7 @@
                         <font>Reg24</font>
 						<scrollspeed>160</scrollspeed>
 						<textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
-						<visible>!String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu)</visible>
+						<visible>!String.IsEqual(Window.Property(menuname),mainmenu) + !String.IsEqual(Window.Property(menuname),powermenu)</visible>
 					</control>
 					<control type="fadelabel">
 						<left>5</left>
@@ -365,7 +365,7 @@
 						<pauseatend>2500</pauseatend>
 						<orientation>horizontal</orientation>
                         <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
-						<visible>!String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu)</visible>
+						<visible>!String.IsEqual(Window.Property(menuname),mainmenu) + !String.IsEqual(Window.Property(menuname),powermenu)</visible>
 					</control>
 				</control>				
 				<!--fake list -->
@@ -398,7 +398,7 @@
 					<height>58</height>
 					<align>center</align>
 					<label>$LOCALIZE[15019]</label>
-					<visible>String.IsEqual(Window.Property(groupname),searchmenu) | String.IsEqual(Window.Property(groupname),tmdbsearchmenu)</visible>
+					<visible>String.IsEqual(Window.Property(menuname),searchmenu) | String.IsEqual(Window.Property(menuname),tmdbsearchmenu)</visible>
 				</control>
 	
 				<!--ADD-->
@@ -408,7 +408,7 @@
 					<align>center</align>
 					<label>$LOCALIZE[15019]</label>
 					<visible>!Integer.IsGreater(Container(200).NumItems,34)</visible>
-					<visible>!String.IsEqual(Window.Property(groupname),searchmenu) + !String.IsEqual(Window.Property(groupname),tmdbsearchmenu) + !String.IsEqual(Window.Property(groupname),somethinghub) + !String.IsEqual(Window.Property(groupname),mylisthub)</visible>
+					<visible>!String.IsEqual(Window.Property(menuname),searchmenu) + !String.IsEqual(Window.Property(menuname),tmdbsearchmenu) + !String.IsEqual(Window.Property(menuname),somethinghub) + !String.IsEqual(Window.Property(menuname),mylisthub)</visible>
 					<include>Action_SkinShortcuts_ContentType_AutoSetOnUnFocus</include>
 				</control>				
 				
@@ -418,7 +418,7 @@
 					<height>58</height>
 					<align>center</align>
 					<label>$LOCALIZE[31564]</label>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
 				</control>
 				
 				<!--Spotlight Home-->
@@ -427,8 +427,8 @@
 					<height>58</height>
 					<align>center</align>
 					<label>$LOCALIZE[31379]</label>
-					<onclick>RunScript(script.skinshortcuts,type=widgets&amp;showNone=true&amp;skinWidgetPath=spotlighthome.path)</onclick>
-					<visible>String.EndsWith(Window.Property(groupname),.1)</visible>
+					<onclick>RunScript(script.skinshortcuts,type=skinstring&amp;skinPath=spotlighthome.path)</onclick>
+					<visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
 					<visible>!Skin.HasSetting(DisableSpotlightContent)</visible>
 				</control>
 				
@@ -438,8 +438,8 @@
 					<height>58</height>
 					<align>center</align>
 					<label>$LOCALIZE[31379]</label>
-					<onclick>RunScript(script.skinshortcuts,type=widgets&amp;showNone=true&amp;skinWidgetPath=spotlightmyhub.path)</onclick>
-					<visible>String.IsEqual(Window.Property(groupname),customhub)</visible>
+					<onclick>RunScript(script.skinshortcuts,type=skinstring&amp;skinPath=spotlightmyhub.path)</onclick>
+					<visible>String.IsEqual(Window.Property(menuname),customhub)</visible>
 					<visible>!Skin.HasSetting(DisableSpotlightContent)</visible>
 				</control>
 				
@@ -449,8 +449,8 @@
 					<height>58</height>
 					<align>center</align>
 					<label>$LOCALIZE[31379]</label>
-					<onclick>RunScript(script.skinshortcuts,type=widgets&amp;showNone=true&amp;skinWidgetPath=spotlightmovies.path)</onclick>
-					<visible>String.IsEqual(Window.Property(groupname),moviehub)</visible>
+					<onclick>RunScript(script.skinshortcuts,type=skinstring&amp;skinPath=spotlightmovies.path)</onclick>
+					<visible>String.IsEqual(Window.Property(menuname),moviehub)</visible>
 					<visible>!Skin.HasSetting(DisableSpotlightContent)</visible>
 				</control>
 				
@@ -460,8 +460,8 @@
 					<height>58</height>
 					<align>center</align>
 					<label>$LOCALIZE[31379]</label>
-					<onclick>RunScript(script.skinshortcuts,type=widgets&amp;showNone=true&amp;skinWidgetPath=spotlighttvshows.path)</onclick>
-					<visible>String.IsEqual(Window.Property(groupname),tvshowhub)</visible>
+					<onclick>RunScript(script.skinshortcuts,type=skinstring&amp;skinPath=spotlighttvshows.path)</onclick>
+					<visible>String.IsEqual(Window.Property(menuname),tvshowhub)</visible>
 					<visible>!Skin.HasSetting(DisableSpotlightContent)</visible>
 				</control>
 				
@@ -471,8 +471,8 @@
 					<height>58</height>
 					<align>center</align>
 					<label>$LOCALIZE[31379]</label>
-					<onclick>RunScript(script.skinshortcuts,type=widgets&amp;showNone=true&amp;skinWidgetPath=spotlightnew.path)</onclick>
-					<visible>String.IsEqual(Window.Property(groupname),newhub)</visible>
+					<onclick>RunScript(script.skinshortcuts,type=skinstring&amp;skinPath=spotlightnew.path)</onclick>
+					<visible>String.IsEqual(Window.Property(menuname),newhub)</visible>
 					<visible>!Skin.HasSetting(DisableSpotlightContent)</visible>
 				</control>
 				
@@ -482,8 +482,8 @@
 					<height>58</height>
 					<align>center</align>
 					<label>$LOCALIZE[31379]</label>
-					<onclick>RunScript(script.skinshortcuts,type=widgets&amp;showNone=true&amp;skinWidgetPath=spotlightmusic.path)</onclick>
-					<visible>String.IsEqual(Window.Property(groupname),musichub)</visible>
+					<onclick>RunScript(script.skinshortcuts,type=skinstring&amp;skinPath=spotlightmusic.path)</onclick>
+					<visible>String.IsEqual(Window.Property(menuname),musichub)</visible>
 					<visible>!Skin.HasSetting(DisableSpotlightContent)</visible>
 				</control>
 				
@@ -493,8 +493,8 @@
 					<height>58</height>
 					<align>center</align>
                     <label>$LOCALIZE[31369]</label>
-                    <onclick>RunScript(script.bingie.toolbox,action=selectimage,skinshortcutsproperty=thumb,header=$LOCALIZE[31369],allowmulti=true,resourceaddon=resource.images.skinicons,skinstring=CustomBackgroundSetting,currentvalue=$INFO[Container(211).ListItem.Property(ThumbName)])</onclick>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    
+					<visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
 				</control>
 				
 				<!--Set Label-->
@@ -502,7 +502,7 @@
 					<width>510</width>
 					<height>58</height>
 					<align>center</align>
-					<onclick>SetProperty(shortcutDialog, label,Home)</onclick>
+					
 					<label>$LOCALIZE[31466]</label>
 				</control>
 				
@@ -512,7 +512,7 @@
 					<height>58</height>
 					<align>center</align>
 					<label>$LOCALIZE[13332]</label>
-					<visible>!String.IsEqual(Window.Property(groupname),somethinghub) + !String.IsEqual(Window.Property(groupname),mylisthub)</visible>
+					<visible>!String.IsEqual(Window.Property(menuname),somethinghub) + !String.IsEqual(Window.Property(menuname),mylisthub)</visible>
 				</control>
 				
 				<!--Move Down-->
@@ -521,7 +521,7 @@
 					<height>58</height>
 					<align>center</align>
 					<label>$LOCALIZE[13333]</label>
-					<visible>!String.IsEqual(Window.Property(groupname),somethinghub)  + !String.IsEqual(Window.Property(groupname),mylisthub)</visible>
+					<visible>!String.IsEqual(Window.Property(menuname),somethinghub)  + !String.IsEqual(Window.Property(menuname),mylisthub)</visible>
 				</control>
 				
 				<!--change shortcut-->
@@ -539,7 +539,7 @@
 					<height>58</height>
 					<align>center</align>
 					<label>$LOCALIZE[31391]</label>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu) | String.IsEqual(Window.Property(groupname),powermenu) | String.IsEqual(Window.Property(groupname),searchmenu) | String.IsEqual(Window.Property(groupname),tmdbsearchmenu)</visible>
+					<visible>String.IsEqual(Window.Property(menuname),mainmenu) | String.IsEqual(Window.Property(menuname),powermenu) | String.IsEqual(Window.Property(menuname),searchmenu) | String.IsEqual(Window.Property(menuname),tmdbsearchmenu)</visible>
 				</control> 
 				
 				<!--sub menu-->
@@ -548,49 +548,50 @@
 					<height>58</height>
 					<align>center</align>
 					<label>$LOCALIZE[31465]</label>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
 					<visible>!Skin.HasSetting(DisableAllSubmenus)</visible>
 				</control>
 				
 				<!--shortcut type label-->
-				<control type="label" id="101">
-					<width>510</width>
-					<height>58</height>
-					<align>center</align>
-					<visible>false</visible>
-				</control>				              
+				<!-- Skin Shortcuts v3: old control 101 was removed -->				              
 
                 <control type="button" id="306"> 
 					<label/>
 					<visible>false</visible>
 				</control>
-				<control type="button" id="309"> 
-					<label/>
-					<visible>false</visible>
-				</control>
-                <control type="button" id="310"> 
-					<label/>
-					<visible>false</visible>
-				</control>
-                <control type="button" id="311"> 
-					<label/>
-					<visible>false</visible>
-				</control>			
+				<control type="button" id="309">
+                  <width>510</width>
+                  <height>58</height>
+                  <align>center</align>
+                  <label>Choisir un widget</label>
+                  <visible>!String.IsEqual(Window.Property(menuname),powermenu) + !String.IsEqual(Window.Property(disableWidgets),true)</visible>
+                </control>
+                <control type="button" id="310">
+                  <width>510</width>
+                  <height>58</height>
+                  <align>center</align>
+                  <label>Choisir un arrière-plan</label>
+                  <visible>String.IsEqual(Window.Property(menuname),mainmenu) + !String.IsEqual(Window.Property(disableBackgrounds),true)</visible>
+                </control>
+                <control type="button" id="311">
+                  <width>510</width>
+                  <height>58</height>
+                  <align>center</align>
+                  <label>Restaurer les éléments supprimés</label>
+                  <visible>true</visible>
+                </control>			
 				
 				<!--hidden button for properties-->
-				<control type="button" id="404"> 
-					<width>510</width>
-					<height>58</height>
-					<label/>
-					<align>center</align>
-					<onclick>SetProperty(chooseProperty, true)</onclick>
-					<visible>false</visible>
-				</control>
+				<!-- Skin Shortcuts v3: old control 404 was removed -->
 				
                 <!-- hidden button to set widget -->
                 <control type="button" id="312">
-					<visible>false</visible>
-				</control>              
+                  <width>510</width>
+                  <height>58</height>
+                  <align>center</align>
+                  <label>Réinitialiser l'élément</label>
+                  <visible>true</visible>
+                </control>              
 				
 				<!--widget style-->
                 <control type="button" id="31507"> 
@@ -598,8 +599,8 @@
 					<height>58</height>
 					<label>$LOCALIZE[31507]</label>
 					<align>center</align>
-                    <onclick>RunScript(script.bingie.toolbox,action=setskinshortcutsproperty,setting=layout,header=$LOCALIZE[31507],property=layout)</onclick>
-					<visible>String.IsEqual(Window.Property(groupname),searchmenu) | String.IsEqual(Window.Property(groupname),tmdbsearchmenu)</visible>
+                    
+					<visible>String.IsEqual(Window.Property(menuname),searchmenu) | String.IsEqual(Window.Property(menuname),tmdbsearchmenu)</visible>
                 </control>
 				
 				<!--widget style-->
@@ -608,8 +609,8 @@
 					<height>58</height>
 					<label>$LOCALIZE[31507]</label>
 					<align>center</align>
-                    <onclick>RunScript(script.bingie.toolbox,action=setskinshortcutsproperty,setting=widgetstyle,header=$LOCALIZE[31507],property=widgetstyle)</onclick>
-					<visible>!String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + !String.IsEqual(Window.Property(groupname),searchmenu) + !String.IsEqual(Window.Property(groupname),tmdbsearchmenu) + !String.IsEqual(Window.Property(groupname),somethinghub)</visible>
+                    
+					<visible>!String.IsEqual(Window.Property(menuname),mainmenu) + !String.IsEqual(Window.Property(menuname),powermenu) + !String.IsEqual(Window.Property(menuname),searchmenu) + !String.IsEqual(Window.Property(menuname),tmdbsearchmenu) + !String.IsEqual(Window.Property(menuname),somethinghub)</visible>
                 </control>
 								
 				<!--widget tags-->
@@ -618,8 +619,8 @@
 					<height>58</height>
 					<label>$LOCALIZE[31028]</label>
 					<align>center</align>
-					<onclick>RunScript(script.bingie.toolbox,action=setskinshortcutsproperty,header=$LOCALIZE[31028],property=widgetTags,setting=Widgets_DisplayTags)</onclick>
-					<visible>!String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + !String.IsEqual(Window.Property(groupname),somethinghub)</visible>
+					
+					<visible>!String.IsEqual(Window.Property(menuname),mainmenu) + !String.IsEqual(Window.Property(menuname),powermenu) + !String.IsEqual(Window.Property(menuname),somethinghub)</visible>
 					<visible>!String.Contains(Container(211).ListItem.Property(widgetstyle),square) + ![String.IsEmpty(Container(211).ListItem.Property(widgetstyle)) + String.Contains(Skin.String(widgetstyle),square)] + !String.Contains(Container(211).ListItem.Property(widgetstyle),landscape) + ![String.IsEmpty(Container(211).ListItem.Property(widgetstyle)) + String.Contains(Skin.String(widgetstyle),landscape)]</visible>
 			   </control>
 				
@@ -629,8 +630,8 @@
 					<height>58</height>
 					<label>$LOCALIZE[31468]</label>
 					<align>center</align>
-					<onclick>RunScript(script.bingie.toolbox,action=setskinshortcutsproperty,header=$LOCALIZE[31468],property=widgetTarget,setting=widgettarget)</onclick>
-					<visible>!String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu)</visible>
+					
+					<visible>!String.IsEqual(Window.Property(menuname),mainmenu) + !String.IsEqual(Window.Property(menuname),powermenu)</visible>
                 </control>
 				
 				<!--widget sort by-->
@@ -639,8 +640,8 @@
 					<height>58</height>
 					<label>$LOCALIZE[581]</label>
 					<align>center</align>
-					<onclick>RunScript(script.bingie.toolbox,action=setskinshortcutsproperty,header=$LOCALIZE[581],property=widgetSortBy,setting=widgetsortby)</onclick>
-					<visible>!String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + !String.IsEqual(Window.Property(groupname),searchmenu) + !String.IsEqual(Window.Property(groupname),tmdbsearchmenu)</visible>
+					
+					<visible>!String.IsEqual(Window.Property(menuname),mainmenu) + !String.IsEqual(Window.Property(menuname),powermenu) + !String.IsEqual(Window.Property(menuname),searchmenu) + !String.IsEqual(Window.Property(menuname),tmdbsearchmenu)</visible>
                 </control>
 				
 				<!--widget sort order-->
@@ -649,8 +650,8 @@
 					<height>58</height>
 					<label>$LOCALIZE[580]</label>
 					<align>center</align>
-					<onclick>RunScript(script.bingie.toolbox,action=setskinshortcutsproperty,header=$LOCALIZE[580],property=widgetSortOrder,setting=widgetsortorder)</onclick>
-					<visible>!String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + !String.IsEqual(Window.Property(groupname),searchmenu) + !String.IsEqual(Window.Property(groupname),tmdbsearchmenu)</visible>
+					
+					<visible>!String.IsEqual(Window.Property(menuname),mainmenu) + !String.IsEqual(Window.Property(menuname),powermenu) + !String.IsEqual(Window.Property(menuname),searchmenu) + !String.IsEqual(Window.Property(menuname),tmdbsearchmenu)</visible>
                 </control>
 				
 				<!--widget limit-->
@@ -659,16 +660,11 @@
 					<height>58</height>
 					<label>$LOCALIZE[21427]</label>
 					<align>center</align>
-					<onclick>RunScript(script.bingie.toolbox,action=setskinshortcutsproperty,header=$LOCALIZE[21427],property=widgetLimit,setting=widgetlimit)</onclick>
-					<visible>!String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu)</visible>
+					
+					<visible>!String.IsEqual(Window.Property(menuname),mainmenu) + !String.IsEqual(Window.Property(menuname),powermenu)</visible>
                 </control>
 				
-				<control type="button" id="308"> <!--reset-->
-					<width>510</width>
-					<height>58</height>
-					<align>center</align>
-					<label>$LOCALIZE[31415]</label>
-				</control>
+				<!-- Skin Shortcuts v3: old control 308 was removed -->
                 
                 <!-- disable shortcut-->
                 <control type="radiobutton" id="313">
@@ -678,7 +674,7 @@
 					<textwidth>300</textwidth>
                     <label>$LOCALIZE[31392]</label>
                     <selected>String.Contains(Container(211).ListItem.Property(skinshortcuts-disabled),true)</selected>
-					<visible>!String.IsEqual(Window.Property(groupname),somethinghub) + !String.IsEqual(Window.Property(groupname),mylisthub)</visible>
+					<visible>!String.IsEqual(Window.Property(menuname),somethinghub) + !String.IsEqual(Window.Property(menuname),mylisthub)</visible>
 				</control>
 				
 				<!--Delete-->				
@@ -687,7 +683,7 @@
 					<height>58</height>
 					<align>center</align>
 					<label>$LOCALIZE[117]</label>
-					<visible>!String.IsEqual(Window.Property(groupname),somethinghub) + !String.IsEqual(Window.Property(groupname),mylisthub)</visible>
+					<visible>!String.IsEqual(Window.Property(menuname),somethinghub) + !String.IsEqual(Window.Property(menuname),mylisthub)</visible>
 				</control>
                 
                 <!--close button-->
