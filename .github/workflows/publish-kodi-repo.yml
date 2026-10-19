@@ -7,14 +7,24 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+concurrency:
+  group: bingie-build-omega
+  cancel-in-progress: false
 jobs:
   publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout skin source
         uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           persist-credentials: true
+      - name: Use latest omega revision
+        run: |
+          git fetch origin omega
+          git checkout omega
+          git reset --hard origin/omega
       - name: Check Kodi 22 skin compatibility
         run: python3 tools/check_kodi22.py
       - name: Generate Kodi repository
@@ -26,5 +36,5 @@ jobs:
           git add repo/
           if ! git diff --cached --quiet; then
             git commit -m "chore: publish Kodi repository packages [skip ci]"
-            git push
+            git push origin HEAD:omega
           fi
