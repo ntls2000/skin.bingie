@@ -663,7 +663,6 @@
     </include>
 
     <include name="widget_base">
-        <!-- Keep classic item styles available as an instant fallback. -->
         <include content="widget_base_normal" condition="!Skin.HasSetting(NetflixModern2026)">
             <param name="contentStyle" value="$PARAM[contentStyle]" />
 			<param name="container" value="$PARAM[container]" />
@@ -695,8 +694,9 @@
             <param name="widgetSortOrder" value="$PARAM[widgetSortOrder]" />
             <param name="widgetLimit" value="$PARAM[widgetLimit]" />
             <param name="widgetStyle" value="widget_layout_landscape" />
-
+        </include>
     </include>
+
     <include name="WidgetBaseBingieIncludes">
         <onunfocus condition="System.HasAlarm(preview_delay)">CancelAlarm(preview_delay,silent)</onunfocus>
         <onunfocus condition="Skin.HasSetting(BingieAutoTrailer) + $EXP[IsPlayingUnrecognizedContent] + String.IsEmpty(Window(Home).Property(KeepPlayingPreview))">PlayerControl(Stop)</onunfocus>
