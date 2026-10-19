@@ -74,6 +74,15 @@
                 <ondown>77777</ondown>
                 <onback>77777</onback>
                 <itemlayout width="181" height="67">
+                    <!-- Keep the current page indicated even when focus moves to the rows. -->
+                    <control type="image">
+                        <visible>$EXP[IsMenuEntryActive]</visible>
+                        <left>7</left>
+                        <top>5</top>
+                        <width>167</width>
+                        <height>55</height>
+                        <texture colordiffuse="ff38383c" border="18">dialogs/keyboard/key-nf-2.png</texture>
+                    </control>
                     <control type="label">
                         <left>8</left>
                         <top>1</top>
