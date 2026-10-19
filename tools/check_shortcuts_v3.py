@@ -99,8 +99,27 @@ def check():
                       if e.get("name") == "NetflixModernTopNavigation")
     assert any(c.get("id") == "900" and c.get("type") == "list"
                for c in navigation.iter("control")), "Modern menu must preserve Skin Shortcuts id 900"
-    assert any((x.text or "").strip() == "MainMenuContent"
-               for x in navigation.iter("include")), "Modern menu must reuse saved v3 items"
+    assert any((x.text or "").strip() == "skinshortcuts-modernnav"
+               for x in navigation.iter("include")), "Modern menu must use its v3-generated four-item navbar"
+    nav = next(x for x in menus.findall("menu") if x.get("name") == "modernnav")
+    assert len(nav.findall("item")) == 4, "Four compact modern TV tabs are required"
+    assert all(x.find("action") is not None for x in nav.findall("item"))
+    hero = next(x for x in modern.findall("include")
+                if x.get("name") == "NetflixModernHeroSurface")
+    hero_ids = {x.get("id") for x in hero.iter("control")}
+    assert {"49010", "49011"} <= hero_ids, "Modern hero Play and Info buttons missing"
+    assert "Container(1508).ListItem.Title" in ET.tostring(hero, encoding="unicode")
+    # Kodi-specific on/off routing and a larger gap beneath the feature.
+    widget_factory = ET.parse(XML_DIR / "IncludesHomeWidgets.xml").getroot()
+    base = next(e for e in widget_factory.findall("include") if e.get("name") == "widget_base")
+    factory_options = base.findall("include")
+    assert len(factory_options) == 2
+    assert {x.get("condition") for x in factory_options} == {
+        "Skin.HasSetting(NetflixModern2026)", "!Skin.HasSetting(NetflixModern2026)"
+    }
+    assert any(p.get("name") == "widgetStyle" and p.get("value") == "widget_layout_landscape"
+               for x in factory_options for p in x.findall("param"))
+
     homepage = (XML_DIR / "IncludesHomeBingie.xml").read_text(encoding="utf-8")
     assert 'condition="Skin.HasSetting(NetflixModern2026) + Window.IsActive(Home)"' in homepage
     assert 'condition="!Skin.HasSetting(NetflixModern2026) | !Window.IsActive(Home)"' in homepage
@@ -108,6 +127,10 @@ def check():
     skinsettings = (XML_DIR / "IncludesSkinSettings.xml").read_text(encoding="utf-8")
     assert "Skin.ToggleSetting(NetflixModern2026)" in skinsettings
     assert "ReloadSkin()" in skinsettings
+    assert "type=manage&amp;menu=modernnav" in skinsettings
+    assert 'end="0,155"' in homepage
+    assert 'old hub title and old spotlight would overlap modern feature' in homepage
+
     assert "ActivateWindow(Settings)" in ET.tostring(modern, encoding="unicode")
     for locale in ("en_gb", "fr_fr"):
         po = (ROOT / f"language/resource.language.{locale}/strings.po").read_text(encoding="utf-8")
