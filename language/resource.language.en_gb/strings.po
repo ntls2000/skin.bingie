@@ -2387,3 +2387,15 @@ msgctxt "#31611"
 msgid "Display horizontal navigation and a modern featured hero. The original layout can be restored at any time."
 msgstr ""
 
+
+msgctxt "#31612"
+msgid "Edit modern navigation"
+msgstr ""
+
+msgctxt "#31613"
+msgid "FEATURED"
+msgstr ""
+
+msgctxt "#31614"
+msgid "More info"
+msgstr ""
