@@ -1,27 +1,39 @@
-# Kodi 22 — migration Skin Shortcuts 2 → 3
+# Bingie 2.0.4~beta1 — migration Skin Shortcuts 3 pour Kodi 22
 
-**Statut : travail en cours, NON INSTALLABLE.** Cette branche est séparée de `omega` pour protéger la version distribuée sur tablette.
+**Statut : bêta expérimentale. Pas encore testée sur une tablette Kodi 22.**
+Ne pas fusionner cette branche dans `omega` et ne pas l'imposer en mise à jour automatique.
 
-Guide officiel de migration :
-https://github.com/MikeSiLVO/script.skinshortcuts/blob/main/docs/migration-v2-to-v3.md
+## Versions confirmées (19 octobre 2026)
+- Skin Shortcuts : **3.0.5~beta1** (préversion publiée le 18 octobre 2026).
+- Dernière stable : **3.0.4**.
+- Notre skin : **2.0.4~beta1**, dépendance minimale `script.skinshortcuts >= 3.0.4`.
 
-## Avancement réel
+## Changements réalisés
+- `shortcuts/menus.xml` : définitions des menus Bingie (principal, power, recherche, hubs, personnalisés) et sous-menus Films/Séries.
+- `shortcuts/widgets.xml` : groupes du nouveau sélecteur.
+- `shortcuts/properties.xml` : boutons natifs d'édition des widgets, fonds, styles, limites et tris.
+- `shortcuts/backgrounds.xml` : choix d'images statiques et personnalisées.
+- `shortcuts/templates.xml` : nouveaux générateurs v3 des 8 zones de widgets Bingie.
+- `Home.xml` : commande `type=buildxml` sans paramètres v2.
+- `IncludesSkinSettings.xml` : `type=manage&menu=` au lieu de `group=`.
+- `script-skinshortcuts.xml` : propriétés `menuname`, suppression des IDs obsolètes 101, 308 et 404, réaffectation des contrôles pour la v3.
+- 34 sélecteurs de widgets intégrés : `type=skinstring` remplace `type=widgets`.
+- Adaptation des noms d'includes générés pour les sous-menus et le menu power.
+- Deux accès de secours directs vers **Paramètres Kodi** dans le menu principal et le menu d'alimentation, indépendants de la construction des raccourcis.
 
-- [x] Créer la branche expérimentale `kodi22-skinshortcuts-v3`.
-- [x] Ajouter `shortcuts/menus.xml` avec les entrées Bingie principales et le power menu à partir des anciens `.DATA.xml`.
-- [x] Ajouter un premier `shortcuts/widgets.xml` avec des catégories vidéo, séries et musique.
-- [ ] Migrer tous les menus secondaires : searchmenu, tmdbsearchmenu, moviehub, tvshowhub, newhub, musichub, customhub, somethinghub et mylisthub.
-- [ ] Réécrire les 768 lignes de `shortcuts/template.xml` selon le format `shortcuts/templates.xml` de Skin Shortcuts 3. Les instructions `<other>`, `<submenuOther>`, `$SKINSHORTCUTS[]`, `$PYTHON[]`, les identifiants de conteneurs et les includes générés ne sont pas directement compatibles.
-- [ ] Remplacer les appels `RunScript(script.skinshortcuts,type=widgets...)` par le nouveau sélecteur `type=skinstring`.
-- [ ] Migrer `shortcuts/overrides.xml` vers les nouveaux `properties.xml`, `backgrounds.xml`, `menus.xml` et `widgets.xml`.
-- [ ] Actualiser les contrôles des fenêtres v2 devenus obsolètes (dont 101-103, 111, 308, 404, 406-410).
-- [ ] Adapter les références de l'interface aux nouveaux noms des includes générés par v3.
-- [ ] Actualiser la dépendance `script.skinshortcuts` dans `addon.xml`, augmenter le numéro de version de Bingie et adapter les appels `buildxml` de Home.xml.
-- [ ] Vérifier le XML, les includes à l'exécution et les journaux Kodi 22 sur Android.
-- [ ] Publier sur `omega` uniquement après validation de la navigation, des widgets et des raccourcis.
+## Validation
+- `python tools/check_kodi22.py` : XML et labels obsolètes vérifiés.
+- `python tools/check_shortcuts_v3.py` : structure v3, noms, boutons, commandes et accès de secours.
+- Génération d'un ZIP bêta distinct via `.github/workflows/check-shortcuts-v3.yml`.
+- Exécution passée : https://github.com/ntls2000/skin.bingie/actions/runs/39288517400
 
-## Point d'attention
+## À confirmer sur un appareil Kodi 22
+- Ouverture des menus, modification et mémorisation des raccourcis ;
+- Widgets de chaque hub et génération des includes à l'exécution ;
+- Parcours du picker widgets / images, sous-menus et retour aux paramètres ;
+- Réglages utilisateur **v2** : sauvegarder avant test. La v3 utilise un fichier JSON nouveau et ne reprend pas automatiquement les anciens fichiers XML.
+- Performances Android, dépendances Bingie et retour en Estuary.
 
-Les personnalisations sauvegardées en XML sous Skin Shortcuts 2 ne sont pas migrées automatiquement vers le format JSON de Skin Shortcuts 3. Prévoir sauvegarde et reconstruction des menus utilisateur.
+Les anciens fichiers `shortcuts/template.xml` et `shortcuts/overrides.xml` restent présents comme références historiques, mais la v3 utilise les nouveaux fichiers au pluriel.
 
-Les fichiers `overrides.xml` et `template.xml` d'origine sont intentionnellement préservés pendant la conversion, afin de comparer le comportement.
+**Important :** tant que les tests sur Kodi 22 ne sont pas confirmés, garder Estuary actif et `omega` stable.
