@@ -631,15 +631,15 @@ msgstr "avec"
 
 msgctxt "#31150"
 msgid "and"
-msgstr "and"
+msgstr "et"
 
 msgctxt "#31151"
 msgid "Background overlay color"
-msgstr "Background overlay color"
+msgstr "Couleur du voile d’arrière-plan"
 
 msgctxt "#31152"
 msgid "Bingie animation"
-msgstr "Bingie animation"
+msgstr "Animation Bingie"
 
 msgctxt "#31153"
 msgid "Trakt"
@@ -647,19 +647,19 @@ msgstr "Trakt"
 
 msgctxt "#31154"
 msgid "Startup animations"
-msgstr "Startup animations"
+msgstr "Animations de démarrage"
 
 msgctxt "#31155"
 msgid "Add/remove favorites"
-msgstr "Add/remove favorites"
+msgstr "Ajouter/retirer des favoris"
 
 msgctxt "#31156"
 msgid "Ratings & studio logo"
-msgstr "Ratings & studio logo"
+msgstr "Notes et logo du studio"
 
 msgctxt "#31157"
 msgid "Primary text color"
-msgstr "Primary text color"
+msgstr "Couleur du texte principal"
 
 msgctxt "#31158"
 msgid "Thumbs up/down options"
@@ -671,7 +671,7 @@ msgstr "Documentaires"
 
 msgctxt "#31160"
 msgid "Exit Bingie"
-msgstr "Exit Bingie"
+msgstr "Quitter Bingie"
 
 msgctxt "#31161"
 msgid "Watch Season 1 Now"
@@ -679,11 +679,11 @@ msgstr "Regardez la saison 1 maintenant"
 
 msgctxt "#31162"
 msgid "Button disabled text color"
-msgstr "Button disabled text color"
+msgstr "Couleur du texte des boutons désactivés"
 
 msgctxt "#31163"
 msgid "Trailer delay interval"
-msgstr "Trailer delay interval"
+msgstr "Délai avant les bandes-annonces"
 
 msgctxt "#31164"
 msgid "No active weather alerts"
@@ -691,35 +691,35 @@ msgstr "Pas d'alertes météo active"
 
 msgctxt "#31165"
 msgid "TMDb Shows"
-msgstr "TMDb Shows"
+msgstr "Séries TMDb"
 
 msgctxt "#31166"
 msgid "Customize my list hub"
-msgstr "Customize my list hub"
+msgstr "Personnaliser la section Ma liste"
 
 msgctxt "#31167"
 msgid "Configure home screen & menus"
-msgstr "Configure home screen & menus"
+msgstr "Configurer l’accueil et les menus"
 
 msgctxt "#31168"
 msgid "This skin is designed to give you maximum flexibility in how you arrange your home screen and menus. You can add or remove widgets, define menus and submenus, and more. Use the buttons below to start customizing the skin’s menus and widgets."
-msgstr "This skin is designed to give you maximum flexibility in how you arrange your home screen and menus. You can add or remove widgets, define menus and submenus, and more. Use the buttons below to start customizing the skin’s menus and widgets."
+msgstr "Cet habillage vous permet de personnaliser entièrement l’organisation de l’accueil et des menus. Vous pouvez ajouter ou supprimer des widgets, définir des menus et sous-menus, et bien plus encore. Utilisez les boutons ci-dessous pour personnaliser vos menus et vos widgets."
 
 msgctxt "#31169"
 msgid "Disable dummy spotlight widget"
-msgstr "Disable dummy spotlight widget"
+msgstr "Désactiver le widget de sélection fictif"
 
 msgctxt "#31170"
 msgid "Reset menu to skin defaults"
-msgstr "Reset menu to skin defaults"
+msgstr "Réinitialiser les menus aux valeurs par défaut de l’habillage"
 
 msgctxt "#31171"
 msgid "If you see weird behavior on your home menu or you just want to start fresh and get the most out of this skin, you can reset the menu structures to the skins default settings with the button below."
-msgstr "If you see weird behavior on your home menu or you just want to start fresh and get the most out of this skin, you can reset the menu structures to the skins default settings with the button below."
+msgstr "Si le menu d’accueil se comporte de façon inhabituelle, ou si vous souhaitez repartir à zéro, utilisez le bouton ci-dessous pour restaurer la disposition des menus prévue par l’habillage."
 
 msgctxt "#31172"
 msgid "Who's watching Bingie?"
-msgstr "Who's watching Bingie?"
+msgstr "Qui regarde Bingie ?"
 
 msgctxt "#31173"
 msgid "Auto play trailers in home & hubs"
@@ -727,7 +727,7 @@ msgstr "Lancer automatiquement les bandes-annonces sur l'Accueil et les Hubs"
 
 msgctxt "#31174"
 msgid "Focused color for home tiles and widgets"
-msgstr "Focused color for home tiles and widgets"
+msgstr "Couleur de sélection des tuiles et widgets de l’accueil"
 
 msgctxt "#31175"
 msgid "Change shortcut"
@@ -739,11 +739,11 @@ msgstr "Paramètres de l'écran d'introduction"
 
 msgctxt "#31177"
 msgid "Title/clearlogo animation when system is idle"
-msgstr "Title/clearlogo animation when system is idle"
+msgstr "Animation du titre ou du logo quand le système est inactif"
 
 msgctxt "#31178"
 msgid "Hide ratings and studio logo on spotlight"
-msgstr "Hide ratings and studio logo on spotlight"
+msgstr "Masquer les notes et le logo du studio dans la sélection principale"
 
 msgctxt "#31179"
 msgid "Always open fullscreen music playback"
@@ -751,11 +751,11 @@ msgstr "Toujours lancer la lecture de musique en plein écran"
 
 msgctxt "#31180"
 msgid "Hide ratings and studio logo on widgets"
-msgstr "Hide ratings and studio logo on widgets"
+msgstr "Masquer les notes et le logo du studio dans les widgets"
 
 msgctxt "#31181"
 msgid "Select movie genre icons"
-msgstr "Select movie genre icons"
+msgstr "Choisir les icônes des genres de films"
 
 msgctxt "#31182"
 msgid "Menu options"
@@ -763,11 +763,11 @@ msgstr "Options du menu"
 
 msgctxt "#31183"
 msgid "TMDb Movies"
-msgstr "TMDb Movies"
+msgstr "Films TMDb"
 
 msgctxt "#31184"
 msgid "Replace cast and crew text list with cast and crew images"
-msgstr "Replace cast and crew text list with cast and crew images"
+msgstr "Remplacer la liste des acteurs et de l’équipe par leurs photos"
 
 msgctxt "#31185"
 msgid "Spotlight"
@@ -775,7 +775,7 @@ msgstr "Spotlight (Mise en avant du contenu)"
 
 msgctxt "#31186"
 msgid "Search by TMDb Movies, Shows or People"
-msgstr "Search by TMDb Movies, Shows or People"
+msgstr "Rechercher des films, séries ou personnalités sur TMDb"
 
 msgctxt "#31187"
 msgid "More info"
@@ -787,7 +787,7 @@ msgstr "Options de détails"
 
 msgctxt "#31189"
 msgid "Listitem border/panel focused color"
-msgstr "Listitem border/panel focused color"
+msgstr "Couleur de bordure ou de panneau de l’élément sélectionné"
 
 msgctxt "#31190"
 msgid "Watch Now"
@@ -799,11 +799,11 @@ msgstr "Démarrage dans"
 
 msgctxt "#31192"
 msgid "Match"
-msgstr "Match"
+msgstr "Correspondance"
 
 msgctxt "#31193"
 msgid "Focus frame border size"
-msgstr "Focus frame border size"
+msgstr "Épaisseur de la bordure du cadre de sélection"
 
 msgctxt "#31194"
 msgid "Supported addons"
@@ -811,11 +811,11 @@ msgstr "Extensions supportées"
 
 msgctxt "#31195"
 msgid "Play from beginning"
-msgstr "Play from beginning"
+msgstr "Lire depuis le début"
 
 msgctxt "#31196"
 msgid "Last Releases TV Shows"
-msgstr "Last Releases TV Shows"
+msgstr "Dernières sorties de séries"
 
 msgctxt "#31197"
 msgid "Style for media/codec info"
@@ -823,27 +823,27 @@ msgstr "Style des informations media/codec"
 
 msgctxt "#31198"
 msgid "Hide ratings in Plot & Critics"
-msgstr "Hide ratings in Plot & Critics"
+msgstr "Masquer les notes dans « Résumé et critiques »"
 
 msgctxt "#31199"
 msgid "Enable additional details cast thumbnails"
-msgstr "Enable additional details cast thumbnails"
+msgstr "Afficher des vignettes supplémentaires des acteurs"
 
 msgctxt "#31200"
 msgid "Show discart"
-msgstr "Show discart"
+msgstr "Afficher l’image du disque"
 
 msgctxt "#31201"
 msgid "Animate discart"
-msgstr "Animate discart"
+msgstr "Animer l’image du disque"
 
 msgctxt "#31202"
 msgid "Customize search menu"
-msgstr "Customize search menu"
+msgstr "Personnaliser le menu de recherche"
 
 msgctxt "#31203"
 msgid "Background color"
-msgstr "Background color"
+msgstr "Couleur d’arrière-plan"
 
 msgctxt "#31204"
 msgid "Customize power menu"
@@ -855,7 +855,7 @@ msgstr "Onyx"
 
 msgctxt "#31206"
 msgid "Music Video Artists"
-msgstr "Music Video Artists"
+msgstr "Artistes des clips musicaux"
 
 msgctxt "#31207"
 msgid "Use extra fanart"
@@ -863,11 +863,11 @@ msgstr "Utiliser les FanArts supplémentaire"
 
 msgctxt "#31208"
 msgid "Replace 'Rate This Title' (local library) with 'Add Raiting' (Trakt)"
-msgstr "Replace 'Rate This Title' (local library) with 'Add Raiting' (Trakt)"
+msgstr "Remplacer « Noter ce titre » (médiathèque locale) par « Ajouter une note » (Trakt)"
 
 msgctxt "#31209"
 msgid "Loading..."
-msgstr "Loading..."
+msgstr "Chargement…"
 
 msgctxt "#31210"
 msgid "Classic"
@@ -887,11 +887,11 @@ msgstr "Sélectionner le délai d'intervale pour le lancement auto. des bandes-a
 
 msgctxt "#31214"
 msgid "Replace 'Add to My List' (local library) with 'Add/Remove Favorites' (Trakt)"
-msgstr "Replace 'Add to My List' (local library) with 'Add/Remove Favorites' (Trakt)"
+msgstr "Remplacer « Ajouter à ma liste » (médiathèque locale) par « Ajouter/retirer des favoris » (Trakt)"
 
 msgctxt "#31215"
 msgid "Content loading"
-msgstr "Content loading"
+msgstr "Chargement du contenu"
 
 msgctxt "#31216"
 msgid "Only when OSD active"
@@ -899,11 +899,11 @@ msgstr "seulement lorsque l’OSD est actif"
 
 msgctxt "#31217"
 msgid "Reboot to android"
-msgstr "Reboot to android"
+msgstr "Redémarrer sous Android"
 
 msgctxt "#31218"
 msgid "Show first unwatched/currently watching episode details in TV Shows info"
-msgstr "Show first unwatched/currently watching episode details in TV Shows info"
+msgstr "Afficher les détails du premier épisode non vu ou en cours dans les informations d’une série"
 
 msgctxt "#31219"
 msgid "Random Movies"
@@ -911,7 +911,7 @@ msgstr "Film aléatoire"
 
 msgctxt "#31220"
 msgid "Header text shadow color"
-msgstr "Header text shadow color"
+msgstr "Couleur de l’ombre du texte d’en-tête"
 
 msgctxt "#31221"
 msgid "Media library views"
@@ -919,7 +919,7 @@ msgstr "Vues des médiathèques"
 
 msgctxt "#31222"
 msgid "Media details text color"
-msgstr "Media details text color"
+msgstr "Couleur du texte des détails du média"
 
 # DO NOT TRANSLATE THIS STRING!!!
 msgctxt "#31223"
@@ -928,19 +928,19 @@ msgstr "Liste"
 
 msgctxt "#31224"
 msgid "PVR guide unfocused item panel color"
-msgstr "PVR guide unfocused item panel color"
+msgstr "Couleur du panneau des éléments non sélectionnés du guide TV"
 
 msgctxt "#31225"
 msgid "Enable auto scroll for plots/descriptions"
-msgstr "Enable auto scroll for plots/descriptions"
+msgstr "Défilement automatique des résumés et descriptions"
 
 msgctxt "#31226"
 msgid "Media details header color"
-msgstr "Media details header color"
+msgstr "Couleur d’en-tête des détails du média"
 
 msgctxt "#31227"
 msgid "New & Popular"
-msgstr "New & Popular"
+msgstr "Nouveautés et tendances"
 
 msgctxt "#31228"
 msgid "Modern"
@@ -952,7 +952,7 @@ msgstr "Plus d'épisodes"
 
 msgctxt "#31230"
 msgid "Press up for full keyboard"
-msgstr "Press up for full keyboard"
+msgstr "Appuyer sur Haut pour afficher le clavier complet"
 
 msgctxt "#31231"
 msgid "seconds"
@@ -960,15 +960,15 @@ msgstr "secondes"
 
 msgctxt "#31232"
 msgid "Don't hide OSD infopanel on fullscreen music playback"
-msgstr "Don't hide OSD infopanel on fullscreen music playback"
+msgstr "Ne pas masquer les informations OSD pendant la lecture musicale en plein écran"
 
 msgctxt "#31233"
 msgid "Button focused color"
-msgstr "Button focused color"
+msgstr "Couleur des boutons sélectionnés"
 
 msgctxt "#31234"
 msgid "TMDb Movie Collections"
-msgstr "TMDb Movie Collections"
+msgstr "Collections de films TMDb"
 
 msgctxt "#31235"
 msgid "Video process information"
@@ -976,7 +976,7 @@ msgstr "Information du processus vidéo"
 
 msgctxt "#31236"
 msgid "Details row text color"
-msgstr "Details row text color"
+msgstr "Couleur du texte de la ligne de détails"
 
 msgctxt "#31237"
 msgid "Use genre colors in EPG timeline"
@@ -984,7 +984,7 @@ msgstr "Utiliser des couleurs de genre dans l'horaire du Guide des Programmes"
 
 msgctxt "#31238"
 msgid "Lyrics text color"
-msgstr "Lyrics text color"
+msgstr "Couleur du texte des paroles"
 
 msgctxt "#31239"
 msgid "Use alternative EPG progress indicator"
@@ -992,11 +992,11 @@ msgstr "Utiliser un indicateur de progression alternatif dans le Guide des Progr
 
 msgctxt "#31240"
 msgid "We think you'll like this"
-msgstr "We think you'll like this"
+msgstr "Nous pensons que cela vous plaira"
 
 msgctxt "#31241"
 msgid "Age"
-msgstr "Age"
+msgstr "Âge"
 
 msgctxt "#31242"
 msgid "Skin resources settings"
@@ -1008,19 +1008,19 @@ msgstr "Afficher du texte défilant durant la lecture de musique"
 
 msgctxt "#31244"
 msgid "IMDB Top 250"
-msgstr "IMDB Top 250"
+msgstr "Top 250 IMDb"
 
 msgctxt "#31245"
 msgid "Number of rows to show in timeline"
-msgstr "Number of rows to show in timeline"
+msgstr "Nombre de lignes affichées dans la grille du programme TV"
 
 msgctxt "#31246"
 msgid "Credits & more info"
-msgstr "Credits & more info"
+msgstr "Générique et autres informations"
 
 msgctxt "#31247"
 msgid "Trailers & more"
-msgstr "Trailers & more"
+msgstr "Bandes-annonces et plus"
 
 msgctxt "#31248"
 msgid "IMDb"
@@ -1028,11 +1028,11 @@ msgstr "IMDb"
 
 msgctxt "#31249"
 msgid "Enable OSD seek/jump indicator"
-msgstr "Enable OSD seek/jump indicator"
+msgstr "Afficher l’indicateur de déplacement rapide dans l’OSD"
 
 msgctxt "#31250"
 msgid "Customize custom hub"
-msgstr "Customize custom hub"
+msgstr "Personnaliser la section personnalisée"
 
 msgctxt "#31251"
 msgid "Custom color settings"
@@ -1040,7 +1040,7 @@ msgstr "Paramètres de couleur personnalisés"
 
 msgctxt "#31252"
 msgid "Custom Hub"
-msgstr "Custom Hub"
+msgstr "Section personnalisée"
 
 msgctxt "#31253"
 msgid "FAST FORWARD"
@@ -1052,11 +1052,11 @@ msgstr "RETOUR RAPIDE"
 
 msgctxt "#31255"
 msgid "Search by Movies, Shows or Episodes"
-msgstr "Search by Movies, Shows or Episodes"
+msgstr "Rechercher des films, séries ou épisodes"
 
 msgctxt "#31256"
 msgid "TV Shows Trending Today"
-msgstr "TV Shows Trending Today"
+msgstr "Séries tendance aujourd’hui"
 
 msgctxt "#31257"
 msgid "Memory Usage"
@@ -1064,15 +1064,15 @@ msgstr "Utilisation de la mémoire"
 
 msgctxt "#31258"
 msgid "Enable finish, current & total time for OSD playback"
-msgstr "Enable finish, current & total time for OSD playback"
+msgstr "Afficher l’heure de fin, la position et la durée totale dans l’OSD"
 
 msgctxt "#31259"
 msgid "Enable animated discart"
-msgstr "Enable animated discart"
+msgstr "Animer l’image du disque"
 
 msgctxt "#31260"
 msgid "Panel color"
-msgstr "Panel color"
+msgstr "Couleur du panneau"
 
 msgctxt "#31261"
 msgid "There are no matches for your search."
@@ -1080,15 +1080,15 @@ msgstr "Nous ne trouvons rien"
 
 msgctxt "#31262"
 msgid "In the Bingie skin, the content is organized into dedicated hubs. This layout makes it easy to navigate between categories and find what you’re looking for. Just like on the home screen, you have the ability to add new widgets, remove existing ones, and fully customize their appearance and behavior."
-msgstr "In the Bingie skin, the content is organized into dedicated hubs. This layout makes it easy to navigate between categories and find what you’re looking for. Just like on the home screen, you have the ability to add new widgets, remove existing ones, and fully customize their appearance and behavior."
+msgstr "Dans Bingie, le contenu est organisé en sections dédiées. Cette disposition facilite la navigation entre les catégories et la découverte de contenus. Comme sur l’accueil, vous pouvez ajouter des widgets, supprimer ceux qui existent et personnaliser leur apparence et leur fonctionnement."
 
 msgctxt "#31263"
 msgid "Recommended by TMDb"
-msgstr "Recommended by TMDb"
+msgstr "Recommandations TMDb"
 
 msgctxt "#31264"
 msgid "Enable snow animation"
-msgstr "Enable snow animation"
+msgstr "Activer l’animation de neige"
 
 msgctxt "#31265"
 msgid "Disable all submenus"
@@ -1108,7 +1108,7 @@ msgstr "Désactiver FanArt"
 
 msgctxt "#31269"
 msgid "Large white icons"
-msgstr "Large white icons"
+msgstr "Grandes icônes blanches"
 
 msgctxt "#31270"
 msgid "General artwork & details options"
@@ -1120,55 +1120,55 @@ msgstr "Sauvegarder et restaurer"
 
 msgctxt "#31272"
 msgid "Backup skin settings"
-msgstr "Backup skin settings"
+msgstr "Sauvegarder les paramètres de l’habillage"
 
 msgctxt "#31273"
 msgid "Restore skin settings"
-msgstr "Restore skin settings"
+msgstr "Restaurer les paramètres de l’habillage"
 
 msgctxt "#31274"
 msgid "Reset skin to default settings"
-msgstr "Reset skin to default settings"
+msgstr "Réinitialiser les paramètres de l’habillage"
 
 msgctxt "#31275"
 msgid "Disable Bingie logo on home"
-msgstr "Disable Bingie logo on home"
+msgstr "Masquer le logo Bingie sur l’accueil"
 
 msgctxt "#31276"
 msgid "Auto hide menu"
-msgstr "Auto hide menu"
+msgstr "Masquer automatiquement le menu"
 
 msgctxt "#31277"
 msgid "IMDB Top 250 Movies"
-msgstr "IMDB Top 250 Movies"
+msgstr "Top 250 des films IMDb"
 
 msgctxt "#31278"
 msgid "Hide ratings and studio logo while trailer is playing"
-msgstr "Hide ratings and studio logo while trailer is playing"
+msgstr "Masquer les notes et le logo du studio pendant la bande-annonce"
 
 msgctxt "#31279"
 msgid "Dark grey"
-msgstr "Dark grey"
+msgstr "Gris foncé"
 
 msgctxt "#31280"
 msgid "OSD buffering spinner color"
-msgstr "OSD buffering spinner color"
+msgstr "Couleur de l’icône de chargement dans l’OSD"
 
 msgctxt "#31281"
 msgid "Disable items progress bar below title/clearlogo (use default indicator)"
-msgstr "Disable items progress bar below title/clearlogo (use default indicator)"
+msgstr "Masquer la barre de progression sous le titre ou logo (utiliser l’indicateur par défaut)"
 
 msgctxt "#31282"
 msgid "Prefer red/white additional details icon"
-msgstr "Prefer red/white additional details icon"
+msgstr "Préférer les icônes de détails rouges et blanches"
 
 msgctxt "#31283"
 msgid "Prefer white icon on Top 250 sublabel"
-msgstr "Prefer white icon on Top 250 sublabel"
+msgstr "Préférer une icône blanche pour le badge Top 250"
 
 msgctxt "#31284"
 msgid "Enable Top 250 sublabel on home and Bingie views"
-msgstr "Enable Top 250 sublabel on home and Bingie views"
+msgstr "Afficher le badge Top 250 sur l’accueil et dans les vues Bingie"
 
 msgctxt "#31285"
 msgid "Overview"
@@ -1200,27 +1200,27 @@ msgstr "Récupération des prévisions météo..."
 
 msgctxt "#31292"
 msgid "TV Show status"
-msgstr "TV Show status"
+msgstr "Statut de la série"
 
 msgctxt "#31293"
 msgid "Only for music"
-msgstr "Only for music"
+msgstr "Uniquement pour la musique"
 
 msgctxt "#31294"
 msgid "For episodes and music"
-msgstr "For episodes and music"
+msgstr "Pour les épisodes et la musique"
 
 msgctxt "#31295"
 msgid "TMDb Rating"
-msgstr "TMDb Rating"
+msgstr "Note TMDb"
 
 msgctxt "#31296"
 msgid "Time to show each fanart image"
-msgstr "Time to show each fanart image"
+msgstr "Durée d’affichage de chaque image de fond"
 
 msgctxt "#31297"
 msgid "Disable spotlight widget"
-msgstr "Disable spotlight widget"
+msgstr "Désactiver le widget de sélection principale"
 
 msgctxt "#31298"
 msgid "pixels"
@@ -1228,7 +1228,7 @@ msgstr "pixels"
 
 msgctxt "#31299"
 msgid "Color-fixed size"
-msgstr "Color-fixed size"
+msgstr "Taille fixe pour la couleur"
 
 msgctxt "#31300"
 msgid "Watch It Again Movies"
