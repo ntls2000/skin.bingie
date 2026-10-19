@@ -1,7 +1,6 @@
 name: Validate Bingie Skin Shortcuts v3 beta
+# Temporarily run manually while changing the home UI to avoid racing ZIP bot commits.
 on:
-  push:
-    branches: [kodi22-skinshortcuts-v3]
   workflow_dispatch:
 permissions:
   contents: write
