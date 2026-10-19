@@ -194,7 +194,7 @@
 	<!--details row MPAA UK & UK style US icons-->
 	<variable name="mediaflags_large_rating_UK_icons">
 		
-		<!---UK classifcations using UK or Rated prefix--->
+		<!-- UK classifications using UK or Rated prefix -->
 		<value condition="String.Contains(ListItem.mpaa,UK:U) | String.Contains(ListItem.mpaa,GB-U) | String.Contains(ListItem.mpaa,Rated U) | String.IsEqual(ListItem.mpaa,U) | String.Contains(Container(17195).ListItem.mpaa,UK:U) | String.Contains(Container(17195).ListItem.mpaa,GB-U) | String.Contains(Container(17195).ListItem.mpaa,Rated U) | String.IsEqual(Container(17195).ListItem.mpaa,U)">Flags/flags_color/mpaa/bbfc_u_certificate_uk.png</value>
 		<value condition="String.Contains(ListItem.mpaa,UK:PG) | String.Contains(ListItem.mpaa,GB-PG) | String.Contains(ListItem.mpaa,Guidance) | String.Contains(Container(17195).ListItem.mpaa,UK:PG) | String.Contains(Container(17195).ListItem.mpaa,GB-PG) | String.Contains(Container(17195).ListItem.mpaa,Guidance)">Flags/flags_color/mpaa/bbfc_pg_certificate_uk.png</value>
 		<value condition="String.Contains(ListItem.mpaa,UK:12A) | String.Contains(ListItem.mpaa,GB-12A) | String.Contains(ListItem.mpaa,Rated 12A) | String.IsEqual(ListItem.mpaa,12A) | String.Contains(Container(17195).ListItem.mpaa,UK:12A) | String.Contains(Container(17195).ListItem.mpaa,GB-12A) | String.Contains(Container(17195).ListItem.mpaa,Rated 12A) | String.IsEqual(Container(17195).ListItem.mpaa,12A)">Flags/flags_color/mpaa/bbfc_12a_certificate_uk.png</value>
@@ -221,7 +221,7 @@
 	<!--MPAA UK & UK style US icons for spotlight-->
 	<variable name="mediaflags_large_rating_UK_spotlight_icons">
 		
-		<!---UK classifcations using UK or Rated prefix--->
+		<!-- UK classifications using UK or Rated prefix -->
 		<value condition="String.Contains(ListItem.mpaa,UK:U) | String.Contains(ListItem.mpaa,GB-U) | String.Contains(ListItem.mpaa,Rated U) | String.IsEqual(ListItem.mpaa,U) | String.Contains(Container(17195).ListItem.mpaa,UK:U) | String.Contains(Container(17195).ListItem.mpaa,GB-U) | String.Contains(Container(17195).ListItem.mpaa,Rated U) | String.IsEqual(Container(17195).ListItem.mpaa,U)">Flags/flags_color/mpaa/uk_spotlight/bbfc_u.png</value>
 		<value condition="String.Contains(ListItem.mpaa,UK:PG) | String.Contains(ListItem.mpaa,GB-PG) | String.Contains(ListItem.mpaa,Guidance) | String.Contains(Container(17195).ListItem.mpaa,UK:PG) | String.Contains(Container(17195).ListItem.mpaa,GB-PG) | String.Contains(Container(17195).ListItem.mpaa,Guidance)">Flags/flags_color/mpaa/uk_spotlight/bbfc_pg.png</value>
 		<value condition="String.Contains(ListItem.mpaa,UK:12A) | String.Contains(ListItem.mpaa,GB-12A) | String.Contains(ListItem.mpaa,Rated 12A) | String.IsEqual(ListItem.mpaa,12A) | String.Contains(Container(17195).ListItem.mpaa,UK:12A) | String.Contains(Container(17195).ListItem.mpaa,GB-12A) | String.Contains(Container(17195).ListItem.mpaa,Rated 12A) | String.IsEqual(Container(17195).ListItem.mpaa,12A)">Flags/flags_color/mpaa/uk_spotlight/bbfc_12a.png</value>
@@ -248,7 +248,7 @@
 	<!--OSD MPAA UK & UK style US icons-->
 	<variable name="mediaflagsOSD_large_rating_UK_icons">
 		
-		<!---UK classifcations using UK or Rated prefix--->
+		<!-- UK classifications using UK or Rated prefix -->
 		<value condition="String.Contains(videoplayer.mpaa,UK:U) | String.Contains(videoplayer.mpaa,GB-U) | String.Contains(videoplayer.mpaa,Rated U) | String.IsEqual(videoplayer.mpaa,U) | String.Contains(Container(17195).videoplayer.mpaa,UK:U) | String.Contains(Container(17195).videoplayer.mpaa,GB-U) | String.Contains(Container(17195).videoplayer.mpaa,Rated U) | String.IsEqual(Container(17195).videoplayer.mpaa,U)">Flags/flags_color/mpaa/bbfc_u_certificate_uk.png</value>
 		<value condition="String.Contains(videoplayer.mpaa,UK:PG) | String.Contains(videoplayer.mpaa,GB-PG) | String.Contains(videoplayer.mpaa,Guidance) | String.Contains(Container(17195).videoplayer.mpaa,UK:PG) | String.Contains(Container(17195).videoplayer.mpaa,GB-PG) | String.Contains(Container(17195).videoplayer.mpaa,Guidance)">Flags/flags_color/mpaa/bbfc_pg_certificate_uk.png</value>
 		<value condition="String.Contains(videoplayer.mpaa,UK:12A) | String.Contains(videoplayer.mpaa,GB-12A) | String.Contains(videoplayer.mpaa,Rated 12A) | String.IsEqual(videoplayer.mpaa,12A) | String.Contains(Container(17195).videoplayer.mpaa,UK:12A) | String.Contains(Container(17195).videoplayer.mpaa,GB-12A) | String.Contains(Container(17195).videoplayer.mpaa,Rated 12A) | String.IsEqual(Container(17195).videoplayer.mpaa,12A)">Flags/flags_color/mpaa/bbfc_12a_certificate_uk.png</value>
@@ -287,7 +287,7 @@
 		<value condition="String.Contains(ListItem.mpaa,TV-PG) | String.Contains(Container(17195).ListItem.mpaa,TV-PG)">$INFO[Skin.String(PGPanelColor)]</value>
 		<value condition="String.Contains(ListItem.mpaa,TV-14) | String.Contains(Container(17195).ListItem.mpaa,TV-14)">$INFO[Skin.String(PG13PanelColor)]</value>
 		<value condition="String.Contains(ListItem.mpaa,TV-MA) | String.Contains(ListItem.mpaa,USA:TV-MA) | String.Contains(Container(17195).ListItem.mpaa,TV-MA) | String.Contains(Container(17195).ListItem.mpaa,USA:TV-MA)">$INFO[Skin.String(RPanelColor)]</value>
-		<!---UK classifcations using UK or Rated prefix--->
+		<!-- UK classifications using UK or Rated prefix -->
 		<value condition="String.Contains(ListItem.mpaa,UK:U) | String.Contains(ListItem.mpaa,GB-U) | String.Contains(ListItem.mpaa,Rated U) | String.IsEqual(ListItem.mpaa,U) | String.Contains(Container(17195).ListItem.mpaa,UK:U) | String.Contains(Container(17195).ListItem.mpaa,GB-U) | String.Contains(Container(17195).ListItem.mpaa,Rated U) | String.IsEqual(Container(17195).ListItem.mpaa,U)">$INFO[Skin.String(GPanelColor)]</value>
 		<value condition="String.Contains(ListItem.mpaa,UK:PG) | String.Contains(ListItem.mpaa,GB-PG) | String.Contains(ListItem.mpaa,Guidance) | String.Contains(Container(17195).ListItem.mpaa,UK:PG) | String.Contains(Container(17195).ListItem.mpaa,GB-PG) | String.Contains(Container(17195).ListItem.mpaa,Guidance)">$INFO[Skin.String(PGPanelColor)]</value>
 		<value condition="String.Contains(ListItem.mpaa,UK:12A) | String.Contains(ListItem.mpaa,GB-12A) | String.Contains(ListItem.mpaa,Rated 12A) | String.IsEqual(ListItem.mpaa,12A) | String.Contains(Container(17195).ListItem.mpaa,UK:12A) | String.Contains(Container(17195).ListItem.mpaa,GB-12A) | String.Contains(Container(17195).ListItem.mpaa,Rated 12A) | String.IsEqual(Container(17195).ListItem.mpaa,12A)">$INFO[Skin.String(PG13PanelColor)]</value>
@@ -324,7 +324,7 @@
 		<value condition="String.Contains(videoplayer.mpaa,TV-PG) | String.Contains(Window(Home).Property(TMDbBingieHelper.Player.mpaa,TV-PG))">$INFO[Skin.String(PGPanelColor)]</value>
 		<value condition="String.Contains(videoplayer.mpaa,TV-14) | String.Contains(Window(Home).Property(TMDbBingieHelper.Player.mpaa,TV-14))">$INFO[Skin.String(PG13PanelColor)]</value>
 		<value condition="String.Contains(videoplayer.mpaa,TV-MA) | String.Contains(videoplayer.mpaa,USA:TV-MA) | String.Contains(Window(Home).Property(TMDbBingieHelper.Player.mpaa,TV-MA)) | String.Contains(Window(Home).Property(TMDbBingieHelper.Player.mpaa,USA:TV-MA))">$INFO[Skin.String(RPanelColor)]</value>
-		<!---UK classifcations using UK or Rated prefix--->
+		<!-- UK classifications using UK or Rated prefix -->
 		<value condition="String.Contains(videoplayer.mpaa,UK:U) | String.Contains(videoplayer.mpaa,GB-U) | String.Contains(videoplayer.mpaa,Rated U) | String.IsEqual(videoplayer.mpaa,U) | String.Contains(Window(Home).Property(TMDbBingieHelper.Player.mpaa,UK:U)) | String.Contains(Window(Home).Property(TMDbBingieHelper.Player.mpaa,GB-U)) | String.Contains(Window(Home).Property(TMDbBingieHelper.Player.mpaa,Rated U)) | String.IsEqual(Window(Home).Property(TMDbBingieHelper.Player.mpaa,U))">$INFO[Skin.String(GPanelColor)]</value>
 		<value condition="String.Contains(videoplayer.mpaa,UK:PG) | String.Contains(videoplayer.mpaa,GB-PG) | String.Contains(videoplayer.mpaa,Guidance) | String.Contains(Window(Home).Property(TMDbBingieHelper.Player.mpaa,UK:PG)) | String.Contains(Window(Home).Property(TMDbBingieHelper.Player.mpaa,GB-PG)) | String.Contains(Window(Home).Property(TMDbBingieHelper.Player.mpaa,Guidance))">$INFO[Skin.String(PGPanelColor)]</value>
 		<value condition="String.Contains(videoplayer.mpaa,UK:12A) | String.Contains(videoplayer.mpaa,GB-12A) | String.Contains(videoplayer.mpaa,Rated 12A) | String.IsEqual(videoplayer.mpaa,12A) | String.Contains(Window(Home).Property(TMDbBingieHelper.Player.mpaa,UK:12A)) | String.Contains(Window(Home).Property(TMDbBingieHelper.Player.mpaa,GB-12A)) | String.Contains(Window(Home).Property(TMDbBingieHelper.Player.mpaa,Rated 12A)) | String.IsEqual(Window(Home).Property(TMDbBingieHelper.Player.mpaa,12A))">$INFO[Skin.String(PG13PanelColor)]</value>
