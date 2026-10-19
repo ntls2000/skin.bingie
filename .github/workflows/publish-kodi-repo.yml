@@ -1,0 +1,28 @@
+name: Publish Bingie Kodi repository
+on:
+  push:
+    branches: [omega]
+    paths-ignore:
+      - 'repo/**'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout skin source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Generate Kodi repository
+        run: python3 tools/build_kodi_repo.py
+      - name: Publish ZIP files and repository index
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add repo/
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: publish Kodi repository packages [skip ci]"
+            git push
+          fi
