@@ -16,3 +16,12 @@ jobs:
           python-version: '3.14'
       - run: python tools/check_kodi22.py
       - run: python tools/check_shortcuts_v3.py
+      - name: Build separate test ZIP (never published to omega)
+        run: python tools/build_kodi_repo.py
+      - name: Preserve test ZIP for manual Kodi 22 verification
+        uses: actions/upload-artifact@v4
+        with:
+          name: bingie-2.0.4-beta1-skinshortcuts-v3-test
+          path: repo/skin.bingie/skin.bingie-2.0.4~beta1.zip
+          if-no-files-found: error
+          retention-days: 14
