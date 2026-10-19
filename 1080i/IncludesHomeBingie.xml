@@ -44,7 +44,7 @@
 			<include>NetflixModernHeroSurface</include>
             <!-- SPOTLIGHT DIFFUSE VIGNETTE -->
 			<control type="image">
-				<visible>$EXP[IsCurrentWidgetSpotlight]</visible>
+				<visible>$EXP[IsCurrentWidgetSpotlight] + ![Skin.HasSetting(NetflixModern2026) + Window.IsActive(Home)]</visible>
                 <include>FullscreenDimensions</include>
                 <colordiffuse>$VAR[BingiePanelColor]</colordiffuse>
                 <texture background="true">bingie/diffuse.png</texture>
