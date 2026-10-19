@@ -1646,39 +1646,39 @@ msgstr "Westerns"
 
 msgctxt "#31400"
 msgid "[B]CONFIGURE APPEARANCE SETTINGS[/B][CR][CR]Change skin · Configure language and region · Setup screensaver"
-msgstr "[B]CONFIGURE APPEARANCE SETTINGS[/B][CR][CR]Change skin · Configure language and region · Setup screensaver"
+msgstr "[B]CONFIGURER L’APPARENCE[/B][CR][CR]Changer d’habillage · Configurer la langue et la région · Régler l’économiseur d’écran"
 
 msgctxt "#31401"
 msgid "[B]CONFIGURE MEDIA SETTINGS[/B][CR][CR]Manage your video, music and picture library"
-msgstr "[B]CONFIGURE MEDIA SETTINGS[/B][CR][CR]Manage your video, music and picture library"
+msgstr "[B]CONFIGURER LES MÉDIAS[/B][CR][CR]Gérer vos médiathèques vidéo, musicale et d’images"
 
 msgctxt "#31402"
 msgid "[B]CONFIGURE PLAYER SETTINGS[/B][CR][CR]Configure playback options · Set subtitle style"
-msgstr "[B]CONFIGURE PLAYER SETTINGS[/B][CR][CR]Configure playback options · Set subtitle style"
+msgstr "[B]CONFIGURER LE LECTEUR[/B][CR][CR]Configurer la lecture · Régler l’apparence des sous-titres"
 
 msgctxt "#31403"
 msgid "[B]CONFIGURE GAMES SETTINGS[/B][CR][CR]Set gameplay options"
-msgstr "[B]CONFIGURE GAMES SETTINGS[/B][CR][CR]Set gameplay options"
+msgstr "[B]CONFIGURER LES JEUX[/B][CR][CR]Modifier les options de jeu"
 
 msgctxt "#31404"
 msgid "[B]FILE MANAGER[/B][CR][CR]Browse and organize files"
-msgstr "[B]FILE MANAGER[/B][CR][CR]Browse and organize files"
+msgstr "[B]GESTIONNAIRE DE FICHIERS[/B][CR][CR]Parcourir et organiser les fichiers"
 
 msgctxt "#31405"
 msgid "[B]CONFIGURE NETWORK SETTINGS[/B][CR][CR]Configure file sharing and internet access options"
-msgstr "[B]CONFIGURE NETWORK SETTINGS[/B][CR][CR]Configure file sharing and internet access options"
+msgstr "[B]CONFIGURER LE RÉSEAU[/B][CR][CR]Configurer le partage de fichiers et l’accès à Internet"
 
 msgctxt "#31406"
 msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Configure display and audio · Enable debugging"
-msgstr "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Configure display and audio · Enable debugging"
+msgstr "[B]CONFIGURER LE SYSTÈME[/B][CR][CR]Configurer l’affichage et le son · Activer le débogage"
 
 msgctxt "#31407"
 msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup Bingie · Configure home screen and hubs"
-msgstr "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup Bingie · Configure home screen and hubs"
+msgstr "[B]CONFIGURER L’HABILLAGE[/B][CR][CR]Paramétrer Bingie · Configurer l’accueil et les sections"
 
 msgctxt "#31408"
 msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Browse, install and manage add-ons"
-msgstr "[B]CONFIGURE ADD-ONS[/B][CR][CR]Browse, install and manage add-ons"
+msgstr "[B]CONFIGURER LES EXTENSIONS[/B][CR][CR]Parcourir, installer et gérer les extensions"
 
 msgctxt "#31409"
 msgid "[B]SYSTEM INFO[/B][CR][CR]Summary · Storage · Network · Video · Hardware"
@@ -1686,27 +1686,27 @@ msgstr "[B]INFORMATIONS SYSTÈME[/B][CR][CR]Résumé · Stockage · Réseau · V
 
 msgctxt "#31410"
 msgid "[B]CONFIGURE LIVE TV SETTINGS[/B][CR][CR]Configure PVR options"
-msgstr "[B]CONFIGURE LIVE TV SETTINGS[/B][CR][CR]Configure PVR options"
+msgstr "[B]CONFIGURER LA TV EN DIRECT[/B][CR][CR]Configurer les options PVR"
 
 msgctxt "#31411"
 msgid "Additional info text color"
-msgstr "Additional info text color"
+msgstr "Couleur du texte des informations supplémentaires"
 
 msgctxt "#31412"
 msgid "Sublabel text color"
-msgstr "Sublabel text color"
+msgstr "Couleur du texte secondaire"
 
 msgctxt "#31413"
 msgid "Configure hubs"
-msgstr "Configure hubs"
+msgstr "Configurer les sections"
 
 msgctxt "#31414"
 msgid "Mysteries"
-msgstr "Mysteries"
+msgstr "Mystères"
 
 msgctxt "#31415"
 msgid "Restore menu items"
-msgstr "Restore menu items"
+msgstr "Restaurer les éléments du menu"
 
 msgctxt "#31416"
 msgid "Thumbs down rate value"
@@ -1714,7 +1714,7 @@ msgstr "Valeur de notation du pouce en bas"
 
 msgctxt "#31417"
 msgid "Thumbs Up/Down"
-msgstr "Thumbs Up/Down"
+msgstr "Pouce levé / pouce baissé"
 
 msgctxt "#31418"
 msgid "Thumbs up rate value"
@@ -1722,15 +1722,15 @@ msgstr "Valeur de notation du pouce en l'air"
 
 msgctxt "#31419"
 msgid "PVR guide focused item panel color"
-msgstr "PVR guide focused item panel color"
+msgstr "Couleur du panneau sélectionné du guide TV"
 
 msgctxt "#31420"
 msgid "Plot & critics"
-msgstr "Plot & critics"
+msgstr "Résumé et critiques"
 
 msgctxt "#31421"
 msgid "[B]MANAGE YOUR KODI USER PROFILES[/B][CR][CR]Create new profiles or edit existing ones"
-msgstr "[B]MANAGE YOUR KODI USER PROFILES[/B][CR][CR]Create new profiles or edit existing ones"
+msgstr "[B]GÉRER LES PROFILS UTILISATEUR KODI[/B][CR][CR]Créer ou modifier des profils"
 
 # DO NOT TRANSLATE THIS STRING!!!
 msgctxt "#31422"
@@ -1744,7 +1744,7 @@ msgstr "Échanger les affiches"
 # DO NOT TRANSLATE THIS STRING!!!
 msgctxt "#31424"
 msgid "Banner Details"
-msgstr "Banner Details"
+msgstr "Détails en bannière"
 
 # DO NOT TRANSLATE THIS STRING!!!
 msgctxt "#31425"
@@ -1762,17 +1762,17 @@ msgstr "Romance"
 
 msgctxt "#31428"
 msgid "Sci-Fi"
-msgstr "Sci-Fi"
+msgstr "Science-fiction"
 
 # DO NOT TRANSLATE THIS STRING!!!
 msgctxt "#31429"
 msgid "Poster Showcase"
-msgstr "Poster Showcase"
+msgstr "Présentation des affiches"
 
 # DO NOT TRANSLATE THIS STRING!!!
 msgctxt "#31430"
 msgid "Big Landscape"
-msgstr "Big Landscape"
+msgstr "Grand format paysage"
 
 # DO NOT TRANSLATE THIS STRING!!!
 msgctxt "#31431"
@@ -1781,7 +1781,7 @@ msgstr "Paysage sur une seule ligne"
 
 msgctxt "#31432"
 msgid "TMDb Trending Movies"
-msgstr "TMDb Trending Movies"
+msgstr "Films tendance sur TMDb"
 
 msgctxt "#31433"
 msgid "Rate this title"
@@ -1789,20 +1789,20 @@ msgstr "Noter ce titre"
 
 msgctxt "#31434"
 msgid "Customize movies hub"
-msgstr "Customize movies hub"
+msgstr "Personnaliser la section Films"
 
 msgctxt "#31435"
 msgid "Animations"
-msgstr "Animations"
+msgstr "Films d’animation"
 
 msgctxt "#31436"
 msgid "Disable search suggestions"
-msgstr "Disable search suggestions"
+msgstr "Désactiver les suggestions de recherche"
 
 # DO NOT TRANSLATE THIS STRING!!!
 msgctxt "#31437"
 msgid "Square Details"
-msgstr "Square Details"
+msgstr "Détails en format carré"
 
 msgctxt "#31438"
 msgid "Enable indicator if item is playing or is recording/timer (PVR)"
@@ -1825,37 +1825,37 @@ msgstr "Alternance d'affiches"
 
 msgctxt "#31442"
 msgid "History & War"
-msgstr "History & War"
+msgstr "Histoire et guerre"
 
 msgctxt "#31443"
 msgid "IMDB Top 250 TV Shows"
-msgstr "IMDB Top 250 TV Shows"
+msgstr "Top 250 des séries IMDb"
 
 # DO NOT TRANSLATE THIS STRING!!!
 msgctxt "#31444"
 msgid "List Details"
-msgstr "List Details"
+msgstr "Détails en liste"
 
 # DO NOT TRANSLATE THIS STRING!!!
 msgctxt "#31445"
 msgid "Panel Single Row"
-msgstr "Panel Single Row"
+msgstr "Panneau sur une seule ligne"
 
 msgctxt "#31446"
 msgid "Fantasy"
-msgstr "Fantasy"
+msgstr "Fantastique"
 
 msgctxt "#31447"
 msgid "Bingie landscape tag sublabel"
-msgstr "Bingie landscape tag sublabel"
+msgstr "Sous-libellé du badge paysage Bingie"
 
 msgctxt "#31448"
 msgid "Crime"
-msgstr "Crime"
+msgstr "Policier"
 
 msgctxt "#31449"
 msgid "Interval for multi-image and random fanart backgrounds"
-msgstr "Interval for multi-image and random fanart backgrounds"
+msgstr "Intervalle de changement des fonds multiples et illustrations aléatoires"
 
 msgctxt "#31450"
 msgid "Header colors"
@@ -1863,48 +1863,48 @@ msgstr "Couleurs de l'entête"
 
 msgctxt "#31451"
 msgid "Kids & Family"
-msgstr "Kids & Family"
+msgstr "Jeunesse et famille"
 
 msgctxt "#31452"
 msgid "Horror"
-msgstr "Horror"
+msgstr "Horreur"
 
 msgctxt "#31453"
 msgid "TMDb Trending TV Shows"
-msgstr "TMDb Trending TV Shows"
+msgstr "Séries tendance sur TMDb"
 
 msgctxt "#31454"
 msgid "Movies Trending This Week"
-msgstr "Movies Trending This Week"
+msgstr "Films tendance cette semaine"
 
 msgctxt "#31455"
 msgid "Footer text color"
-msgstr "Footer text color"
+msgstr "Couleur du texte de pied de page"
 
 msgctxt "#31456"
 msgid "Dramas"
-msgstr "Dramas"
+msgstr "Drames"
 
 msgctxt "#31457"
 msgid "Comedies"
-msgstr "Comedies"
+msgstr "Comédies"
 
 msgctxt "#31458"
 msgid "More like this"
-msgstr "More like this"
+msgstr "Plus de contenus similaires"
 
 msgctxt "#31459"
 msgid "Button focused text color"
-msgstr "Button focused text color"
+msgstr "Couleur du texte des boutons sélectionnés"
 
 msgctxt "#31460"
 msgid "Text color"
-msgstr "Text color"
+msgstr "Couleur du texte"
 
 # DO NOT TRANSLATE THIS STRING!!!
 msgctxt "#31461"
 msgid "Clearlogo"
-msgstr "Clearlogo"
+msgstr "Logo transparent du titre"
 
 msgctxt "#31462"
 msgid "Color themes"
@@ -1916,39 +1916,39 @@ msgstr "Choisir un thème de couleurs"
 
 msgctxt "#31464"
 msgid "Bingie skin allows you to customize almost every color manually. You can save your customizations as a color theme or reset everything to default."
-msgstr "Bingie skin allows you to customize almost every color manually. You can save your customizations as a color theme or reset everything to default."
+msgstr "Bingie vous permet de personnaliser presque toutes les couleurs. Vous pouvez enregistrer vos changements comme thème de couleurs ou rétablir les couleurs par défaut."
 
 msgctxt "#31465"
 msgid "Customize submenu"
-msgstr "Customize submenu"
+msgstr "Personnaliser le sous-menu"
 
 msgctxt "#31466"
 msgid "Set label"
-msgstr "Set label"
+msgstr "Définir le libellé"
 
 msgctxt "#31467"
 msgid "PVR guide progress indicator color"
-msgstr "PVR guide progress indicator color"
+msgstr "Couleur de l’indicateur de progression du guide TV"
 
 msgctxt "#31468"
 msgid "Content type"
-msgstr "Content type"
+msgstr "Type de contenu"
 
 msgctxt "#31469"
 msgid "Action & Adventure"
-msgstr "Action & Adventure"
+msgstr "Action et aventure"
 
 msgctxt "#31470"
 msgid "Details row rating color"
-msgstr "Details row rating color"
+msgstr "Couleur de la note dans la ligne de détails"
 
 msgctxt "#31471"
 msgid "Adults only panel color"
-msgstr "Adults only panel color"
+msgstr "Couleur du panneau « Réservé aux adultes »"
 
 msgctxt "#31472"
 msgid "Customize music hub"
-msgstr "Customize music hub"
+msgstr "Personnaliser la section Musique"
 
 msgctxt "#31473"
 msgid "OSD panel color"
@@ -1956,23 +1956,23 @@ msgstr "Couleur du panneau incrusté à l'écran OSD"
 
 msgctxt "#31474"
 msgid "Amber"
-msgstr "Amber"
+msgstr "Ambre"
 
 msgctxt "#31475"
 msgid "Button color"
-msgstr "Button color"
+msgstr "Couleur des boutons"
 
 msgctxt "#31476"
 msgid "Listitem border/panel unfocused color"
-msgstr "Listitem border/panel unfocused color"
+msgstr "Couleur de bordure ou de panneau des éléments non sélectionnés"
 
 msgctxt "#31477"
 msgid "Footer text shadow color"
-msgstr "Footer text shadow color"
+msgstr "Couleur de l’ombre du texte du pied de page"
 
 msgctxt "#31478"
 msgid "OSD text color"
-msgstr "OSD text color"
+msgstr "Couleur du texte de l’OSD"
 
 msgctxt "#31479"
 msgid "Similar"
@@ -1984,7 +1984,7 @@ msgstr "Voir la bande-annonce"
 
 msgctxt "#31481"
 msgid "PVR guide unfocused item text color"
-msgstr "PVR guide unfocused item text color"
+msgstr "Couleur du texte des éléments non sélectionnés dans le guide TV"
 
 msgctxt "#31482"
 msgid "Oscar"
@@ -1992,19 +1992,19 @@ msgstr "Oscar"
 
 msgctxt "#31483"
 msgid "Trakt Rating"
-msgstr "Trakt Rating"
+msgstr "Note Trakt"
 
 msgctxt "#31484"
 msgid "Home main menu icon underline color"
-msgstr "Home main menu icon underline color"
+msgstr "Couleur de la ligne sous l’icône du menu principal"
 
 msgctxt "#31485"
 msgid "Radio button and spin control focused/active color"
-msgstr "Radio button and spin control focused/active color"
+msgstr "Couleur des boutons radio et commandes sélectionnés ou actifs"
 
 msgctxt "#31486"
 msgid "General colors"
-msgstr "General colors"
+msgstr "Couleurs générales"
 
 msgctxt "#31487"
 msgid "Enable/disable views"
@@ -2012,23 +2012,23 @@ msgstr "Activer/désactiver les vues"
 
 msgctxt "#31488"
 msgid "Writer"
-msgstr "Writer"
+msgstr "Scénariste"
 
 msgctxt "#31489"
 msgid "For all content"
-msgstr "For all content"
+msgstr "Pour tous les contenus"
 
 msgctxt "#31490"
 msgid "Change widget"
-msgstr "Change widget"
+msgstr "Changer le widget"
 
 msgctxt "#31491"
 msgid "Customize categories hub"
-msgstr "Customize categories hub"
+msgstr "Personnaliser la section Catégories"
 
 msgctxt "#31492"
 msgid "Play Something Else"
-msgstr "Play Something Else"
+msgstr "Lire autre chose"
 
 msgctxt "#31493"
 msgid "YouTube videos"
@@ -2052,19 +2052,19 @@ msgstr "Couleur de la barre de défilement sélectionnée"
 
 msgctxt "#31498"
 msgid "Use fake discart when no discart exists"
-msgstr "Use fake discart when no discart exists"
+msgstr "Utiliser une image de disque factice quand aucune n’est disponible"
 
 msgctxt "#31499"
 msgid "Channel number"
-msgstr "Channel number"
+msgstr "Numéro de chaîne"
 
 msgctxt "#31500"
 msgid "Use local trailers only"
-msgstr "Use local trailers only"
+msgstr "Utiliser uniquement les bandes-annonces locales"
 
 msgctxt "#31501"
 msgid "Reload"
-msgstr "Reload"
+msgstr "Recharger"
 
 msgctxt "#31502"
 msgid "Golden Globe"
@@ -2076,15 +2076,15 @@ msgstr "Horloge"
 
 msgctxt "#31504"
 msgid "Default music background (if no artist fanart)"
-msgstr "Default music background (if no artist fanart)"
+msgstr "Fond musical par défaut (sans illustration d’artiste)"
 
 msgctxt "#31505"
 msgid "Busy animation color"
-msgstr "Busy animation color"
+msgstr "Couleur de l’animation de chargement"
 
 msgctxt "#31506"
 msgid "Customize new & popular hub"
-msgstr "Customize new & popular hub"
+msgstr "Personnaliser la section Nouveautés et tendances"
 
 msgctxt "#31507"
 msgid "Layout for widgets"
@@ -2092,23 +2092,23 @@ msgstr "Disposition des widgets"
 
 msgctxt "#31508"
 msgid "Cast in TV Shows"
-msgstr "Cast in TV Shows"
+msgstr "Distribution des séries"
 
 msgctxt "#31509"
 msgid "Crew in Movies"
-msgstr "Crew in Movies"
+msgstr "Équipe technique des films"
 
 msgctxt "#31510"
 msgid "Crew in TV Shows"
-msgstr "Crew in TV Shows"
+msgstr "Équipe technique des séries"
 
 msgctxt "#31511"
 msgid "Only for episodes"
-msgstr "Only for episodes"
+msgstr "Uniquement pour les épisodes"
 
 msgctxt "#31512"
 msgid "Media items indicators"
-msgstr "Media items indicators"
+msgstr "Indicateurs des éléments multimédias"
 
 msgctxt "#31513"
 msgid "Enable indicator for watched items"
@@ -2136,27 +2136,27 @@ msgstr "Vues forcées"
 
 msgctxt "#31519"
 msgid "Cast in Movies"
-msgstr "Cast in Movies"
+msgstr "Distribution des films"
 
 msgctxt "#31520"
 msgid "Widget loading animation color"
-msgstr "Widget loading animation color"
+msgstr "Couleur de l’animation de chargement des widgets"
 
 msgctxt "#31521"
 msgid "color for indicator image"
-msgstr "color for indicator image"
+msgstr "Couleur de l’image de l’indicateur"
 
 msgctxt "#31522"
 msgid "Auto trailers"
-msgstr "Auto trailers"
+msgstr "Bandes-annonces automatiques"
 
 msgctxt "#31523"
 msgid "Header settings"
-msgstr "Header settings"
+msgstr "Paramètres d’en-tête"
 
 msgctxt "#31524"
 msgid "Autoplay trailer"
-msgstr "Autoplay trailer"
+msgstr "Lecture automatique de la bande-annonce"
 
 msgctxt "#31525"
 msgid "Configure header for home screen"
@@ -2168,23 +2168,23 @@ msgstr "Configurer l'entête pour toutes les fenêtres (hors Accueil)"
 
 msgctxt "#31527"
 msgid "Premiered in"
-msgstr "Premiered in"
+msgstr "Première diffusion le"
 
 msgctxt "#31528"
 msgid "Play next episode (TMDb Bingie Helper)"
-msgstr "Play next episode (TMDb Bingie Helper)"
+msgstr "Lire l’épisode suivant (TMDb Bingie Helper)"
 
 msgctxt "#31529"
 msgid "Posters"
-msgstr "Posters"
+msgstr "Affiches"
 
 msgctxt "#31530"
 msgid "Creator"
-msgstr "Creator"
+msgstr "Créateur"
 
 msgctxt "#31531"
 msgid "Created by"
-msgstr "Created by"
+msgstr "Créé par"
 
 msgctxt "#31532"
 msgid "Critically Acclaimed Movies"
@@ -2200,7 +2200,7 @@ msgstr "Ma liste"
 
 msgctxt "#31535"
 msgid "OSD button focused color"
-msgstr "OSD button focused color"
+msgstr "Couleur des boutons OSD sélectionnés"
 
 msgctxt "#31536"
 msgid "Weather Alerts"
@@ -2208,43 +2208,43 @@ msgstr "Alertes météo"
 
 msgctxt "#31537"
 msgid "Flags color"
-msgstr "Flags color"
+msgstr "Couleur des indicateurs média"
 
 msgctxt "#31538"
 msgid "PVR guide focused item text color"
-msgstr "PVR guide focused item text color"
+msgstr "Couleur du texte sélectionné dans le guide TV"
 
 msgctxt "#31539"
 msgid "Light red"
-msgstr "Light red"
+msgstr "Rouge clair"
 
 msgctxt "#31540"
 msgid "TV Shows Trending This Week"
-msgstr "TV Shows Trending This Week"
+msgstr "Séries tendance cette semaine"
 
 msgctxt "#31541"
 msgid "Directed by"
-msgstr "Directed by"
+msgstr "Réalisé par"
 
 msgctxt "#31542"
 msgid "Written by"
-msgstr "Written by"
+msgstr "Écrit par"
 
 msgctxt "#31543"
 msgid "No items in My List.[CR]Start adding Movies & TV Shows you like, just press the 'Add/Remove Favorites' button from information page."
-msgstr "No items in My List.[CR]Start adding Movies & TV Shows you like, just press the 'Add/Remove Favorites' button from information page."
+msgstr "Aucun élément dans Ma liste.[CR]Ajoutez les films et séries qui vous plaisent avec le bouton « Ajouter/retirer des favoris » sur la page d’informations."
 
 msgctxt "#31544"
 msgid "There are no comments for this content."
-msgstr "There are no comments for this content."
+msgstr "Aucun commentaire pour ce contenu."
 
 msgctxt "#31545"
 msgid "in main roles"
-msgstr "in main roles"
+msgstr "dans les rôles principaux"
 
 msgctxt "#31546"
 msgid "series with"
-msgstr "series with"
+msgstr "séries avec"
 
 msgctxt "#31547"
 msgid "OSD progress bar border color"
@@ -2252,11 +2252,11 @@ msgstr "Couleur de la barre de progression pour l’OSD"
 
 msgctxt "#31548"
 msgid "Bingie Top 250 icon color"
-msgstr "Bingie Top 250 icon color"
+msgstr "Couleur de l’icône Top 250 Bingie"
 
 msgctxt "#31549"
 msgid "Play next episode (local library)"
-msgstr "Play next episode (local library)"
+msgstr "Lire l’épisode suivant (médiathèque locale)"
 
 msgctxt "#31550"
 msgid "Enable option for a complete keyboard"
@@ -2264,15 +2264,15 @@ msgstr "Activer l'option pour un clavier étendu"
 
 msgctxt "#31551"
 msgid "Parental guidance suggested panel color"
-msgstr "Parental guidance suggested panel color"
+msgstr "Couleur du panneau « Accord parental recommandé »"
 
 msgctxt "#31552"
 msgid "General audiences panel color"
-msgstr "General audiences panel color"
+msgstr "Couleur du panneau « Tous publics »"
 
 msgctxt "#31553"
 msgid "Disable extra fanart"
-msgstr "Disable extra fanart"
+msgstr "Désactiver les illustrations supplémentaires"
 
 msgctxt "#31554"
 msgid "Square"
@@ -2284,11 +2284,11 @@ msgstr "Afficher le logo de l'artiste en plein écran durant la lecture de musiq
 
 msgctxt "#31556"
 msgid "Watch It Again TV Shows"
-msgstr "Watch It Again TV Shows"
+msgstr "Séries à revoir"
 
 msgctxt "#31557"
 msgid "Lyrics unfocused text color"
-msgstr "Lyrics unfocused text color"
+msgstr "Couleur du texte des paroles non sélectionnées"
 
 msgctxt "#31558"
 msgid "There are no matches for this category."
@@ -2300,15 +2300,15 @@ msgstr "Lecture de musique"
 
 msgctxt "#31560"
 msgid "Channel logo"
-msgstr "Channel logo"
+msgstr "Logo de la chaîne"
 
 msgctxt "#31561"
 msgid "Additional info icon color"
-msgstr "Additional info icon color"
+msgstr "Couleur des icônes d’informations supplémentaires"
 
 msgctxt "#31562"
 msgid "MPAA font color"
-msgstr "MPAA font color"
+msgstr "Couleur de police de la classification d’âge"
 
 msgctxt "#31563"
 msgid "Popular"
@@ -2324,7 +2324,7 @@ msgstr "Panneau d'information du menu incrusté à l'image (OSD)"
 
 msgctxt "#31566"
 msgid "Shows"
-msgstr "Shows"
+msgstr "Séries"
 
 # DO NOT TRANSLATE THIS STRING!!!
 msgctxt "#31567"
@@ -2337,19 +2337,19 @@ msgstr "Activer l'indicateur pour les éléments non-vus"
 
 msgctxt "#31569"
 msgid "Media listitem unfocused text color"
-msgstr "Media listitem unfocused text color"
+msgstr "Couleur du texte des éléments multimédias non sélectionnés"
 
 msgctxt "#31570"
 msgid "Media listitem focused text color"
-msgstr "Media listitem focused text color"
+msgstr "Couleur du texte des éléments multimédias sélectionnés"
 
 msgctxt "#31571"
 msgid "Media listitem focused panel color"
-msgstr "Media listitem focused panel color"
+msgstr "Couleur du panneau des éléments multimédias sélectionnés"
 
 msgctxt "#31572"
 msgid "Additional info text color (video info dialog)"
-msgstr "Additional info text color (video info dialog)"
+msgstr "Couleur du texte des informations supplémentaires (fenêtre vidéo)"
 
 msgctxt "#31573"
 msgid "OSD progress bar buffer cache color"
@@ -2361,7 +2361,7 @@ msgstr "Couleur diffuse du fond d'écran"
 
 msgctxt "#31575"
 msgid "Prefer mini TV channels list on fullscreen"
-msgstr "Prefer mini TV channels list on fullscreen"
+msgstr "Préférer la mini-liste des chaînes TV en plein écran"
 
 msgctxt "#31576"
 msgid "Landscape"
